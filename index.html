@@ -1,1 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace | Psychological Support</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top left,#164a8a,transparent 35%),
+    radial-gradient(circle at bottom right,#0d2d5a,transparent 40%),
+    #061426;
+
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+
+/* Animated background */
+
+body::before{
+
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#2196ff;
+filter:blur(180px);
+opacity:.25;
+top:-200px;
+left:-200px;
+animation:move 10s infinite alternate;
+
+}
+
+
+@keyframes move{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(200px,150px);
+}
+
+}
+
+
+
+/* Navbar */
+
+
+header{
+
+width:100%;
+position:fixed;
+top:0;
+z-index:100;
+
+padding:25px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+letter-spacing:1px;
+
+}
+
+
+.logo span{
+
+color:#4db8ff;
+
+}
+
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:15px;
+opacity:.85;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#4db8ff;
+
+}
+
+
+
+/* Hero */
+
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:140px 8% 80px;
+
+gap:50px;
+
+}
+
+
+
+.hero-text{
+
+max-width:600px;
+
+}
+
+
+.hero-text h1{
+
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
+
+}
+
+
+.hero-text h1 span{
+
+background:linear-gradient(
+90deg,
+#4db8ff,
+#9edcff
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+
+
+.hero-text p{
+
+font-size:20px;
+line-height:1.7;
+opacity:.8;
+margin-bottom:35px;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+background:
+linear-gradient(
+135deg,
+#2294ff,
+#4dc7ff
+);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+box-shadow:
+0 10px 30px rgba(0,150,255,.4);
+
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 20px 40px rgba(0,150,255,.5);
+
+}
+
+
+
+/* Glass card */
+
+
+.hero-card{
+
+width:400px;
+height:420px;
+
+border-radius:30px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+position:relative;
+
+animation:float 5s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+
+
+.mind-circle{
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:
+linear-gradient(
+135deg,
+#4db8ff,
+#0c4c91
+);
+
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:80px;
+
+box-shadow:
+0 0 80px rgba(77,184,255,.6);
+
+}
+
+
+
+
+/* reveal animation */
+
+
+.hero-text,
+.hero-card{
+
+animation:show 1s ease forwards;
+
+opacity:0;
+
+}
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+
+.hero-text h1{
+
+font-size:45px;
+
+}
+
+
+.hero-card{
+
+width:320px;
+height:320px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+}
+
+/* Feeling Section */
+
+.section{
+
+padding:100px 8%;
+
+}
+
+
+.section-title{
+
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+
+}
+
+
+.section-title span{
+
+color:#4db8ff;
+
+}
+
+
+/* Feeling cards */
+
+
+.feelings{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+
+.feeling-card{
+
+background:
+rgba(255,255,255,.07);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+padding:35px 20px;
+
+border-radius:25px;
+
+text-align:center;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+
+.feeling-card:hover{
+
+transform:translateY(-10px);
+
+background:
+rgba(77,184,255,.15);
+
+}
+
+
+.feeling-card h3{
+
+margin-top:15px;
+
+}
+
+
+.feeling-card p{
+
+opacity:.7;
+font-size:14px;
+
+}
+
+
+
+/* Services */
+
+
+.services{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+
+.service{
+
+padding:35px;
+
+border-radius:25px;
+
+background:
+rgba(255,255,255,.06);
+
+border:
+1px solid rgba(255,255,255,.1);
+
+transition:.4s;
+
+}
+
+
+.service:hover{
+
+transform:translateY(-8px);
+
+border-color:#4db8ff;
+
+}
+
+
+.service-icon{
+
+font-size:45px;
+margin-bottom:20px;
+
+}
+
+
+
+/* Therapist */
+
+
+.therapist{
+
+display:flex;
+align-items:center;
+gap:50px;
+
+background:
+rgba(255,255,255,.06);
+
+padding:50px;
+
+border-radius:35px;
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.avatar{
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:
+linear-gradient(
+135deg,
+#4db8ff,
+#083d78
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:70px;
+
+}
+
+
+.therapist-info h2{
+
+font-size:35px;
+margin-bottom:15px;
+
+}
+
+
+.therapist-info p{
+
+opacity:.8;
+line-height:1.7;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.feelings{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.services{
+
+grid-template-columns:1fr;
+
+}
+
+
+.therapist{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+}
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Mind<span>Space</span>
+</div>
+
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div class="hero-text">
+
+<h1>
+Your Mind Deserves
+<span>Care & Balance</span>
+</h1>
+
+
+<p>
+
+Professional psychological support designed to help you understand yourself,
+manage stress and create a healthier relationship with your mind.
+
+</p>
+
+
+<a href="#" class="btn">
+Start Your Journey
+</a>
+
+
+</div>
+
+
+
+<div class="hero-card">
+
+<div class="mind-circle">
+🧠
+</div>
+
+</div>
+
+
+</section>
+<section class="section">
+
+
+<h2 class="section-title">
+How are you <span>feeling today?</span>
+</h2>
+
+
+<div class="feelings">
+
+
+<div class="feeling-card">
+<div>😰</div>
+<h3>Stressed</h3>
+<p>Feeling overwhelmed?</p>
+</div>
+
+
+<div class="feeling-card">
+<div>😔</div>
+<h3>Anxious</h3>
+<p>Need emotional support?</p>
+</div>
+
+
+<div class="feeling-card">
+<div>😴</div>
+<h3>Tired</h3>
+<p>Low energy and motivation?</p>
+</div>
+
+
+<div class="feeling-card">
+<div>😊</div>
+<h3>Balanced</h3>
+<p>Want personal growth?</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="section" id="services">
+
+
+<h2 class="section-title">
+Our <span>Services</span>
+</h2>
+
+
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="service-icon">
+🧠
+</div>
+
+<h3>
+Individual Therapy
+</h3>
+
+<p>
+Private sessions focused on emotions,
+self-awareness and personal development.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+💬
+</div>
+
+<h3>
+Stress Management
+</h3>
+
+<p>
+Learn techniques to manage anxiety,
+stress and daily pressure.
+</p>
+
+</div>
+
+
+
+
+<div class="service">
+
+<div class="service-icon">
+🌱
+</div>
+
+<h3>
+Personal Growth
+</h3>
+
+<p>
+Build confidence, emotional balance
+and healthier habits.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="section" id="about">
+
+
+<div class="therapist">
+
+
+<div class="avatar">
+👩‍⚕️
+</div>
+
+
+
+<div class="therapist-info">
+
+
+<h2>
+Dr. Emma Wilson
+</h2>
+
+
+<p>
+
+Licensed psychologist specializing in anxiety,
+stress management and emotional wellness.
+Helping people build a stronger connection
+with themselves through modern therapy methods.
+
+</p>
+
+
+<br>
+
+
+<a href="#" class="btn">
+Book Session
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+</body>
+</html>
