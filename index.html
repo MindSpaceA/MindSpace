@@ -799,6 +799,136 @@ overflow-x:auto;
 
 }
 
+} 
+/* Booking */
+
+
+.booking{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+
+
+.booking-info h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+
+.booking-info p{
+
+opacity:.8;
+line-height:1.7;
+
+}
+
+
+
+.form-box{
+
+background:
+rgba(255,255,255,.07);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+padding:40px;
+
+border-radius:30px;
+
+}
+
+
+
+.form-box input,
+.form-box textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+background:
+rgba(255,255,255,.08);
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+border-radius:15px;
+
+color:white;
+
+outline:none;
+
+}
+
+
+.form-box textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+
+.form-box input::placeholder,
+.form-box textarea::placeholder{
+
+color:#cbdfff;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+padding:40px 8%;
+
+background:
+
+rgba(0,0,0,.2);
+
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+text-align:center;
+
+}
+
+
+footer span{
+
+color:#4db8ff;
+
+}
+
+
+
+@media(max-width:900px){
+
+.booking{
+
+grid-template-columns:1fr;
+
+}
+
 }    
 </style>
 
@@ -1345,6 +1475,206 @@ and manage anxiety symptoms.
 
 
 </section>
+<section class="section" id="contact">
 
+
+<h2 class="section-title">
+Book Your <span>Session</span>
+</h2>
+
+
+
+<div class="booking">
+
+
+
+<div class="booking-info">
+
+
+<h2>
+Start Your Healing Journey
+</h2>
+
+
+<p>
+
+Take the first step toward better mental
+health. Our professional therapists are here
+to support you.
+
+</p>
+
+
+<br>
+
+
+<p>
+📍 Online Therapy Available
+</p>
+
+
+<p>
+⏰ Flexible Schedule
+</p>
+
+
+<p>
+🔒 Private & Confidential
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="form-box">
+
+
+<input type="text" placeholder="Your Name">
+
+
+<input type="email" placeholder="Email Address">
+
+
+<input type="text" placeholder="Preferred Date">
+
+
+
+<textarea placeholder="Tell us how we can help you"></textarea>
+
+
+
+<button class="btn">
+
+Request Appointment
+
+</button>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 <span>MindSpace</span>.
+Mental wellness support platform.
+
+</p>
+
+
+</footer>
+<script>
+
+
+let score = 0;
+
+
+function answer(value,btn){
+
+
+score += value;
+
+
+let buttons =
+btn.parentElement.querySelectorAll("button");
+
+
+buttons.forEach(b=>{
+
+b.classList.remove("active");
+
+});
+
+
+btn.classList.add("active");
+
+
+}
+
+
+
+
+
+function showResult(){
+
+
+let text="";
+
+
+if(score<=2){
+
+text=
+"✨ Your mental balance looks good. Keep caring for yourself.";
+
+}
+
+else if(score<=4){
+
+text=
+"💙 You may benefit from relaxation and self-care techniques.";
+
+}
+
+else{
+
+text=
+"🌱 Consider talking with a professional therapist for support.";
+
+}
+
+
+
+document.getElementById("result").innerHTML=text;
+
+
+}
+
+
+
+
+
+
+
+// FAQ accordion
+
+
+let faqItems=document.querySelectorAll(".faq-item");
+
+
+faqItems.forEach(item=>{
+
+
+item.querySelector(".faq-question")
+.onclick=function(){
+
+
+item.classList.toggle("active");
+
+
+}
+
+
+});
+
+
+
+</script>    
 </body>
 </html>
