@@ -1,1 +1,1912 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindSpace — Personal Growth &amp; Mental Wellness</title>
+  <meta name="description" content="MindSpace helps you understand yourself, manage stress, and build emotional balance through mindful psychological support.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <svg class="brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="16" cy="16" r="4" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">MindSpace</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Approach</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link nav-cta">Start Journey</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="pill-tag">
+            <span class="pill-dot"></span>
+            Mindful Psychological Support
+          </div>
+          
+          <h1 class="hero-title">Your journey to a calmer mind starts here.</h1>
+          
+          <p class="hero-description">
+            MindSpace helps you understand yourself, manage stress, and build emotional balance through tailored, evidence-informed psychological practices.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Start Your Journey</span>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="avatar-group">
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150')"></div>
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150')"></div>
+              <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150')"></div>
+            </div>
+            <div class="trust-text">
+              <div class="stars">★★★★★</div>
+              <span>Trusted by 2,000+ individuals seeking inner peace</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-canvas">
+            <div class="aura-circle aura-1"></div>
+            <div class="aura-circle aura-2"></div>
+            
+            <!-- Abstract Silhouette & Nature Elements -->
+            <div class="abstract-silhouette">
+              <svg viewBox="0 0 400 400" class="silhouette-svg">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#657A63;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#D8C7A8;stop-opacity:0.6" />
+                  </linearGradient>
+                  <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#657A63;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#3B4A3A;stop-opacity:0.9" />
+                  </linearGradient>
+                </defs>
+                <!-- Organic Waves -->
+                <path d="M 50 200 Q 150 100 250 200 T 350 200" fill="none" stroke="url(#grad1)" stroke-width="2" class="wave-line"/>
+                <path d="M 30 230 Q 130 130 230 230 T 330 230" fill="none" stroke="url(#grad1)" stroke-width="1.5" class="wave-line delay-1"/>
+                <!-- Abstract Mind/Body Shape -->
+                <path d="M 200 90 C 160 90 140 130 140 170 C 140 220 180 240 180 320 L 220 320 C 220 240 260 220 260 170 C 260 130 240 90 200 90 Z" fill="url(#grad2)" class="center-shape"/>
+                <circle cx="200" cy="130" r="25" fill="#F8F5EF" opacity="0.9" />
+                <!-- Leaves -->
+                <path d="M 120 150 C 90 120 70 160 100 180 C 120 170 130 160 120 150 Z" fill="#657A63" opacity="0.7"/>
+                <path d="M 280 150 C 310 120 330 160 300 180 C 280 170 270 160 280 150 Z" fill="#D8C7A8" opacity="0.8"/>
+              </svg>
+            </div>
+
+            <!-- Floating Glass Cards -->
+            <div class="glass-float float-card-1">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 7v5l3 3"/></svg>
+              </div>
+              <div class="float-content">
+                <span class="float-title">Emotional Balance</span>
+                <span class="float-sub">Daily Harmony</span>
+              </div>
+            </div>
+
+            <div class="glass-float float-card-2">
+              <div class="float-icon alt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="float-content">
+                <span class="float-title">Stress Reduction</span>
+                <span class="float-sub">87% Improvement</span>
+              </div>
+            </div>
+
+            <div class="glass-float float-card-3">
+              <div class="sparkle-icon">✦</div>
+              <span>Mindful Guidance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="about-visual reveal-left">
+            <div class="about-card-wrapper">
+              <div class="about-image-card">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800" alt="Mindful meditation" class="about-img">
+                <div class="about-glass-overlay">
+                  <div class="quote-badge">
+                    <span class="quote-mark">“</span>
+                    <p>Awareness is the first turning point toward self-compassion.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="experience-pill">
+                <span class="exp-number">12+</span>
+                <span class="exp-text">Years of Clinical Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content reveal-right">
+            <span class="section-tag">Our Philosophy</span>
+            <h2 class="section-title">Understanding yourself is the first step to meaningful growth.</h2>
+            <p class="section-desc">
+              At MindSpace, we move beyond quick fixes. We blend grounded psychological research with warm, human-centered practices to help you untangle complex emotions and build a resilient inner environment.
+            </p>
+
+            <div class="philosophy-grid">
+              <div class="philosophy-item">
+                <div class="phil-icon">01</div>
+                <div>
+                  <h4>Emotional Awareness</h4>
+                  <p>Learn to listen to emotional cues without feeling overwhelmed or reactive.</p>
+                </div>
+              </div>
+
+              <div class="philosophy-item">
+                <div class="phil-icon">02</div>
+                <div>
+                  <h4>Self-Development</h4>
+                  <p>Build core behavioral habits aligned with your deepest personal values.</p>
+                </div>
+              </div>
+
+              <div class="philosophy-item">
+                <div class="phil-icon">03</div>
+                <div>
+                  <h4>Mental Clarity</h4>
+                  <p>Quiet cognitive clutter to navigate decisions with confidence and ease.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header text-center reveal-up">
+          <span class="section-tag">Targeted Solutions</span>
+          <h2 class="section-title">Tailored paths for your emotional well-being</h2>
+          <p class="section-subtitle">Every individual journey is unique. Select an area of focus to explore how we guide you forward.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="glass-service-card reveal-up">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Anxiety Support</h3>
+            <p>Learn practical, body-centered techniques to regulate your nervous system, quiet racing thoughts, and feel grounded in daily life.</p>
+            <a href="#contact" class="card-link">
+              <span>Explore Pathway</span>
+              <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-service-card reveal-up delay-1">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Stress Management</h3>
+            <p>Develop healthier boundary-setting protocols and coping strategies to prevent burnout and handle high-pressure environments.</p>
+            <a href="#contact" class="card-link">
+              <span>Explore Pathway</span>
+              <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-service-card reveal-up delay-2">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Self Confidence</h3>
+            <p>Uncover deep-seated self-doubts, dismantle negative inner dialogue, and build unshakeable, authentic self-trust.</p>
+            <a href="#contact" class="card-link">
+              <span>Explore Pathway</span>
+              <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+            </a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-service-card reveal-up delay-3">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Personal Growth</h3>
+            <p>Define clear life visions, cultivate continuous emotional maturity, and step confidently into your highest personal potential.</p>
+            <a href="#contact" class="card-link">
+              <span>Explore Pathway</span>
+              <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process / How It Works Section -->
+    <section id="process" class="process-section">
+      <div class="container">
+        <div class="section-header text-center reveal-up">
+          <span class="section-tag">Structured Growth</span>
+          <h2 class="section-title">A three-step approach to lasting change</h2>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-step reveal-up">
+            <div class="step-badge">01</div>
+            <div class="step-card">
+              <span class="step-tag">Phase One</span>
+              <h3>Discover</h3>
+              <p>Map your internal landscape. We identify core emotional triggers, behavioral patterns, and personal stress responses in a compassionate environment.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step reveal-up delay-1">
+            <div class="step-badge">02</div>
+            <div class="step-card">
+              <span class="step-tag">Phase Two</span>
+              <h3>Understand</h3>
+              <p>Reframe cognitive narratives. We equip you with psychological frameworks and mindfulness practices to digest past patterns constructively.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step reveal-up delay-2">
+            <div class="step-badge">03</div>
+            <div class="step-card">
+              <span class="step-tag">Phase Three</span>
+              <h3>Grow</h3>
+              <p>Embody sustainable habits. Step into daily routines with quiet confidence, self-awareness, and newfound emotional resilience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspirational Quote Banner -->
+    <section class="quote-banner">
+      <div class="banner-bg"></div>
+      <div class="container relative text-center">
+        <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <blockquote class="banner-quote">
+          "Your mind deserves the exact same care, patience, and tenderness you so freely give to everything else you love."
+        </blockquote>
+        <span class="quote-author">— Dr. Elena Rostova, Lead Psychologist</span>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center reveal-up">
+          <span class="section-tag">Client Experiences</span>
+          <h2 class="section-title">Stories of emotional transformation</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card reveal-up">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"MindSpace helped me untangle severe workplace anxiety that had plagued me for years. The structured mindfulness tools changed how I approach every single morning."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Sarah M." class="author-avatar">
+              <div>
+                <h4 class="author-name">Sarah Jenkins</h4>
+                <span class="author-role">Design Director</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card reveal-up delay-1">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The quiet, elegant approach here immediately made me feel safe. I’ve gained a level of self-awareness and patience that my family notices every day."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="David K." class="author-avatar">
+              <div>
+                <h4 class="author-name">David Koster</h4>
+                <span class="author-role">Software Architect</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card reveal-up delay-2">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Finding a platform that feels like a calm sanctuary rather than a cold clinical office was transformative. I cannot recommend MindSpace enough."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150" alt="Maya R." class="author-avatar">
+              <div>
+                <h4 class="author-name">Maya Lin</h4>
+                <span class="author-role">Entrepreneur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container narrow">
+        <div class="section-header text-center reveal-up">
+          <span class="section-tag">Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion-wrapper reveal-up">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>What is MindSpace and who is it for?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                MindSpace is a premium wellness platform created for individuals seeking to manage stress, improve self-worth, and navigate life transitions through guided psychological methodologies and mindfulness support.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How can psychological support drive personal growth?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Psychology provides a structured map of your subconscious habits and emotional triggers. By gaining clarity on your automatic reactions, you gain the power to choose proactive, fulfilling behaviors instead.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Are online video consultations available?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Yes. We offer fully encrypted, confidential 1-on-1 virtual consultations, allowing you to connect with dedicated specialists from the comfort and privacy of your home.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How do I start my journey with MindSpace?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Simply complete the contact form below. Our care team will review your preferences and match you with a tailored consultation strategy within 24 hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="contact-info reveal-left">
+            <span class="section-tag">Begin Today</span>
+            <h2 class="section-title">Take the first mindful step toward inner balance.</h2>
+            <p class="section-desc">We are here to answer your questions and help you find the ideal pathway for your personal growth.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h5>Email Us</h5>
+                  <p>care@mindspace-wellness.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h5>San Francisco Sanctuary</h5>
+                  <p>450 Sutter St, Suite 1200<br>San Francisco, CA 94108</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card reveal-right">
+            <form id="contactForm" class="glass-form" novalidate>
+              <div class="form-group">
+                <label for="name">Your Full Name</label>
+                <input type="text" id="name" required placeholder="e.g. Eleanor Vance">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="eleanor@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="message">How can we support you?</label>
+                <textarea id="message" rows="4" required placeholder="Tell us briefly about what you hope to explore..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </button>
+              
+              <div id="formSuccess" class="form-success-msg">
+                ✓ Thank you. Your message has been received. We will respond within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand">
+            <svg class="brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+              <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+              <circle cx="16" cy="16" r="4" fill="currentColor"/>
+            </svg>
+            <span class="brand-text">MindSpace</span>
+          </a>
+          <p class="footer-tagline">Cultivating inner stillness, mental clarity, and intentional personal growth.</p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#process">Approach</a>
+          </div>
+
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Spotify Podcasts</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MindSpace Wellness Inc. All rights reserved.</p>
+        <p class="footer-credit">Designed with mindfulness and precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+/* style.css */
+
+/* --- CSS VARIABLES & SYSTEM DESIGN --- */
+:root {
+  /* Color Palette */
+  --bg-warm: #F8F5EF;
+  --bg-card: #FFFFFF;
+  --primary-sage: #657A63;
+  --primary-sage-hover: #526450;
+  --accent-beige: #D8C7A8;
+  --accent-beige-light: #ECE3D2;
+  --text-dark: #252525;
+  --text-muted: #626262;
+  --text-light: #8E8E8E;
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --shadow-soft: 0 10px 30px rgba(37, 37, 37, 0.04);
+  --shadow-hover: 0 20px 40px rgba(101, 122, 99, 0.12);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Transitions & Radii */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- RESET & BASE STYLES --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- TYPOGRAPHY UTILITIES --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* --- LAYOUT CONTAINER --- */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.container.narrow {
+  max-width: 800px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.text-center { text-align: center; }
+.relative { position: relative; }
+
+/* --- SECTION HEADERS --- */
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-sage);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* --- BUTTONS & INTERACTION --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s var(--transition-smooth);
+  cursor: pointer;
+  border: none;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-sage);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(101, 122, 99, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-sage-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(101, 122, 99, 0.35);
+}
+
+.btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid rgba(37, 37, 37, 0.15);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(37, 37, 37, 0.04);
+  border-color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 0;
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.navbar.scrolled {
+  padding: 14px 0;
+  background: rgba(248, 245, 239, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(216, 199, 168, 0.3);
+  box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-sage);
+}
+
+.brand-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-sage);
+}
+
+.nav-link.nav-cta {
+  padding: 10px 24px;
+  background-color: var(--primary-sage);
+  color: #FFFFFF;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.nav-cta:hover {
+  background-color: var(--primary-sage-hover);
+  color: #FFFFFF;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 160px 0 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg-blobs .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-beige);
+  top: -100px;
+  right: -50px;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(101, 122, 99, 0.25);
+  bottom: -50px;
+  left: -100px;
+}
+
+.blob-3 {
+  width: 300px;
+  height: 300px;
+  background: #E5D5BC;
+  top: 40%;
+  left: 30%;
+}
+
+.hero-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(101, 122, 99, 0.2);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-sage);
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-sage);
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 36px;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-warm);
+  background-size: cover;
+  background-position: center;
+  margin-left: -12px;
+}
+
+.avatar:first-child { margin-left: 0; }
+
+.trust-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stars {
+  color: #D4A359;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+/* Hero Visual Canvas */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.aura-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.aura-1 {
+  width: 220px;
+  height: 220px;
+  background: rgba(216, 199, 168, 0.5);
+  top: 10%;
+  left: 10%;
+}
+
+.aura-2 {
+  width: 250px;
+  height: 250px;
+  background: rgba(101, 122, 99, 0.3);
+  bottom: 10%;
+  right: 10%;
+}
+
+.silhouette-svg {
+  width: 320px;
+  height: 320px;
+  z-index: 2;
+}
+
+.wave-line {
+  animation: wavePulse 6s ease-in-out infinite alternate;
+}
+
+.wave-line.delay-1 {
+  animation-delay: 2s;
+}
+
+@keyframes wavePulse {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.02); }
+}
+
+/* Floating Glass Cards */
+.glass-float {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: floatAnim 5s ease-in-out infinite alternate;
+}
+
+.float-card-1 {
+  top: 40px;
+  left: 20px;
+}
+
+.float-card-2 {
+  bottom: 50px;
+  right: 20px;
+  animation-delay: 2.5s;
+}
+
+.float-card-3 {
+  bottom: 140px;
+  left: -10px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-sage);
+  animation-delay: 1.2s;
+}
+
+.float-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(101, 122, 99, 0.15);
+  color: var(--primary-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.float-icon svg { width: 20px; height: 20px; }
+.float-icon.alt { background: rgba(216, 199, 168, 0.3); color: #8C754A; }
+
+.float-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.float-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+@keyframes floatAnim {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+  padding: 140px 0;
+}
+
+.about-card-wrapper {
+  position: relative;
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  height: 540px;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-glass-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(37, 37, 37, 0.8), transparent);
+  color: #FFFFFF;
+}
+
+.quote-badge p {
+  color: #F8F5EF;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.quote-mark {
+  font-size: 3rem;
+  line-height: 0;
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent-beige);
+}
+
+.experience-pill {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: var(--bg-card);
+  padding: 20px 28px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--accent-beige-light);
+  text-align: center;
+}
+
+.exp-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-sage);
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.philosophy-grid {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.philosophy-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.phil-icon {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-sage);
+  background: rgba(101, 122, 99, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.philosophy-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+/* --- SERVICES SECTION --- */
+.services-section {
+  padding: 140px 0;
+  background-color: #F3EFE6;
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.glass-service-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  padding: 40px 28px;
+  border-radius: var(--radius-md);
+  transition: all 0.4s var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.glass-service-card:hover {
+  background: #FFFFFF;
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(101, 122, 99, 0.3);
+}
+
+.card-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(101, 122, 99, 0.1);
+  color: var(--primary-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  transition: all 0.3s ease;
+}
+
+.card-icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.glass-service-card:hover .card-icon-box {
+  background: var(--primary-sage);
+  color: #FFFFFF;
+}
+
+.glass-service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.glass-service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-sage);
+  transition: gap 0.3s ease;
+}
+
+.card-link svg { width: 16px; height: 16px; }
+
+.glass-service-card:hover .card-link {
+  gap: 12px;
+}
+
+/* --- PROCESS SECTION --- */
+.process-section {
+  padding: 140px 0;
+}
+
+.timeline-wrapper {
+  position: relative;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--accent-beige);
+  z-index: 1;
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.step-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--bg-warm);
+  border: 2px solid var(--primary-sage);
+  color: var(--primary-sage);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  box-shadow: 0 0 0 8px var(--bg-warm);
+  transition: all 0.3s ease;
+}
+
+.timeline-step:hover .step-badge {
+  background: var(--primary-sage);
+  color: #FFFFFF;
+}
+
+.step-card {
+  background: var(--bg-card);
+  padding: 36px 28px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(216, 199, 168, 0.3);
+}
+
+.step-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-beige);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.step-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+/* --- QUOTE BANNER --- */
+.quote-banner {
+  position: relative;
+  padding: 120px 0;
+  background: var(--primary-sage);
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(216, 199, 168, 0.2) 0%, transparent 70%);
+}
+
+.quote-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent-beige);
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
+
+.banner-quote {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1.35;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  font-weight: 400;
+}
+
+.quote-author {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--accent-beige);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials-section {
+  padding: 140px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  margin: 20px 0 32px;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.author-role {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+  padding: 140px 0;
+  background-color: #F3EFE6;
+}
+
+.accordion-wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-item {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(216, 199, 168, 0.4);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 24px 32px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.accordion-header:hover {
+  color: var(--primary-sage);
+}
+
+.accordion-icon {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.4s var(--transition-smooth);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--transition-smooth);
+}
+
+.accordion-body {
+  padding: 0 32px 28px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+  padding: 140px 0;
+}
+
+.contact-details {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(101, 122, 99, 0.1);
+  color: var(--primary-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg { width: 22px; height: 22px; }
+
+.contact-item h5 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.glass-form {
+  background: var(--bg-card);
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid rgba(216, 199, 168, 0.4);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(37, 37, 37, 0.15);
+  background: var(--bg-warm);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-sage);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(101, 122, 99, 0.12);
+}
+
+.form-success-msg {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(101, 122, 99, 0.15);
+  color: var(--primary-sage);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #1C221B;
+  color: #E2DDD5;
+  padding: 100px 0 40px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand .brand {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.footer-tagline {
+  max-width: 320px;
+  font-size: 0.95rem;
+  color: #A39E93;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-sans);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #A39E93;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent-beige);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  font-size: 0.85rem;
+  color: #7A756C;
+}
+
+/* --- ANIMATION UTILITIES FOR SCROLL REVEAL --- */
+.reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  transition: all 0.8s var(--transition-smooth);
+}
+
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+
+.reveal-up.active, .reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin: 0 auto 36px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-line { display: none; }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title { font-size: 2.2rem; }
+  .hero-title { font-size: 2.8rem; }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--bg-warm);
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.4s var(--transition-smooth);
+  }
+
+  .nav-links.mobile-active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-form {
+    padding: 28px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  // --- 1. NAVBAR SCROLL EFFECT ---
+  const navbar = document.getElementById('navbar');
+  
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  // --- 2. MOBILE NAVIGATION MENU ---
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const navLinksItems = document.querySelectorAll('.nav-link');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-active');
+    hamburger.classList.toggle('is-active');
+  });
+
+  navLinksItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-active');
+      hamburger.classList.remove('is-active');
+    });
+  });
+
+  // --- 3. ACCORDION INTERACTION ---
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const accordionItem = header.parentElement;
+      const accordionContent = accordionItem.querySelector('.accordion-content');
+      const isOpen = accordionItem.classList.contains('active');
+
+      // Close all active items
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.accordion-content').style.maxHeight = null;
+      });
+
+      // Toggle clicked item if it wasn't open
+      if (!isOpen) {
+        accordionItem.classList.add('active');
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // --- 4. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) ---
+  const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); // Reveal once
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // --- 5. CONTACT FORM HANDLING ---
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic client-side validation check
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && email && message) {
+        // Simulate immediate response feedback
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.querySelector('span').textContent = 'Sending...';
+
+        setTimeout(() => {
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.querySelector('span').textContent = 'Send Message';
+          
+          formSuccess.style.display = 'block';
+
+          setTimeout(() => {
+            formSuccess.style.display = 'none';
+          }, 6000);
+        }, 1200);
+      }
+    });
+  }
+
+  // --- 6. NAV LINK ACTIVE STATE ON SCROLL ---
+  const sections = document.querySelectorAll('section[id]');
+
+  const highlightNavOnScroll = () => {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        document.querySelectorAll('.nav-links a[href*=' + sectionId + ']').forEach(link => {
+          link.classList.add('active');
+        });
+      } else {
+        document.querySelectorAll('.nav-links a[href*=' + sectionId + ']').forEach(link => {
+          link.classList.remove('active');
+        });
+      }
+    });
+  };
+
+  window.addEventListener('scroll', highlightNavOnScroll);
+});
