@@ -1,3184 +1,1302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Serenity Psychology — A calm, evidence-based practice for therapy, counseling, and mental wellness." />
-  <title>Serenity — Psychology & Mental Wellness</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MindSpace helps you understand yourself, manage stress, and build emotional balance through mindful psychological support.">
+  <title>MindSpace — Personal Growth & Mental Wellness</title>
+  
+  <!-- Typography: Playfair Display for headings, Inter for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body>
 
-  <!-- Page Loader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-mark">Serenity</div>
-  </div>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">MindSpace</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Serenity home">
-        <span class="logo-mark">Serenity</span>
-        <span class="logo-dot"></span>
-      </a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#approach" class="nav-item">Approach</a>
+        <a href="#testimonials" class="nav-item">Testimonials</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="#contact" class="nav-item btn-nav">Contact</a>
       </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2000&q=80" alt="" loading="eager" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container hero-content">
-      <span class="eyebrow reveal fade-up">Psychology & Mental Wellness</span>
-      <h1 class="hero-title reveal fade-up delay-1">A quieter mind,<br/>a fuller life.</h1>
-      <p class="hero-sub reveal fade-up delay-2">
-        Thoughtful, evidence-based therapy in a calm, confidential space. We help you understand yourself more deeply and move forward with clarity.
-      </p>
-      <div class="hero-cta reveal fade-up delay-3">
-        <a href="about.html" class="btn btn-primary">Learn More</a>
-        <a href="contact.html" class="btn btn-ghost">Contact</a>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
       </div>
-    </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="section intro">
-    <div class="container intro-grid">
-      <div class="intro-left reveal fade-right">
-        <span class="eyebrow">Welcome</span>
-        <h2 class="section-title">Therapy that feels <em>human</em>.</h2>
-      </div>
-      <div class="intro-right reveal fade-left">
-        <p class="lede">
-          At Serenity, we believe healing begins in a space of genuine connection. Our practice blends warmth with clinical rigor — offering a place where you can speak freely, feel heard, and grow at your own pace.
-        </p>
-        <p>
-          Whether you're navigating anxiety, grief, relationships, or simply the weight of modern life, we meet you where you are — with patience, discretion, and care.
-        </p>
-        <a href="about.html" class="link-arrow">About our practice →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Preview -->
-  <section class="section services-preview">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">What we offer</span>
-        <h2 class="section-title">Services designed around you.</h2>
-        <p class="section-sub">Every journey is different. Our care adapts to yours.</p>
-      </div>
-      <div class="services-grid">
-        <article class="service-card reveal fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <span class="badge">Mindful Psychological Support</span>
+          <h1>Your journey to a calmer mind starts here.</h1>
+          <p>MindSpace helps you understand yourself, manage stress, and build emotional balance through mindful psychological support.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
           </div>
-          <h3>Individual Therapy</h3>
-          <p>One-to-one sessions tailored to your inner world, goals, and pace of growth.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Couples Counseling</h3>
-          <p>Rebuild trust, deepen communication, and rediscover each other with guidance.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-2">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-          </div>
-          <h3>Anxiety Support</h3>
-          <p>Gentle, evidence-based tools to quiet the noise and reclaim your calm.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-3">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
-          </div>
-          <h3>Depression Support</h3>
-          <p>Compassionate care that helps you find light, meaning, and momentum again.</p>
-        </article>
-        <article class="service-card reveal fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>Stress Management</h3>
-          <p>Practical frameworks to restore balance in work, life, and relationships.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M7 14h4"/></svg>
-          </div>
-          <h3>Online Sessions</h3>
-          <p>Secure, confidential video sessions from the comfort of your own space.</p>
-        </article>
-      </div>
-      <div class="section-foot reveal fade-up">
-        <a href="services.html" class="btn btn-outline">View all services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="section why-us">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Why Serenity</span>
-        <h2 class="section-title">Care built on trust.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal fade-up">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <h3>Confidential</h3>
-          <p>Your story stays with us. Strict privacy, always.</p>
         </div>
-        <div class="why-card reveal fade-up delay-1">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.7 0 3.3.5 4.7 1.3"/></svg></div>
-          <h3>Evidence-Based</h3>
-          <p>Methods grounded in research, refined through practice.</p>
-        </div>
-        <div class="why-card reveal fade-up delay-2">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <h3>Personalized</h3>
-          <p>Care shaped entirely around your needs and rhythm.</p>
-        </div>
-        <div class="why-card reveal fade-up delay-3">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12h4l3 9 4-18 3 9h4"/></svg></div>
-          <h3>Flexible Sessions</h3>
-          <p>In-person or online, mornings or evenings — your choice.</p>
+
+        <div class="hero-illustration reveal">
+          <div class="glass-card illustration-card">
+            <div class="floating-element float-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <span>Emotional Clarity</span>
+            </div>
+            <div class="floating-element float-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+              <span>Inner Balance</span>
+            </div>
+            <div class="abstract-art">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Stats -->
-  <section class="section stats">
-    <div class="container stats-grid">
-      <div class="stat reveal fade-up">
-        <span class="stat-num" data-count="12">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Years of practice</span>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container grid-2">
+        <div class="about-image-wrapper reveal">
+          <div class="glass-card about-card">
+            <div class="quote-graphic">
+              <span>Mindful Healing</span>
+            </div>
+            <div class="pill-badge">Self-Discovery</div>
+            <div class="pill-badge pill-2">Awareness</div>
+          </div>
+        </div>
+        
+        <div class="about-content reveal">
+          <span class="section-subtitle">Our Philosophy</span>
+          <h2>Understanding yourself is the first step to growth.</h2>
+          <p>At MindSpace, we believe that emotional wellness is not a destination, but a continuous practice of self-discovery and acceptance.</p>
+          
+          <ul class="philosophy-list">
+            <li>
+              <div class="list-icon">✦</div>
+              <div>
+                <strong>Emotional Awareness</strong>
+                <p>Recognize and honor your feelings without judgment.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">✦</div>
+              <div>
+                <strong>Self-Development</strong>
+                <p>Cultivate tools to navigate life’s complexities with grace.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">✦</div>
+              <div>
+                <strong>Mental Clarity</strong>
+                <p>Clear space in your mind for purpose, creativity, and calm.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="stat reveal fade-up delay-1">
-        <span class="stat-num" data-count="850">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Clients supported</span>
-      </div>
-      <div class="stat reveal fade-up delay-2">
-        <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
-        <span class="stat-label">Client satisfaction</span>
-      </div>
-      <div class="stat reveal fade-up delay-3">
-        <span class="stat-num" data-count="24">0</span><span class="stat-suffix">/7</span>
-        <span class="stat-label">Online availability</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Resources Preview -->
-  <section class="section resources-preview">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Insights</span>
-        <h2 class="section-title">Resources for your wellbeing.</h2>
-      </div>
-      <div class="resources-grid">
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80" alt="Calm lake at dawn" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Mindfulness · July 18, 2026</span>
-            <h3>The quiet art of slowing down</h3>
-            <p>Why stillness is not emptiness — and how small pauses reshape the nervous system.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80" alt="Hands holding a warm cup" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Anxiety · July 10, 2026</span>
-            <h3>Understanding high-functioning anxiety</h3>
-            <p>When success masks struggle: recognizing the signs and finding sustainable relief.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80" alt="Sunlight through trees" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Relationships · June 29, 2026</span>
-            <h3>Repair, not perfection</h3>
-            <p>How small moments of repair build stronger, more resilient relationships over time.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-      </div>
-      <div class="section-foot reveal fade-up">
-        <a href="resources.html" class="btn btn-outline">All resources</a>
-      </div>
-    </div>
-  </section>
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header reveal text-center">
+          <span class="section-subtitle">How We Help</span>
+          <h2>Tailored Wellness Support</h2>
+        </div>
 
-  <!-- CTA -->
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Begin with a conversation.</h2>
-      <p>The first step is often the hardest. We're here when you're ready.</p>
-      <a href="contact.html" class="btn btn-primary">Book a consultation</a>
-    </div>
-  </section>
+        <div class="grid-4">
+          <div class="glass-card service-card reveal">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5-2 4-2 4 2 4 2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
+            </div>
+            <h3>Anxiety Support</h3>
+            <p>Learn techniques to manage anxious thoughts, quiet inner overwhelm, and regain physical ease.</p>
+          </div>
+
+          <div class="glass-card service-card reveal">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Stress Management</h3>
+            <p>Develop healthier, adaptive ways to navigate everyday pressures and protect your inner peace.</p>
+          </div>
+
+          <div class="glass-card service-card reveal">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Self Confidence</h3>
+            <p>Build stronger self-awareness, dismantle self-doubt, and cultivate enduring inner strength.</p>
+          </div>
+
+          <div class="glass-card service-card reveal">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Personal Growth</h3>
+            <p>Create meaningful positive changes, unlock your potential, and live with renewed intention.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal text-center">
+          <span class="section-subtitle">Our Process</span>
+          <h2>A Mindful Pathway to Balance</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="glass-card timeline-card reveal">
+            <span class="step-num">01</span>
+            <h3>Discover</h3>
+            <p>Understand your emotions, uncover sub-conscious patterns, and identify core needs in a safe space.</p>
+          </div>
+
+          <div class="glass-card timeline-card reveal">
+            <span class="step-num">02</span>
+            <h3>Understand</h3>
+            <p>Develop deep awareness and adopt healthier cognitive patterns tailored to your life context.</p>
+          </div>
+
+          <div class="glass-card timeline-card reveal">
+            <span class="step-num">03</span>
+            <h3>Grow</h3>
+            <p>Implement sustainable daily practices to build a resilient, balanced, and confident life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="quote-section">
+      <div class="container reveal text-center">
+        <blockquote class="quote-text">
+          "Your mind deserves the same care you give to everything you love."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header reveal text-center">
+          <span class="section-subtitle">Client Experiences</span>
+          <h2>Stories of Growth</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="glass-card testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"MindSpace helped me understand myself better and create healthier habits. The guidance was compassionate and genuinely life-changing."</p>
+            <div class="author-info">
+              <div class="avatar">EA</div>
+              <div>
+                <strong>Elena A.</strong>
+                <span>Mindfulness Member</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"I was struggling with overwhelming work anxiety. Working through their approach gave me my calm back."</p>
+            <div class="author-info">
+              <div class="avatar">MK</div>
+              <div>
+                <strong>Marcus K.</strong>
+                <span>Self-Growth Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"An extraordinarily calm, supportive space. The focus on self-compassion turned everything around for me."</p>
+            <div class="author-info">
+              <div class="avatar">SL</div>
+              <div>
+                <strong>Sophia L.</strong>
+                <span>Personal Growth Client</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding">
+      <div class="container narrow-container">
+        <div class="section-header reveal text-center">
+          <span class="section-subtitle">Questions & Answers</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item reveal">
+            <button class="accordion-header" aria-expanded="false">
+              <span>What is MindSpace?</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>MindSpace is a modern psychological wellness platform designed to guide individuals through self-growth, stress reduction, and emotional balance using evidence-informed, mindful approaches.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How can psychology support personal growth?</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Psychology provides structured insight into habits, thought patterns, and emotional triggers. By gaining clarity on why you think and feel the way you do, you can build deliberate, fulfilling habits.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Is online support available?</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes. We offer fully remote video sessions, self-paced guided modules, and digital reflection work so you can prioritize your mind from anywhere.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How do I start my journey?</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Simply reach out through our contact form below. We’ll schedule a brief, comfortable introductory conversation to align on your personal goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-alt">
+      <div class="container grid-2">
+        <div class="contact-info reveal">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2>Begin your path toward emotional clarity today.</h2>
+          <p>Have questions or ready to begin? Send us a message and our welcoming team will reach out within 24 hours.</p>
+          
+          <div class="info-items">
+            <div class="info-card">
+              <strong>Email Us</strong>
+              <p>hello@mindspace.com</p>
+            </div>
+            <div class="info-card">
+              <strong>Visit Us</strong>
+              <p>108 Serenity Way, Suite 400<br>San Francisco, CA 94103</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-wrapper reveal">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="How can we support you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-        <p class="footer-tag">Psychology & Mental Wellness</p>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">MindSpace</a>
+        <p>Cultivating peace, self-awareness, and emotional balance.</p>
       </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li>hello@serenity.care</li>
-          <li>+1 (415) 555-0142</li>
-          <li>221 Linden Ave, San Francisco</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
         <a href="#">Privacy Policy</a>
       </div>
     </div>
-  </footer>
 
-  <!-- Back to top -->
-  <button class="back-top" id="backTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Meet Dr. Elena Marsh — our approach, values, education, and experience." />
-  <title>About — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="about">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">About</span>
-      <h1 class="page-title reveal fade-up delay-1">A practice shaped by <em>care</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Grounded in science, guided by warmth.</p>
-    </div>
-  </section>
-
-  <!-- Portrait + Intro -->
-  <section class="section about-intro">
-    <div class="container about-grid">
-      <div class="about-portrait reveal fade-right">
-        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80" alt="Dr. Elena Marsh, clinical psychologist" loading="lazy"/>
-      </div>
-      <div class="about-text reveal fade-left">
-        <span class="eyebrow">Meet the therapist</span>
-        <h2 class="section-title">Dr. Elena Marsh, PhD</h2>
-        <p class="lede">
-          For over a decade, I've walked alongside people through some of life's most delicate transitions — grief, anxiety, identity, love, loss, and renewal.
-        </p>
-        <p>
-          My approach is integrative: drawing from cognitive-behavioral, psychodynamic, and mindfulness-based frameworks to meet each person where they are. The room we share — whether physical or virtual — is a space of quiet honesty, free from judgment.
-        </p>
-        <p>
-          I believe therapy is not about fixing. It's about understanding. And from understanding, something gentler and more lasting begins to grow.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission / Values -->
-  <section class="section mission">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Our foundation</span>
-        <h2 class="section-title">Mission & values.</h2>
-      </div>
-      <div class="mission-grid">
-        <div class="mission-card reveal fade-up">
-          <h3>Mission</h3>
-          <p>To offer thoughtful, evidence-based psychological care in a space that feels safe, dignified, and deeply human.</p>
-        </div>
-        <div class="mission-card reveal fade-up delay-1">
-          <h3>Compassion</h3>
-          <p>Every story is met with warmth, patience, and genuine presence.</p>
-        </div>
-        <div class="mission-card reveal fade-up delay-2">
-          <h3>Integrity</h3>
-          <p>Confidentiality, transparency, and ethical practice are non-negotiable.</p>
-        </div>
-        <div class="mission-card reveal fade-up delay-3">
-          <h3>Growth</h3>
-          <p>We believe change is always possible — at the right pace, with the right support.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Timeline -->
-  <section class="section timeline-section">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Journey</span>
-        <h2 class="section-title">Education & experience.</h2>
-      </div>
-      <ol class="timeline">
-        <li class="timeline-item reveal fade-up">
-          <div class="timeline-year">2024</div>
-          <div class="timeline-content">
-            <h3>Advanced Certification in Trauma-Informed Therapy</h3>
-            <p>International Institute for Trauma & Recovery.</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal fade-up delay-1">
-          <div class="timeline-year">2018</div>
-          <div class="timeline-content">
-            <h3>Founded Serenity Psychology</h3>
-            <p>Opened a private practice focused on integrative, client-centered care.</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal fade-up delay-2">
-          <div class="timeline-year">2014</div>
-          <div class="timeline-content">
-            <h3>PhD in Clinical Psychology</h3>
-            <p>Stanford University — research on anxiety and emotional regulation.</p>
-          </div>
-        </li>
-        <li class="timeline-item reveal fade-up delay-3">
-          <div class="timeline-year">2011</div>
-          <div class="timeline-content">
-            <h3>BA in Psychology, Summa Cum Laude</h3>
-            <p>University of California, Berkeley.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Let's begin when you're ready.</h2>
-      <p>A confidential conversation is the first step.</p>
-      <a href="contact.html" class="btn btn-primary">Get in touch</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-        <p class="footer-tag">Psychology & Mental Wellness</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Therapy services at Serenity — individual, couples, anxiety, depression, stress, and online sessions." />
-  <title>Services — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="services">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link active">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Services</span>
-      <h1 class="page-title reveal fade-up delay-1">Care, tailored to <em>you</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Every service is shaped around your pace, your story, and your goals.</p>
-    </div>
-  </section>
-
-  <section class="section services-full">
-    <div class="container">
-      <div class="services-grid services-grid-lg">
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <h3>Individual Therapy</h3>
-          <p>A private, unhurried space to explore what matters most. Sessions are 50 minutes and scheduled weekly or bi-weekly, depending on your needs.</p>
-          <ul class="service-points">
-            <li>Self-understanding & clarity</li>
-            <li>Emotional regulation</li>
-            <li>Life transitions</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <h3>Couples Counseling</h3>
-          <p>Rebuild trust, restore dialogue, and rediscover each other. A neutral, compassionate space to navigate the hard conversations.</p>
-          <ul class="service-points">
-            <li>Communication repair</li>
-            <li>Conflict resolution</li>
-            <li>Rebuilding intimacy</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-          <h3>Anxiety Support</h3>
-          <p>Gentle, structured approaches to quiet the nervous system. Learn tools that work — in the room and in real life.</p>
-          <ul class="service-points">
-            <li>Panic & generalized anxiety</li>
-            <li>Social anxiety</li>
-            <li>Mindfulness-based techniques</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div>
-          <h3>Depression Support</h3>
-          <p>Compassionate, evidence-based care to help you find your footing again — gently, sustainably, at your pace.</p>
-          <ul class="service-points">
-            <li>Mood & motivation</li>
-            <li>Meaning & purpose</li>
-            <li>Behavioral activation</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-          <h3>Stress Management</h3>
-          <p>Practical, sustainable frameworks to restore balance between work, relationships, and rest.</p>
-          <ul class="service-points">
-            <li>Burnout recovery</li>
-            <li>Boundaries & priorities</li>
-            <li>Sleep & rhythm</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M7 14h4"/></svg></div>
-          <h3>Online Sessions</h3>
-          <p>Secure, HIPAA-compliant video sessions — with the same depth and warmth as in-person care.</p>
-          <ul class="service-points">
-            <li>End-to-end encrypted</li>
-            <li>Flexible scheduling</li>
-            <li>Anywhere, anytime</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Not sure where to start?</h2>
-      <p>A short, free consultation can help us find the right path together.</p>
-      <a href="contact.html" class="btn btn-primary">Book a consultation</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Articles, guides, and reflections on mental wellness from Serenity Psychology." />
-  <title>Resources — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="resources">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link active">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Resources</span>
-      <h1 class="page-title reveal fade-up delay-1">Reading, reflecting, <em>growing</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Thoughtful writing on the inner life — from our practice to yours.</p>
-    </div>
-  </section>
-
-  <section class="section resources-full">
-    <div class="container">
-      <div class="resources-grid resources-grid-lg">
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Mindfulness · July 18, 2026</span>
-            <h3>The quiet art of slowing down</h3>
-            <p>Why stillness is not emptiness — and how small pauses reshape the nervous system over time.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Anxiety · July 10, 2026</span>
-            <h3>Understanding high-functioning anxiety</h3>
-            <p>When success masks struggle: recognizing the signs and finding sustainable relief.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Relationships · June 29, 2026</span>
-            <h3>Repair, not perfection</h3>
-            <p>How small moments of repair build stronger, more resilient relationships over time.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Self-care · June 15, 2026</span>
-            <h3>The myth of balance</h3>
-            <p>Why rhythm matters more than balance — and how to find yours.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Grief · June 02, 2026</span>
-            <h3>Grief is not a line</h3>
-            <p>On the non-linear nature of loss, and the gentle return of feeling.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Sleep · May 20, 2026</span>
-            <h3>Rest as resistance</h3>
-            <p>Why sleep is one of the most radical acts of self-care in a restless world.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Want more in-depth guidance?</h2>
-      <p>Our practice offers personalized resources as part of every therapy plan.</p>
-      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Frequently asked questions about therapy at Serenity Psychology." />
-  <title>FAQ — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="faq">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">FAQ</span>
-      <h1 class="page-title reveal fade-up delay-1">Questions, <em>answered</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Everything you may wonder before your first session.</p>
-    </div>
-  </section>
-
-  <section class="section faq-section">
-    <div class="container faq-wrap">
-      <div class="faq-list">
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>How do I know if therapy is right for me?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>If you're feeling stuck, overwhelmed, or simply curious about yourself, therapy can help. You don't need a crisis to begin — many people start with a quiet sense that something could feel better.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>What happens in the first session?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>The first session is mostly listening. We'll talk about what brought you here, what you're hoping for, and answer any questions you have. There's no pressure to share more than feels right.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>How long does therapy usually last?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>It depends entirely on you. Some clients find clarity in 6–8 sessions; others work with us for a year or more. We review progress together regularly.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>Is everything I share confidential?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Absolutely. Confidentiality is the foundation of our work. There are rare, legally required exceptions (such as imminent risk of harm), which we'll explain clearly at the start.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>Do you offer online sessions?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Yes. Online sessions are conducted through a secure, HIPAA-compliant video platform and offer the same depth and warmth as in-person meetings.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>How much does a session cost?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Standard sessions are $180 for 50 minutes. We offer a limited number of reduced-fee slots and can provide superbills for out-of-network insurance reimbursement.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>Can I switch between in-person and online?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Of course. Many clients move between formats depending on travel, schedule, or simply what feels right that week. Flexibility is built in.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Still wondering something?</h2>
-      <p>We're happy to answer anything — no commitment required.</p>
-      <a href="contact.html" class="btn btn-primary">Contact us</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Serenity Psychology — book a consultation or ask a question." />
-  <title>Contact — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="contact">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Contact</span>
-      <h1 class="page-title reveal fade-up delay-1">Let's <em>talk</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Reach out any time — we respond within one business day.</p>
-    </div>
-  </section>
-
-  <section class="section contact-section">
-    <div class="container contact-grid">
-      <!-- Info -->
-      <aside class="contact-info reveal fade-right">
-        <h2>Get in touch</h2>
-        <p>We're here to answer questions, schedule a first session, or simply listen.</p>
-
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-          <div>
-            <span>Email</span>
-            <a href="mailto:hello@serenity.care">hello@serenity.care</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <div>
-            <span>Phone</span>
-            <a href="tel:+14155550142">+1 (415) 555-0142</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div>
-            <span>Location</span>
-            <span>221 Linden Ave, San Francisco, CA</span>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <div>
-            <span>Office hours</span>
-            <span>Mon – Fri · 9:00 – 19:00<br/>Sat · 10:00 – 14:00</span>
-          </div>
-        </div>
-
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.097760983339!2d-122.4194155!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807c7d2b5a55%3A0x5db6b9d8e7d4e4f0!2sSan+Francisco%2
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Serenity Psychology — A calm, evidence-based practice for therapy, counseling, and mental wellness." />
-  <title>Serenity — Psychology & Mental Wellness</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="home">
-
-  <!-- Page Loader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-mark">Serenity</div>
-  </div>
-
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Serenity home">
-        <span class="logo-mark">Serenity</span>
-        <span class="logo-dot"></span>
-      </a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2000&q=80" alt="" loading="eager" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container hero-content">
-      <span class="eyebrow reveal fade-up">Psychology & Mental Wellness</span>
-      <h1 class="hero-title reveal fade-up delay-1">A quieter mind,<br/>a fuller life.</h1>
-      <p class="hero-sub reveal fade-up delay-2">
-        Thoughtful, evidence-based therapy in a calm, confidential space. We help you understand yourself more deeply and move forward with clarity.
-      </p>
-      <div class="hero-cta reveal fade-up delay-3">
-        <a href="about.html" class="btn btn-primary">Learn More</a>
-        <a href="contact.html" class="btn btn-ghost">Contact</a>
-      </div>
-    </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="section intro">
-    <div class="container intro-grid">
-      <div class="intro-left reveal fade-right">
-        <span class="eyebrow">Welcome</span>
-        <h2 class="section-title">Therapy that feels <em>human</em>.</h2>
-      </div>
-      <div class="intro-right reveal fade-left">
-        <p class="lede">
-          At Serenity, we believe healing begins in a space of genuine connection. Our practice blends warmth with clinical rigor — offering a place where you can speak freely, feel heard, and grow at your own pace.
-        </p>
-        <p>
-          Whether you're navigating anxiety, grief, relationships, or simply the weight of modern life, we meet you where you are — with patience, discretion, and care.
-        </p>
-        <a href="about.html" class="link-arrow">About our practice →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Preview -->
-  <section class="section services-preview">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">What we offer</span>
-        <h2 class="section-title">Services designed around you.</h2>
-        <p class="section-sub">Every journey is different. Our care adapts to yours.</p>
-      </div>
-      <div class="services-grid">
-        <article class="service-card reveal fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h3>Individual Therapy</h3>
-          <p>One-to-one sessions tailored to your inner world, goals, and pace of growth.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Couples Counseling</h3>
-          <p>Rebuild trust, deepen communication, and rediscover each other with guidance.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-2">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-          </div>
-          <h3>Anxiety Support</h3>
-          <p>Gentle, evidence-based tools to quiet the noise and reclaim your calm.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-3">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
-          </div>
-          <h3>Depression Support</h3>
-          <p>Compassionate care that helps you find light, meaning, and momentum again.</p>
-        </article>
-        <article class="service-card reveal fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>Stress Management</h3>
-          <p>Practical frameworks to restore balance in work, life, and relationships.</p>
-        </article>
-        <article class="service-card reveal fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M7 14h4"/></svg>
-          </div>
-          <h3>Online Sessions</h3>
-          <p>Secure, confidential video sessions from the comfort of your own space.</p>
-        </article>
-      </div>
-      <div class="section-foot reveal fade-up">
-        <a href="services.html" class="btn btn-outline">View all services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="section why-us">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Why Serenity</span>
-        <h2 class="section-title">Care built on trust.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal fade-up">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <h3>Confidential</h3>
-          <p>Your story stays with us. Strict privacy, always.</p>
-        </div>
-        <div class="why-card reveal fade-up delay-1">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.7 0 3.3.5 4.7 1.3"/></svg></div>
-          <h3>Evidence-Based</h3>
-          <p>Methods grounded in research, refined through practice.</p>
-        </div>
-        <div class="why-card reveal fade-up delay-2">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <h3>Personalized</h3>
-          <p>Care shaped entirely around your needs and rhythm.</p>
-        </div>
-        <div class="why-card reveal fade-up delay-3">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12h4l3 9 4-18 3 9h4"/></svg></div>
-          <h3>Flexible Sessions</h3>
-          <p>In-person or online, mornings or evenings — your choice.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="section stats">
-    <div class="container stats-grid">
-      <div class="stat reveal fade-up">
-        <span class="stat-num" data-count="12">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Years of practice</span>
-      </div>
-      <div class="stat reveal fade-up delay-1">
-        <span class="stat-num" data-count="850">0</span><span class="stat-suffix">+</span>
-        <span class="stat-label">Clients supported</span>
-      </div>
-      <div class="stat reveal fade-up delay-2">
-        <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
-        <span class="stat-label">Client satisfaction</span>
-      </div>
-      <div class="stat reveal fade-up delay-3">
-        <span class="stat-num" data-count="24">0</span><span class="stat-suffix">/7</span>
-        <span class="stat-label">Online availability</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resources Preview -->
-  <section class="section resources-preview">
-    <div class="container">
-      <div class="section-head reveal fade-up">
-        <span class="eyebrow">Insights</span>
-        <h2 class="section-title">Resources for your wellbeing.</h2>
-      </div>
-      <div class="resources-grid">
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80" alt="Calm lake at dawn" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Mindfulness · July 18, 2026</span>
-            <h3>The quiet art of slowing down</h3>
-            <p>Why stillness is not emptiness — and how small pauses reshape the nervous system.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80" alt="Hands holding a warm cup" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Anxiety · July 10, 2026</span>
-            <h3>Understanding high-functioning anxiety</h3>
-            <p>When success masks struggle: recognizing the signs and finding sustainable relief.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80" alt="Sunlight through trees" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Relationships · June 29, 2026</span>
-            <h3>Repair, not perfection</h3>
-            <p>How small moments of repair build stronger, more resilient relationships over time.</p>
-            <a href="resources.html" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-      </div>
-      <div class="section-foot reveal fade-up">
-        <a href="resources.html" class="btn btn-outline">All resources</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Begin with a conversation.</h2>
-      <p>The first step is often the hardest. We're here when you're ready.</p>
-      <a href="contact.html" class="btn btn-primary">Book a consultation</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-        <p class="footer-tag">Psychology & Mental Wellness</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li>hello@serenity.care</li>
-          <li>+1 (415) 555-0142</li>
-          <li>221 Linden Ave, San Francisco</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span>
-        <a href="#">Privacy Policy</a>
-      </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 MindSpace. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Back to top -->
-  <button class="back-top" id="backTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Therapy services at Serenity — individual, couples, anxiety, depression, stress, and online sessions." />
-  <title>Services — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="services">
+/* ==========================================================================
+   MINDSPACE - MODERN PREMIUM STYLESHEET
+   ========================================================================== */
 
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link active">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Services</span>
-      <h1 class="page-title reveal fade-up delay-1">Care, tailored to <em>you</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Every service is shaped around your pace, your story, and your goals.</p>
-    </div>
-  </section>
-
-  <section class="section services-full">
-    <div class="container">
-      <div class="services-grid services-grid-lg">
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <h3>Individual Therapy</h3>
-          <p>A private, unhurried space to explore what matters most. Sessions are 50 minutes and scheduled weekly or bi-weekly, depending on your needs.</p>
-          <ul class="service-points">
-            <li>Self-understanding & clarity</li>
-            <li>Emotional regulation</li>
-            <li>Life transitions</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <h3>Couples Counseling</h3>
-          <p>Rebuild trust, restore dialogue, and rediscover each other. A neutral, compassionate space to navigate the hard conversations.</p>
-          <ul class="service-points">
-            <li>Communication repair</li>
-            <li>Conflict resolution</li>
-            <li>Rebuilding intimacy</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-          <h3>Anxiety Support</h3>
-          <p>Gentle, structured approaches to quiet the nervous system. Learn tools that work — in the room and in real life.</p>
-          <ul class="service-points">
-            <li>Panic & generalized anxiety</li>
-            <li>Social anxiety</li>
-            <li>Mindfulness-based techniques</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div>
-          <h3>Depression Support</h3>
-          <p>Compassionate, evidence-based care to help you find your footing again — gently, sustainably, at your pace.</p>
-          <ul class="service-points">
-            <li>Mood & motivation</li>
-            <li>Meaning & purpose</li>
-            <li>Behavioral activation</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-          <h3>Stress Management</h3>
-          <p>Practical, sustainable frameworks to restore balance between work, relationships, and rest.</p>
-          <ul class="service-points">
-            <li>Burnout recovery</li>
-            <li>Boundaries & priorities</li>
-            <li>Sleep & rhythm</li>
-          </ul>
-        </article>
-        <article class="service-card service-card-lg reveal fade-up delay-1">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M7 14h4"/></svg></div>
-          <h3>Online Sessions</h3>
-          <p>Secure, HIPAA-compliant video sessions — with the same depth and warmth as in-person care.</p>
-          <ul class="service-points">
-            <li>End-to-end encrypted</li>
-            <li>Flexible scheduling</li>
-            <li>Anywhere, anytime</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Not sure where to start?</h2>
-      <p>A short, free consultation can help us find the right path together.</p>
-      <a href="contact.html" class="btn btn-primary">Book a consultation</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Articles, guides, and reflections on mental wellness from Serenity Psychology." />
-  <title>Resources — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="resources">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link active">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Resources</span>
-      <h1 class="page-title reveal fade-up delay-1">Reading, reflecting, <em>growing</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Thoughtful writing on the inner life — from our practice to yours.</p>
-    </div>
-  </section>
-
-  <section class="section resources-full">
-    <div class="container">
-      <div class="resources-grid resources-grid-lg">
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Mindfulness · July 18, 2026</span>
-            <h3>The quiet art of slowing down</h3>
-            <p>Why stillness is not emptiness — and how small pauses reshape the nervous system over time.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Anxiety · July 10, 2026</span>
-            <h3>Understanding high-functioning anxiety</h3>
-            <p>When success masks struggle: recognizing the signs and finding sustainable relief.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Relationships · June 29, 2026</span>
-            <h3>Repair, not perfection</h3>
-            <p>How small moments of repair build stronger, more resilient relationships over time.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Self-care · June 15, 2026</span>
-            <h3>The myth of balance</h3>
-            <p>Why rhythm matters more than balance — and how to find yours.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-1">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Grief · June 02, 2026</span>
-            <h3>Grief is not a line</h3>
-            <p>On the non-linear nature of loss, and the gentle return of feeling.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-        <article class="blog-card reveal fade-up delay-2">
-          <div class="blog-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"/></div>
-          <div class="blog-body">
-            <span class="blog-meta">Sleep · May 20, 2026</span>
-            <h3>Rest as resistance</h3>
-            <p>Why sleep is one of the most radical acts of self-care in a restless world.</p>
-            <a href="#" class="link-arrow">Read more →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Want more in-depth guidance?</h2>
-      <p>Our practice offers personalized resources as part of every therapy plan.</p>
-      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Frequently asked questions about therapy at Serenity Psychology." />
-  <title>FAQ — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="faq">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">FAQ</span>
-      <h1 class="page-title reveal fade-up delay-1">Questions, <em>answered</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Everything you may wonder before your first session.</p>
-    </div>
-  </section>
-
-  <section class="section faq-section">
-    <div class="container faq-wrap">
-      <div class="faq-list">
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>How do I know if therapy is right for me?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>If you're feeling stuck, overwhelmed, or simply curious about yourself, therapy can help. You don't need a crisis to begin — many people start with a quiet sense that something could feel better.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>What happens in the first session?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>The first session is mostly listening. We'll talk about what brought you here, what you're hoping for, and answer any questions you have. There's no pressure to share more than feels right.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>How long does therapy usually last?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>It depends entirely on you. Some clients find clarity in 6–8 sessions; others work with us for a year or more. We review progress together regularly.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>Is everything I share confidential?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Absolutely. Confidentiality is the foundation of our work. There are rare, legally required exceptions (such as imminent risk of harm), which we'll explain clearly at the start.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>Do you offer online sessions?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Yes. Online sessions are conducted through a secure, HIPAA-compliant video platform and offer the same depth and warmth as in-person meetings.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up delay-1">
-          <button class="faq-q" aria-expanded="false">
-            <span>How much does a session cost?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Standard sessions are $180 for 50 minutes. We offer a limited number of reduced-fee slots and can provide superbills for out-of-network insurance reimbursement.</p></div>
-        </div>
-        <div class="faq-item reveal fade-up">
-          <button class="faq-q" aria-expanded="false">
-            <span>Can I switch between in-person and online?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
-          </button>
-          <div class="faq-a"><p>Of course. Many clients move between formats depending on travel, schedule, or simply what feels right that week. Flexibility is built in.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-band">
-    <div class="container cta-inner reveal fade-up">
-      <h2>Still wondering something?</h2>
-      <p>We're happy to answer anything — no commitment required.</p>
-      <a href="contact.html" class="btn btn-primary">Contact us</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Serenity Psychology — book a consultation or ask a question." />
-  <title>Contact — Serenity Psychology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="contact">
-
-  <div class="loader" id="loader" aria-hidden="true"><div class="loader-mark">Serenity</div></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="resources.html" class="nav-link">Resources</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal fade-up">Contact</span>
-      <h1 class="page-title reveal fade-up delay-1">Let's <em>talk</em>.</h1>
-      <p class="page-sub reveal fade-up delay-2">Reach out any time — we respond within one business day.</p>
-    </div>
-  </section>
-
-  <section class="section contact-section">
-    <div class="container contact-grid">
-      <!-- Info -->
-      <aside class="contact-info reveal fade-right">
-        <h2>Get in touch</h2>
-        <p>We're here to answer questions, schedule a first session, or simply listen.</p>
-
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-          <div>
-            <span>Email</span>
-            <a href="mailto:hello@serenity.care">hello@serenity.care</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <div>
-            <span>Phone</span>
-            <a href="tel:+14155550142">+1 (415) 555-0142</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div>
-            <span>Location</span>
-            <span>221 Linden Ave, San Francisco, CA</span>
-          </div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <div>
-            <span>Office hours</span>
-            <span>Mon – Fri · 9:00 – 19:00<br/>Sat · 10:00 – 14:00</span>
-          </div>
-        </div>
-
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.097760983339!2d-122.4194155!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807c7d2b5a55%3A0x5db6b9d8e7d4e4f0!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1700000000000"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Serenity Psychology location"
-            allowfullscreen></iframe>
-        </div>
-      </aside>
-
-      <!-- Form -->
-      <div class="contact-form-wrap reveal fade-left">
-        <form class="contact-form" id="contactForm" novalidate>
-          <h2>Send a message</h2>
-          <p class="form-sub">All messages are confidential.</p>
-
-          <div class="field">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
-            <span class="field-error" data-for="name"></span>
-          </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
-            <span class="field-error" data-for="email"></span>
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone <span class="optional">(optional)</span></label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" />
-            <span class="field-error" data-for="phone"></span>
-          </div>
-
-          <div class="field">
-            <label for="service">I'm interested in</label>
-            <select id="service" name="service">
-              <option value="">Select a service</option>
-              <option>Individual Therapy</option>
-              <option>Couples Counseling</option>
-              <option>Anxiety Support</option>
-              <option>Depression Support</option>
-              <option>Stress Management</option>
-              <option>Online Sessions</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <span class="field-error" data-for="message"></span>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-submit">
-            <span class="btn-label">Send message</span>
-            <span class="btn-loading" hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-            </span>
-          </button>
-
-          <div class="form-success" id="formSuccess" hidden>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-            <h3>Thank you.</h3>
-            <p>Your message has been received. We'll be in touch within one business day.</p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><span class="logo-mark">Serenity</span><span class="logo-dot"></span></a><p class="footer-tag">Psychology & Mental Wellness</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li>hello@serenity.care</li><li>+1 (415) 555-0142</li><li>221 Linden Ave, San Francisco</li></ul></div>
-      <div class="footer-col"><h4>Follow</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="year"></span> Serenity Psychology. All rights reserved.</span><a href="#">Privacy Policy</a></div></div>
-  </footer>
-
-  <button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
-              /* ============================================
-   SERENITY — Psychology & Mental Wellness
-   Premium editorial design · 2026
-   ============================================ */
-
-/* ---------- Reset & Base ---------- */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--text);
-  background: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color .5s ease, color .5s ease;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; transition: color .3s ease; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; color: var(--heading); margin: 0 0 .6em; line-height: 1.15; }
-h1 { font-size: clamp(2.5rem, 5vw, 4.25rem); }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.75rem); }
-h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
-p { margin: 0 0 1em; }
-em { font-style: italic; color: var(--primary); }
-
-/* ---------- Design Tokens ---------- */
+/* --- CSS Variables --- */
 :root {
-  --bg: #FAFAF8;
-  --primary: #7B8F72;
-  --primary-soft: rgba(123, 143, 114, .12);
-  --secondary: #C9B79C;
-  --dark: #263238;
-  --text: #444444;
-  --heading: #263238;
-  --card: #FFFFFF;
-  --border: rgba(0,0,0,.08);
-  --shadow-sm: 0 2px 10px rgba(38, 50, 56, .04);
-  --shadow-md: 0 10px 40px rgba(38, 50, 56, .06);
-  --shadow-lg: 0 20px 60px rgba(38, 50, 56, .08);
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
-  --container: 1240px;
-  --ease: cubic-bezier(.22, 1, .36, 1);
+  --bg-color: #FAFAF7;
+  --bg-alt: #F3F3ED;
+  --primary: #6F8B6A;
+  --primary-hover: #5B7557;
+  --secondary: #D7C7AE;
+  --text-dark: #2E2E2E;
+  --text-muted: #666666;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(255, 255, 255, 0.8);
+  
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+  
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  
+  --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Dark Mode Tokens */
-[data-theme="dark"] {
-  --bg: #171B19;
-  --primary: #9AAE8F;
-  --primary-soft: rgba(154, 174, 143, .14);
-  --secondary: #B8A07E;
-  --dark: #E8E6E1;
-  --text: #C9C7C1;
-  --heading: #EFECE6;
-  --card: #1F2422;
-  --border: rgba(255,255,255,.08);
-  --shadow-sm: 0 2px 10px rgba(0,0,0,.3);
-  --shadow-md: 0 10px 40px rgba(0,0,0,.35);
-  --shadow-lg: 0 20px 60px rgba(0,0,0,.45);
+/* --- Base & Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ---------- Layout ---------- */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* --- Layout Utils --- */
 .container {
-  max-width: var(--container);
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 32px;
-}
-.section {
-  padding: 120px 0;
-  position: relative;
+  padding: 0 24px;
 }
 
-/* ---------- Typography helpers ---------- */
-.eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 24px;
-}
-.section-title { margin-bottom: 20px; }
-.section-sub { max-width: 560px; color: var(--text); opacity: .85; }
-.section-head { text-align: center; margin: 0 auto 72px; max-width: 720px; }
-.section-foot { text-align: center; margin-top: 64px; }
-.lede { font-size: 1.2rem; line-height: 1.65; color: var(--heading); font-weight: 300; }
-.link-arrow {
-  display: inline-block;
-  font-weight: 500;
-  color: var(--primary);
-  margin-top: 12px;
-  transition: transform .3s var(--ease), letter-spacing .3s var(--ease);
-}
-.link-arrow:hover { transform: translateX(4px); letter-spacing: .02em; }
-
-/* ---------- Buttons ---------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 34px;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: .02em;
-  border-radius: 999px;
-  transition: all .35s var(--ease);
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(123, 143, 114, .28);
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(123, 143, 114, .38);
-  background: #6a7d62;
-}
-.btn-ghost {
-  background: rgba(255,255,255,.12);
-  color: #fff;
-  border-color: rgba(255,255,255,.4);
-  backdrop-filter: blur(10px);
-}
-.btn-ghost:hover { background: rgba(255,255,255,.22); transform: translateY(-2px); }
-.btn-outline {
-  background: transparent;
-  color: var(--heading);
-  border-color: var(--border);
-}
-.btn-outline:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
-
-/* ---------- Loader ---------- */
-.loader {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity .6s ease, visibility .6s ease;
-}
-.loader.hidden { opacity: 0; visibility: hidden; }
-.loader-mark {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  letter-spacing: .02em;
-  color: var(--heading);
-  position: relative;
-  overflow: hidden;
-}
-.loader-mark::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: -4px;
-  width: 100%; height: 2px;
-  background: var(--primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: loaderLine 1.2s var(--ease) infinite;
-}
-@keyframes loaderLine {
-  0% { transform: scaleX(0); transform-origin: left; }
-  50% { transform: scaleX(1); transform-origin: left; }
-  51% { transform-origin: right; }
-  100% { transform: scaleX(0); transform-origin: right; }
+.narrow-container {
+  max-width: 760px;
 }
 
-/* ---------- Scroll Progress ---------- */
-.scroll-progress {
-  position: fixed;
-  top: 0; left: 0;
-  height: 2px;
-  width: 0%;
-  background: var(--primary);
-  z-index: 1000;
-  transition: width .1s linear;
+.section-padding {
+  padding: 100px 0;
 }
 
-/* ---------- Header ---------- */
-.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 24px 0;
-  transition: all .4s var(--ease);
-  background: transparent;
-}
-.site-header.scrolled {
-  background: rgba(250, 250, 248, .85);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  padding: 14px 0;
-  box-shadow: 0 1px 0 var(--border);
-}
-[data-theme="dark"] .site-header.scrolled { background: rgba(23, 27, 25, .85); }
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.logo { display: flex; align-items: center; gap: 8px; }
-.logo-mark {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--heading);
-  letter-spacing: -.01em;
-}
-.logo-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--primary);
-  display: inline-block;
+.bg-alt {
+  background-color: var(--bg-alt);
 }
 
-.main-nav ul {
-  display: flex;
-  gap: 38px;
-  list-style: none;
-  padding: 0; margin: 0;
-}
-.nav-link {
-  font-size: 14.5px;
-  font-weight: 400;
-  color: var(--text);
-  position: relative;
-  padding: 6px 0;
-  transition: color .3s ease;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 100%; height: 1px;
-  background: var(--primary);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform .4s var(--ease);
-}
-.nav-link:hover { color: var(--heading); }
-.nav-link:hover::after,
-.nav-link.active::after { transform: scaleX(1); transform-origin: left; }
-.nav-link.active { color: var(--heading); }
-
-.header-actions { display: flex; align-items: center; gap: 14px; }
-
-.theme-toggle {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--heading);
-  transition: background .3s ease, transform .3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.theme-toggle:hover { background: var(--primary-soft); }
-.theme-toggle svg {
-  width: 18px; height: 18px;
-  position: absolute;
-  transition: transform .5s var(--ease), opacity .4s ease;
-}
-.theme-toggle .icon-sun { opacity: 0; transform: rotate(-90deg) scale(.5); }
-.theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
-[data-theme="dark"] .theme-toggle .icon-sun { opacity: 1; transform: rotate(0) scale(1); }
-[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: rotate(90deg) scale(.5); }
-
-.hamburger {
-  width: 40px; height: 40px;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-.hamburger span {
-  display: block;
-  width: 22px; height: 1.5px;
-  background: var(--heading);
-  transition: transform .4s var(--ease), opacity .3s ease;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  color: #fff;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.hero-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 10s ease;
-}
-.hero.loaded .hero-bg img { transform: scale(1); }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(38,50,56,.35) 0%, rgba(38,50,56,.55) 100%);
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 780px;
-  padding: 160px 32px 120px;
-  margin: 0 auto;
+.text-center {
   text-align: center;
 }
-.hero-content .eyebrow { color: rgba(255,255,255,.85); }
-.hero-title {
-  color: #fff;
-  font-weight: 400;
-  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
-  line-height: 1.05;
-  margin-bottom: 28px;
-  letter-spacing: -.02em;
-}
-.hero-title em { color: var(--secondary); font-style: italic; }
-.hero-sub {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,.9);
-  max-width: 560px;
-  margin: 0 auto 40px;
-  font-weight: 300;
-}
-.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
   align-items: center;
-  gap: 12px;
-  color: rgba(255,255,255,.7);
-  font-size: 11px;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  z-index: 2;
-}
-.scroll-line {
-  width: 1px; height: 40px;
-  background: rgba(255,255,255,.3);
-  position: relative;
-  overflow: hidden;
-}
-.scroll-line::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 50%;
-  background: #fff;
-  animation: scrollLine 2s ease-in-out infinite;
-}
-@keyframes scrollLine {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(200%); }
 }
 
-/* ---------- Page Hero (inner pages) ---------- */
-.page-hero {
-  padding: 200px 0 100px;
-  text-align: center;
-  background: var(--bg);
-  position: relative;
-  overflow: hidden;
-}
-.page-hero::before {
-  content: '';
-  position: absolute;
-  top: 20%; left: 50%;
-  transform: translateX(-50%);
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, var(--primary-soft) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-.page-hero .container { position: relative; z-index: 1; }
-.page-title { font-size: clamp(2.5rem, 5.5vw, 4.5rem); margin-bottom: 20px; }
-.page-title em { color: var(--primary); }
-.page-sub { max-width: 560px; margin: 0 auto; opacity: .85; font-size: 1.1rem; }
-
-/* ---------- Intro ---------- */
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 80px;
-  align-items: start;
-}
-
-/* ---------- Services Grid ---------- */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.services-grid-lg { grid-template-columns: repeat(3, 1fr); }
-.service-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 40px 32px;
-  transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .5s var(--ease);
-  box-shadow: var(--shadow-sm);
-}
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-soft);
-}
-.service-icon {
-  width: 56px; height: 56px;
-  border-radius: 16px;
-  background: var(--primary-soft);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  transition: transform .5s var(--ease), background .5s var(--ease);
-}
-.service-icon svg { width: 26px; height: 26px; }
-.service-card:hover .service-icon {
-  transform: scale(1.08) rotate(-4deg);
-  background: var(--primary);
-  color: #fff;
-}
-.service-card h3 { margin-bottom: 12px; }
-.service-card p { color: var(--text); opacity: .85; font-size: .98rem; margin: 0; }
-.service-card-lg { padding: 44px 36px; }
-.service-points {
-  list-style: none;
-  padding: 0; margin: 20px 0 0;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-}
-.service-points li {
-  font-size: .92rem;
-  color: var(--text);
-  padding: 6px 0 6px 20px;
-  position: relative;
-}
-.service-points li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 14px;
-  width: 10px; height: 1px;
-  background: var(--primary);
-}
-
-/* ---------- Why Us ---------- */
-.why-us { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-}
-.why-card {
-  text-align: center;
-  padding: 40px 24px;
-  border-radius: var(--radius-md);
-  transition: background .4s ease;
-}
-.why-card:hover { background: var(--primary-soft); }
-.why-icon {
-  width: 64px; height: 64px;
-  border-radius: 50%;
-  background: var(--primary-soft);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-  transition: transform .6s var(--ease);
-}
-.why-icon svg { width: 28px; height: 28px; }
-.why-card:hover .why-icon { transform: rotate(360deg) scale(1.05); }
-.why-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
-.why-card p { font-size: .95rem; opacity: .8; margin: 0; }
-
-/* ---------- Stats ---------- */
-.stats { background: var(--bg); }
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-.stat { padding: 32px 16px; }
-.stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 4vw, 3.75rem);
-  color: var(--primary);
-  font-weight: 500;
-  line-height: 1;
-  display: inline-block;
-}
-.stat-suffix {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: var(--primary);
-  font-weight: 400;
-}
-.stat-label {
-  display: block;
-  margin-top: 14px;
-  font-size: .9rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text);
-  opacity: .7;
-}
-
-/* ---------- Resources / Blog ---------- */
-.resources-grid {
+.grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
-.resources-grid-lg { grid-template-columns: repeat(3, 1fr); }
-.blog-card {
-  background: var(--card);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-.blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.blog-img {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--primary-soft);
-}
-.blog-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform .8s var(--ease);
-}
-.blog-card:hover .blog-img img { transform: scale(1.06); }
-.blog-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
-.blog-meta {
-  display: block;
-  font-size: 12px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 14px;
-}
-.blog-body h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
-.blog-body p { font-size: .95rem; opacity: .8; flex: 1; }
 
-/* ---------- CTA Band ---------- */
-.cta-band {
-  background: linear-gradient(180deg, var(--bg) 0%, var(--primary-soft) 100%);
-  padding: 100px 0;
-  text-align: center;
-}
-.cta-inner { max-width: 640px; margin: 0 auto; }
-.cta-inner h2 { margin-bottom: 16px; }
-.cta-inner p { opacity: .85; margin-bottom: 32px; }
-
-/* ---------- FAQ ---------- */
-.faq-wrap { max-width: 820px; margin: 0 auto; }
-.faq-item {
-  border-bottom: 1px solid var(--border);
-}
-.faq-item:first-child { border-top: 1px solid var(--border); }
-.faq-q {
-  width: 100%;
-  text-align: left;
-  padding: 28px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: var(--heading);
-  font-weight: 500;
-  transition: color .3s ease;
-}
-.faq-q:hover { color: var(--primary); }
-.faq-q svg {
-  width: 20px; height: 20px;
-  flex-shrink: 0;
-  transition: transform .4s var(--ease);
-}
-.faq-item.open .faq-q svg { transform: rotate(45deg); }
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .5s var(--ease);
-}
-.faq-a p { padding: 0 0 28px; margin: 0; color: var(--text); opacity: .85; }
-
-/* ---------- Contact ---------- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: start;
-}
-.contact-info h2 { margin-bottom: 16px; }
-.contact-info > p { opacity: .85; margin-bottom: 36px; }
-.info-item {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-}
-.info-item:last-of-type { border-bottom: 1px solid var(--border); }
-.info-item svg {
-  width: 22px; height: 22px;
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.info-item span:first-child,
-.info-item div span:first-child {
-  display: block;
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 4px;
-}
-.info-item a:hover { color: var(--primary); }
-.map-wrap {
-  margin-top: 32px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  aspect-ratio: 16 / 10;
-}
-.map-wrap iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.2) contrast(.95); }
-[data-theme="dark"] .map-wrap iframe { filter: grayscale(.4) invert(.9) hue-rotate(180deg); }
-
-.contact-form-wrap {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  box-shadow: var(--shadow-md);
-}
-.contact-form h2 { margin-bottom: 8px; }
-.form-sub { opacity: .75; margin-bottom: 32px; }
-.field { margin-bottom: 22px; }
-.field label {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: .04em;
-  margin-bottom: 8px;
-  color: var(--heading);
-}
-.optional { font-weight: 400; opacity: .6; font-size: 12px; }
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  padding: 14px 16px;
-  font-family: inherit;
-  font-size: 15px;
-  color: var(--heading);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  transition: border-color .3s ease, box-shadow .3s ease, background .3s ease;
-}
-.field textarea { resize: vertical; min-height: 120px; }
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px var(--primary-soft);
-}
-.field.error input,
-.field.error textarea { border-color: #c97b7b; }
-.field-error {
-  display: block;
-  font-size: 12.5px;
-  color: #c97b7b;
-  margin-top: 6px;
-  min-height: 16px;
-}
-.btn-submit { width: 100%; margin-top: 8px; position: relative; }
-.btn-loading { display: inline-flex; }
-.btn-loading svg {
-  width: 18px; height: 18px;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.form-success {
-  text-align: center;
-  padding: 40px 20px;
-  animation: fadeIn .6s var(--ease);
-}
-.form-success svg {
-  width: 56px; height: 56px;
-  color: var(--primary);
-  margin: 0 auto 20px;
-}
-.form-success h3 { margin-bottom: 8px; }
-.form-success p { opacity: .8; margin: 0; }
-
-/* ---------- About ---------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-.about-portrait {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 4 / 5;
-  box-shadow: var(--shadow-lg);
-}
-.about-portrait img { width: 100%; height: 100%; object-fit: cover; }
-
-.mission-grid {
+.grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
-.mission-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 36px 28px;
-  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
-}
-.mission-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.mission-card h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 12px; }
-.mission-card p { font-size: .95rem; opacity: .85; margin: 0; }
 
-/* Timeline */
-.timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+.section-header {
+  margin-bottom: 60px;
 }
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 120px;
-  top: 0; bottom: 0;
-  width: 1px;
-  background: var(--border);
-}
-.timeline-item {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 40px;
-  padding: 28px 0;
-  position: relative;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 115px;
-  top: 38px;
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--primary);
-}
-.timeline-year {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--primary);
-  text-align: right;
-  padding-top: 4px;
-}
-.timeline-content h3 { font-size: 1.2rem; margin-bottom: 6px; }
-.timeline-content p { opacity: .8; margin: 0; }
 
-/* ---------- Footer ---------- */
-.site-footer {
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  padding: 80px 0 0;
-  margin-top: 40px;
-}
-.footer-inner {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 48px;
-  padding-bottom: 60px;
-}
-.footer-tag { margin-top: 14px; font-size: .9rem; opacity: .7; }
-.footer-col h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  letter-spacing: .2em;
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: var(--primary);
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col li { padding: 6px 0; font-size: .95rem; opacity: .85; }
-.footer-col a:hover { color: var(--primary); }
-.socials { display: flex; gap: 14px; }
-.socials a {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all .3s ease;
-}
-.socials a:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: translateY(-2px); }
-.socials svg { width: 16px; height: 16px; }
 
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding: 24px 0;
+.section-header h2 {
+  font-size: 2.5rem;
 }
-.footer-bottom-inner {
+
+/* --- Glassmorphism Cards --- */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 8px 20px rgba(111, 139, 106, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid rgba(46, 46, 46, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(250, 250, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: .85rem;
-  opacity: .7;
 }
 
-/* ---------- Back to top ---------- */
-.back-top {
-  position: fixed;
-  bottom: 32px; right: 32px;
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--heading);
-  box-shadow: var(--shadow-md);
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 400;
+}
+
+.nav-item:hover {
+  color: var(--primary);
+}
+
+.btn-nav {
+  padding: 8px 20px;
+  border-radius: 30px;
+  background-color: var(--primary);
+  color: #fff !important;
+}
+
+.btn-nav:hover {
+  background-color: var(--primary-hover);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-toggle .bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-dark);
+  transition: var(--transition);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  padding: 180px 0 100px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(111, 139, 106, 0.12);
+  color: var(--primary);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-illustration {
+  position: relative;
+}
+
+.illustration-card {
+  height: 380px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.abstract-art {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(1px);
+}
+
+.circle-1 {
+  width: 120px;
+  height: 120px;
+  background: var(--secondary);
+  top: 0;
+  left: 0;
+}
+
+.circle-2 {
+  width: 130px;
+  height: 130px;
+  background: var(--primary);
+  opacity: 0.6;
+  bottom: 0;
+  right: 0;
+}
+
+.circle-3 {
+  width: 80px;
+  height: 80px;
+  background: #E8DCC4;
+  top: 40px;
+  right: 20px;
+}
+
+.floating-element {
+  position: absolute;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-element stroke {
+  stroke: var(--primary);
+}
+
+.float-1 {
+  top: 40px;
+  left: -20px;
+}
+
+.float-2 {
+  bottom: 40px;
+  right: -10px;
+  animation-delay: 2s;
+}
+
+.hero-bg-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background-color: var(--secondary);
+  top: -100px;
+  right: -100px;
+}
+
+.shape-2 {
+  width: 350px;
+  height: 350px;
+  background-color: var(--primary);
+  bottom: -50px;
+  left: -100px;
+  opacity: 0.2;
+}
+
+/* --- About Section --- */
+.about-card {
+  height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(215, 199, 174, 0.2), rgba(111, 139, 106, 0.1));
+}
+
+.quote-graphic {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-style: italic;
+}
+
+.pill-badge {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  padding: 8px 16px;
+  background: #fff;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pill-2 {
+  top: auto;
+  bottom: 40px;
+  left: 30px;
+  right: auto;
+}
+
+.philosophy-list {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.philosophy-list li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.list-icon {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.philosophy-list strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+/* --- Services Section --- */
+.service-card {
+  padding: 36px 24px;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(111, 139, 106, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+}
+
+/* --- Approach Section --- */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.timeline-card {
+  padding: 40px 30px;
+  position: relative;
+}
+
+.step-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--secondary);
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.timeline-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+/* --- Quote Banner --- */
+.quote-section {
+  padding: 100px 0;
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.quote-text {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* --- Testimonials Section --- */
+.testimonial-card {
+  padding: 32px;
+}
+
+.stars {
+  color: #E2B857;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.author-info span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --- FAQ Section --- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.accordion-header .icon {
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  padding: 0 24px 20px 24px;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(45deg);
+}
+
+/* --- Contact Section --- */
+.info-items {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.contact-form-wrapper {
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(111, 139, 106, 0.15);
+}
+
+.form-feedback {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.form-feedback.success {
+  color: var(--primary);
+}
+
+.form-feedback.error {
+  color: #d9534f;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #242424;
+  color: #E5E5E5;
+  padding: 60px 0 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-brand .brand-logo {
+  color: #ffffff;
+}
+
+.footer-brand p {
+  color: #999999;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #CCCCCC;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+/* --- Animations --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.reveal {
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all .4s var(--ease);
-  z-index: 50;
-}
-.back-top svg { width: 18px; height: 18px; }
-.back-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.back-top:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: translateY(-3px); }
-
-/* ---------- Reveal Animations ---------- */
-.reveal { opacity: 0; transition: opacity .9s var(--ease), transform .9s var(--ease); }
-.fade-up { transform: translateY(30px); }
-.fade-left { transform: translateX(-30px); }
-.fade-right { transform: translateX(30px); }
-.fade-scale { transform: scale(.96); }
-.reveal.visible { opacity: 1; transform: translate(0,0) scale(1); }
-.delay-1 { transition-delay: .1s; }
-.delay-2 { transition-delay: .2s; }
-.delay-3 { transition-delay: .3s; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-/* ---------- Selection ---------- */
-::selection { background: var(--primary); color: #fff; }
-          /* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
-
-/* Tablet & below */
-@media (max-width: 1024px) {
-  .container { padding: 0 28px; }
-  .section { padding: 90px 0; }
-  .intro-grid,
-  .about-grid,
-  .contact-grid { grid-template-columns: 1fr; gap: 56px; }
-  .services-grid,
-  .services-grid-lg,
-  .resources-grid,
-  .resources-grid-lg { grid-template-columns: repeat(2, 1fr); }
-  .why-grid,
-  .mission-grid,
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .timeline::before { left: 80px; }
-  .timeline-item { grid-template-columns: 80px 1fr; gap: 24px; }
-  .timeline-item::before { left: 75px; }
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-/* Mobile nav trigger */
-@media (max-width: 860px) {
-  .hamburger { display: flex; }
-  .main-nav {
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 992px) {
+  .hero-container,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4,
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content p {
+    margin: 0 auto 32px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .quote-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
     position: fixed;
-    top: 0; right: 0;
-    width: min(360px, 85vw);
-    height: 100vh;
-    background: var(--card);
-    box-shadow: -20px 0 60px rgba(0,0,0,.1);
-    padding: 100px 40px 40px;
-    transform: translateX(100%);
-    transition: transform .5s var(--ease);
-    z-index: 90;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    transition: var(--transition);
   }
-  .main-nav.open { transform: translateX(0); }
-  .main-nav ul { flex-direction: column; gap: 24px; }
-  .nav-link { font-size: 1.2rem; font-family: 'Playfair Display', serif; }
-}
 
-/* Mobile */
-@media (max-width: 640px) {
-  body { font-size: 16px; }
-  .container { padding: 0 22px; }
-  .section { padding: 72px 0; }
-  .section-head { margin-bottom: 48px; }
-  .section-foot { margin-top: 40px; }
-  .hero-content { padding: 140px 22px 100px; }
-  .hero-title { font-size: clamp(2.2rem, 9vw, 3.5rem); }
-  .hero-sub { font-size: 1rem; }
-  .hero-cta { flex-direction: column; width: 100%; }
-  .hero-cta .btn { width: 100%; }
-  .scroll-indicator { display: none; }
-  .page-hero { padding: 160px 0 70px; }
-  .page-title { font-size: clamp(2rem, 8vw, 3rem); }
-
-  .services-grid,
-  .services-grid-lg,
-  .resources-grid,
-  .resources-grid-lg,
-  .why-grid,
-  .mission-grid,
-  .stats-grid { grid-template-columns: 1fr; }
-
-  .footer-inner { grid-template-columns: 1fr; gap: 36px; padding-bottom: 40px; }
-  .footer-bottom-inner { flex-direction: column; gap: 12px; text-align: center; }
-
-  .timeline::before { left: 20px; }
-  .timeline-item { grid-template-columns: 1fr; gap: 8px; padding-left: 48px; }
-  .timeline-item::before { left: 15px; top: 10px; }
-  .timeline-year { text-align: left; font-size: 1.2rem; }
-
-  .contact-form-wrap { padding: 32px 24px; }
-  .faq-q { font-size: 1.05rem; padding: 22px 0; }
-
-  .back-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
-}
-
-/* Small mobile */
-@media (max-width: 380px) {
-  .container { padding: 0 18px; }
-  .btn { padding: 14px 24px; font-size: 14px; }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
+  .nav-links.active {
+    right: 0;
   }
-  .reveal { opacity: 1; transform: none; }
-}
-              /* ============================================
-   ANIMATIONS — Reveal on scroll, counters, parallax
-   ============================================ */
-(function () {
-  document.addEventListener('DOMContentLoaded', () => {
 
-    /* ---------- Reveal on scroll ---------- */
-    const revealEls = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-      revealEls.forEach(el => io.observe(el));
+  .grid-4,
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Navbar Scroll Effect ---
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
     } else {
-      revealEls.forEach(el => el.classList.add('visible'));
-    }
-
-    /* ---------- Animated counters ---------- */
-    const counters = document.querySelectorAll('.stat-num');
-    if (counters.length && 'IntersectionObserver' in window) {
-      const animate = (el) => {
-        const target = parseInt(el.dataset.count, 10);
-        const duration = 1800;
-        const start = performance.now();
-        const step = (now) => {
-          const p = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.floor(eased * target);
-          if (p < 1) requestAnimationFrame(step);
-          else el.textContent = target;
-        };
-        requestAnimationFrame(step);
-      };
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animate(entry.target);
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
-      counters.forEach(c => io.observe(c));
-    }
-
-    /* ---------- Hero parallax (subtle) ---------- */
-    const heroBg = document.querySelector('.hero-bg img');
-    if (heroBg) {
-      window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y < window.innerHeight) {
-          heroBg.style.transform = `scale(1.05) translateY(${y * 0.15}px)`;
-        }
-      }, { passive: true });
-      // trigger hero loaded state for zoom-out
-      setTimeout(() => document.querySelector('.hero')?.classList.add('loaded'), 100);
-    }
-
-    /* ---------- Lazy images (native fallback) ---------- */
-    if (!('loading' in HTMLImageElement.prototype)) {
-      const lazy = document.querySelectorAll('img[loading="lazy"]');
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            const img = e.target;
-            if (img.dataset.src) img.src = img.dataset.src;
-            io.unobserve(img);
-          }
-        });
-      });
-      lazy.forEach(img => io.observe(img));
+      navbar.classList.remove('scrolled');
     }
   });
-})();
-            /* ============================================
-   FORM — Validation + success state
-   ============================================ */
-(function () {
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
 
-    const success = document.getElementById('formSuccess');
-    const submitBtn = form.querySelector('.btn-submit');
-    const btnLabel = submitBtn.querySelector('.btn-label');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
+  // --- Mobile Navigation Toggle ---
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const links = document.querySelectorAll('.nav-item');
 
-    const setError = (name, msg) => {
-      const field = form.querySelector(`.field:has([name="${name}"])`) ||
-                    form.querySelector(`[name="${name}"]`)?.closest('.field');
-      if (!field) return;
-      const err = field.querySelector('.field-error');
-      if (msg) {
-        field.classList.add('error');
-        if (err) err.textContent = msg;
-      } else {
-        field.classList.remove('error');
-        if (err) err.textContent = '';
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking links
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // --- Accordion Interactive ---
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const accordionItem = header.parentElement;
+      const accordionContent = accordionItem.querySelector('.accordion-content');
+      const isOpen = accordionItem.classList.contains('active');
+
+      // Close all accordion items
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.accordion-content').style.maxHeight = null;
+        item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        accordionItem.classList.add('active');
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        header.setAttribute('aria-expanded', 'true');
       }
-    };
-
-    const validateEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let valid = true;
-
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-
-      setError('name', '');
-      setError('email', '');
-      setError('message', '');
-
-      if (name.length < 2) { setError('name', 'Please enter your name.'); valid = false; }
-      if (!validateEmail(email)) { setError('email', 'Please enter a valid email.'); valid = false; }
-      if (message.length < 10) { setError('message', 'Please write at least a short message.'); valid = false; }
-
-      if (!valid) return;
-
-      // Simulate sending
-      submitBtn.disabled = true;
-      btnLabel.hidden = true;
-      btnLoading.hidden = false;
-
-      setTimeout(() => {
-        form.querySelectorAll('.field').forEach(f => f.style.display = 'none');
-        submitBtn.style.display = 'none';
-        form.querySelector('.form-sub').style.display = 'none';
-        success.hidden = false;
-      }, 1200);
-    });
-
-    // Live clear errors on input
-    form.querySelectorAll('input, textarea').forEach(el => {
-      el.addEventListener('input', () => setError(el.name, ''));
     });
   });
-})();
-          /* ============================================
-   MAIN — Header, nav, scroll, FAQ, back-top, loader
-   ============================================ */
-(function () {
 
-  document.addEventListener('DOMContentLoaded', () => {
+  // --- Scroll Reveal Animations ---
+  const revealElements = document.querySelectorAll('.reveal');
 
-    /* ---------- Loader ---------- */
-    const loader = document.getElementById('loader');
-    window.addEventListener('load', () => {
-      setTimeout(() => loader?.classList.add('hidden'), 400);
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    const elementVisible = 100;
+
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add('active');
+      }
     });
-    // Fallback
-    setTimeout(() => loader?.classList.add('hidden'), 2500);
+  };
 
-    /* ---------- Sticky header ---------- */
-    const header = document.getElementById('siteHeader');
-    const onScroll = () => {
-      if (window.scrollY > 40) header?.classList.add('scrolled');
-      else header?.classList.remove('scrolled');
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // Trigger initial view check
 
-    /* ---------- Scroll progress ---------- */
-    const progress = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      if (!progress) return;
-      const h = document.documentElement;
-      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-      progress.style.width = scrolled + '%';
-    }, { passive: true });
+  // --- Contact Form Handling ---
+  const contactForm = document.getElementById('contactForm');
+  const formFeedback = document.getElementById('formFeedback');
 
-    /* ---------- Mobile nav ---------- */
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('mainNav');
-    hamburger?.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      hamburger.setAttribute('aria-expanded', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    // Close on link click
-    nav?.querySelectorAll('.nav-link').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        hamburger?.classList.remove('open');
-        hamburger?.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    /* ---------- FAQ accordion ---------- */
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const btn = item.querySelector('.faq-q');
-      const answer = item.querySelector('.faq-a');
-      if (!btn || !answer) return;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-      const toggle = () => {
-        const isOpen = item.classList.contains('open');
-        // Close all others (optional — remove this block to allow multiple open)
-        document.querySelectorAll('.faq-item.open').forEach(o => {
-          if (o !== item) {
-            o.classList.remove('open');
-            o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-            o.querySelector('.faq-a').style.maxHeight = null;
-          }
-        });
-        if (isOpen) {
-          item.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          answer.style.maxHeight = null;
-        } else {
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      };
+    if (!name || !email || !message) {
+      formFeedback.textContent = 'Please fill out all fields.';
+      formFeedback.className = 'form-feedback error';
+      return;
+    }
 
-      btn.addEventListener('click', toggle);
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
-      });
-    });
+    // Simulate Form Submission
+    formFeedback.textContent = 'Thank you! Your message has been sent successfully.';
+    formFeedback.className = 'form-feedback success';
 
-    /* ---------- Back to top ---------- */
-    const backTop = document.getElementById('backTop');
-    window.addEventListener('scroll', () => {
-      if (!backTop) return;
-      if (window.scrollY > 600) backTop.classList.add('visible');
-      else backTop.classList.remove('visible');
-    }, { passive: true });
-    backTop?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    contactForm.reset();
 
-    /* ---------- Current year ---------- */
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    /* ---------- Smooth scroll for in-page anchors ---------- */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        if (id.length > 1) {
-          const target = document.querySelector(id);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      });
-    });
+    setTimeout(() => {
+      formFeedback.textContent = '';
+      formFeedback.className = 'form-feedback';
+    }, 5000);
   });
-})();
-          
-              
+});
+    
