@@ -14,7 +14,23 @@
     box-sizing:border-box;
     font-family: "Inter", Arial, sans-serif;
 }
+<script>
 
+function showFeeling(card){
+
+document.querySelectorAll(".feeling-card").forEach(item=>{
+
+if(item!==card){
+item.classList.remove("active");
+}
+
+});
+
+card.classList.toggle("active");
+
+}
+
+</script>
 body{
     background:#071a33;
     color:white;
@@ -189,7 +205,67 @@ section{
     color:#d7e9ff;
     line-height:1.6;
 }
+<section class="feelings" id="feelings">
 
+    <h2>How are you feeling today?</h2>
+
+    <p class="feel-text">
+        Choose what best describes your current emotional state.
+    </p>
+
+    <div class="feeling-grid">
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">😟</div>
+            <h3>Stress</h3>
+            <p class="hidden-text">
+                Stress is a normal response, but constant pressure can affect your wellbeing.
+            </p>
+        </div>
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">😔</div>
+            <h3>Anxiety</h3>
+            <p class="hidden-text">
+                Anxiety can make everyday situations feel overwhelming. You're not alone.
+            </p>
+        </div>
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">😴</div>
+            <h3>Burnout</h3>
+            <p class="hidden-text">
+                Burnout often comes from long-term emotional and physical exhaustion.
+            </p>
+        </div>
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">💙</div>
+            <h3>Self Growth</h3>
+            <p class="hidden-text">
+                Personal growth begins with understanding yourself one step at a time.
+            </p>
+        </div>
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">❤️</div>
+            <h3>Relationships</h3>
+            <p class="hidden-text">
+                Healthy relationships begin with healthy communication.
+            </p>
+        </div>
+
+        <div class="feeling-card" onclick="showFeeling(this)">
+            <div class="emoji">🌿</div>
+            <h3>Balance</h3>
+            <p class="hidden-text">
+                Small daily habits can help create a calmer and more balanced life.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 /* ABOUT */
 
@@ -326,7 +402,102 @@ font-size:70px;
 }
 
 </style>
+.feelings{
 
+padding:100px 8%;
+text-align:center;
+
+}
+
+.feelings h2{
+
+font-size:45px;
+margin-bottom:15px;
+
+}
+
+.feel-text{
+
+max-width:650px;
+margin:auto;
+color:#bddcff;
+margin-bottom:60px;
+line-height:1.7;
+
+}
+
+.feeling-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+
+}
+
+.feeling-card{
+
+background:rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:25px;
+
+cursor:pointer;
+
+transition:.35s;
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+.feeling-card:hover{
+
+transform:translateY(-10px);
+background:rgba(97,200,255,.15);
+
+}
+
+.emoji{
+
+font-size:48px;
+margin-bottom:15px;
+
+}
+
+.feeling-card h3{
+
+margin-bottom:15px;
+color:#61c8ff;
+
+}
+
+.hidden-text{
+
+max-height:0;
+overflow:hidden;
+opacity:0;
+transition:.4s;
+
+color:#d8ecff;
+line-height:1.6;
+
+}
+
+.feeling-card.active{
+
+background:linear-gradient(135deg,#178fd4,#0b2d53);
+
+}
+
+.feeling-card.active .hidden-text{
+
+opacity:1;
+max-height:200px;
+margin-top:15px;
+
+}
 </head>
 
 
@@ -358,14 +529,21 @@ Mind<span>Space</span>
 
 <div class="hero-text">
 
+
+<div class="mini-title">
+Psychological Counseling & Personal Growth
+</div>
+
+
 <h1>
-A calmer mind.<br>
-A better <span>you.</span>
+Create a calmer mind.<br>
+Build a better <span>you.</span>
 </h1>
 
 
 <p>
-Professional psychological support designed to help you understand yourself, manage emotions and create a healthier inner world.
+A safe and supportive space where you can understand your emotions,
+overcome challenges and create a healthier relationship with yourself.
 </p>
 
 
@@ -374,13 +552,60 @@ Start Your Journey
 </a>
 
 
+<div class="stats">
+
+<div>
+<strong>500+</strong>
+<span>Sessions</span>
+</div>
+
+
+<div>
+<strong>10+</strong>
+<span>Years Experience</span>
+</div>
+
+
+<div>
+<strong>98%</strong>
+<span>Satisfaction</span>
+</div>
+
+</div>
+
+
 </div>
 
 
 
-<div class="mind-card">
-🧠
+
+<div class="hero-visual">
+
+
+<div class="circle">
+
+<div class="glass-box">
+
+<span>Mind</span>
+<span>Balance</span>
+
 </div>
+
+</div>
+
+
+<div class="small-card card-one">
+🧘 Calm
+</div>
+
+
+<div class="small-card card-two">
+💙 Support
+</div>
+
+
+</div>
+
 
 
 </section>
