@@ -6,7 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MindSpace | Psychological Support</title>
+<meta name="description" content="MindSpace provides professional psychological support, therapy and mental wellness services.">
 
+<meta name="keywords" content="therapy, psychology, mental health, counseling">
+
+<meta name="author" content="MindSpace">
 <style>
 
 *{
@@ -929,6 +933,142 @@ grid-template-columns:1fr;
 
 }
 
+} 
+/* Loading animation */
+
+
+body{
+
+animation:pageLoad 1s ease;
+
+}
+
+
+@keyframes pageLoad{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+/* Scroll reveal */
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+.reveal.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+
+
+/* Cursor glow */
+
+
+.cursor-glow{
+
+position:fixed;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+background:#4db8ff;
+
+filter:blur(100px);
+
+opacity:.25;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+
+/* Better buttons */
+
+
+.btn:active{
+
+transform:scale(.95);
+
+}
+
+
+
+/* Navbar scroll */
+
+
+header.scrolled{
+
+background:
+rgba(6,20,38,.85);
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.3);
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.hero-text h1{
+
+font-size:38px;
+
+}
+
+
+.section-title{
+
+font-size:32px;
+
+}
+
+
+.feelings{
+
+grid-template-columns:1fr;
+
+}
+
+
 }    
 </style>
 
@@ -1581,8 +1721,95 @@ Mental wellness support platform.
 
 </footer>
 <script>
+// Navbar effect
 
 
+window.addEventListener("scroll",()=>{
+
+
+let header=document.querySelector("header");
+
+
+if(window.scrollY>50){
+
+header.classList.add("scrolled");
+
+}
+
+else{
+
+header.classList.remove("scrolled");
+
+}
+
+
+});
+
+
+
+
+
+
+
+// Reveal animation
+
+
+const sections=document.querySelectorAll(
+".section, .hero-text, .hero-card"
+);
+
+
+const observer=new IntersectionObserver((entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("reveal","show");
+
+}
+
+
+});
+
+
+});
+
+
+sections.forEach(section=>{
+
+observer.observe(section);
+
+});
+
+
+
+
+
+
+
+// Cursor light
+
+
+let glow=document.createElement("div");
+
+glow.className="cursor-glow";
+
+document.body.appendChild(glow);
+
+
+
+document.addEventListener("mousemove",(e)=>{
+
+
+glow.style.left=e.clientX-90+"px";
+
+glow.style.top=e.clientY-90+"px";
+
+
+});
 let score = 0;
 
 
