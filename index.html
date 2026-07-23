@@ -3066,16 +3066,20 @@ window.onclick=function(event){
     </div>
 
 </div>
-let faqItems=document.querySelectorAll(".faq-item");
+<script>
 
-faqItems.forEach(item=>{
+let faqItems = document.querySelectorAll(".faq-item");
 
-item.addEventListener("click",()=>{
+faqItems.forEach(item => {
 
-item.classList.toggle("active");
+    item.addEventListener("click", () => {
+
+        item.classList.toggle("active");
+
+    });
 
 });
 
-});    
+</script>
 </body>
 </html>
