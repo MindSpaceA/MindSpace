@@ -3033,7 +3033,67 @@ window.onclick=function(event){
 
 </div>
 <script>
+// AI CHAT
 
+let aiButton = document.querySelector(".chat-input button");
+let aiInput = document.querySelector(".chat-input input");
+let aiWindow = document.querySelector(".chat-window");
+
+
+if(aiButton){
+
+    aiButton.addEventListener("click",()=>{
+
+
+        let text = aiInput.value.trim();
+
+
+        if(text === "") return;
+
+
+
+        // User message
+
+        let userMessage = document.createElement("div");
+
+        userMessage.className = "message user";
+
+        userMessage.innerHTML = text;
+
+
+        aiWindow.appendChild(userMessage);
+
+
+
+        aiInput.value = "";
+
+
+
+        // AI response
+
+        setTimeout(()=>{
+
+
+            let aiMessage = document.createElement("div");
+
+            aiMessage.className = "message ai";
+
+
+            aiMessage.innerHTML =
+            "💙 I'm here with you. Take a moment to breathe and remember that every feeling is valid.";
+
+
+            aiWindow.appendChild(aiMessage);
+
+
+
+        },800);
+
+
+
+    });
+
+}
 let faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
