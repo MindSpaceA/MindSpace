@@ -1622,6 +1622,226 @@ height:50px;
 
     position:relative;
 
+} 
+.ai-chat{
+
+max-width:900px;
+margin:120px auto;
+padding:45px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:30px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.ai-header{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+.ai-avatar{
+
+width:90px;
+height:90px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#52bfff,#1b6fff);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:42px;
+
+color:white;
+
+box-shadow:0 0 35px rgba(82,191,255,.6);
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+.ai-header h2{
+
+margin-top:20px;
+font-size:34px;
+
+}
+
+.ai-header p{
+
+color:#b9d7ff;
+margin-top:12px;
+
+}
+
+.chat-window{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.message{
+
+padding:18px 22px;
+
+border-radius:20px;
+
+max-width:75%;
+
+line-height:1.7;
+
+}
+
+.user{
+
+align-self:flex-end;
+
+background:#2e8cff;
+
+color:white;
+
+}
+
+.ai{
+
+align-self:flex-start;
+
+background:#16365f;
+
+}
+
+.chat-input{
+
+margin-top:35px;
+
+display:flex;
+
+gap:15px;
+
+}
+
+.chat-input input{
+
+flex:1;
+
+padding:18px;
+
+background:#0f2444;
+
+border:none;
+
+border-radius:15px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+.chat-input button{
+
+width:65px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+background:#49b6ff;
+
+font-size:20px;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.chat-input button:hover{
+
+transform:scale(1.08);
+
+}
+
+.typing{
+
+display:flex;
+
+gap:8px;
+
+padding-left:8px;
+
+}
+
+.typing span{
+
+width:10px;
+height:10px;
+
+background:#78d4ff;
+
+border-radius:50%;
+
+animation:typing 1.2s infinite;
+
+}
+
+.typing span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+.typing span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+@keyframes typing{
+
+0%,100%{
+
+opacity:.3;
+transform:translateY(0);
+
+}
+
+50%{
+
+opacity:1;
+transform:translateY(-7px);
+
+}
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
 }    
 </style>
 
@@ -2639,7 +2859,52 @@ document.getElementById("result").innerHTML=text;
 
 
 
+<section class="ai-chat">
 
+<div class="ai-header">
+<div class="ai-avatar">
+<i class="fa-solid fa-robot"></i>
+</div>
+
+<h2>MindSpace AI</h2>
+
+<p>
+Your personal AI companion for emotional wellness.
+</p>
+</div>
+
+<div class="chat-window">
+
+<div class="message user">
+I'm feeling overwhelmed today...
+</div>
+
+<div class="typing">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="message ai">
+I'm here for you. ❤️<br><br>
+Take a deep breath. Let's begin with a simple 60-second breathing exercise together.
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+placeholder="Share what's on your mind...">
+
+<button>
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</div>
+
+</section>
 
 
 
@@ -2801,5 +3066,16 @@ window.onclick=function(event){
     </div>
 
 </div>
+let faqItems=document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+item.addEventListener("click",()=>{
+
+item.classList.toggle("active");
+
+});
+
+});    
 </body>
 </html>
