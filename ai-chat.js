@@ -107,10 +107,7 @@ function getAIResponse(message){
 
 }
 
-    }
-
-
-    if(message.includes("stress") || message.includes("anxiety")){
+    
 
         return "Stress can feel overwhelming. Try taking a slow breath and tell me what is causing the most pressure right now.";
 
