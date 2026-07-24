@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace | Wellbeing Guide</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#071a33;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+height:700px;
+
+background:#1b63b8;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+top:-250px;
+left:-200px;
+
+opacity:.25;
+
+z-index:-2;
+
+animation:move1 15s infinite alternate;
+
+}
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:600px;
+height:600px;
+
+background:#3cb4ff;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+right:-180px;
+bottom:-180px;
+
+opacity:.18;
+
+z-index:-2;
+
+animation:move2 18s infinite alternate;
+
+}
+
+
+@keyframes move1{
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(100px,70px);
+
+}
+
+}
+
+
+@keyframes move2{
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(-120px,-80px);
+
+}
+
+}
+
+
+
+/* HEADER */
+
+header{
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:sticky;
+
+top:0;
+
+background:rgba(7,26,51,.75);
+
+backdrop-filter:blur(18px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#9fdcff;
+
+letter-spacing:.5px;
+
+}
+
+
+.back{
+
+text-decoration:none;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.15);
+
+transition:.35s;
+
+}
+
+
+.back:hover{
+
+background:#9fdcff;
+
+color:#071a33;
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+padding:110px 8% 80px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+
+.hero span{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:40px;
+
+color:#9fdcff;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+}
+
+
+.hero h1{
+
+font-size:68px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+
+.hero h1 b{
+
+color:#8fd3ff;
+
+}
+
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#d7ebff;
+
+max-width:760px;
+
+margin:auto;
+
+}
+
+
+.hero-buttons{
+
+margin-top:45px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.primary-btn{
+
+padding:16px 34px;
+
+background:#8fd3ff;
+
+color:#071a33;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:60px;
+
+transition:.35s;
+
+}
+
+
+.primary-btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+.secondary-btn{
+
+padding:16px 34px;
+
+border-radius:60px;
+
+border:1px solid rgba(255,255,255,.2);
+
+color:white;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+
+.secondary-btn:hover{
+
+background:rgba(255,255,255,.08);
+
+transform:translateY(-6px);
+
+}
+
+
+
+/* Scroll */
+
+.scroll{
+
+margin-top:70px;
+
+font-size:15px;
+
+opacity:.8;
+
+animation:float 2.5s infinite;
+
+}
+
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+
+
+
+/* SECTION TITLE */
+
+.section-title{
+
+text-align:center;
+
+margin:60px 0 50px;
+
+}
+
+
+.section-title h2{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+
+.section-title p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#d3e8fb;
+
+}
+
+
+
+/* Articles Container */
+
+.articles{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+padding-bottom:80px;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+}
+.card{
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:28px;
+
+padding:30px;
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+right:-120px;
+
+width:220px;
+height:220px;
+
+background:rgba(143,211,255,.12);
+
+border-radius:50%;
+
+transition:.45s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+border-color:#8fd3ff;
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.card:hover::before{
+
+transform:scale(1.4);
+
+}
+
+.card-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+}
+
+.icon{
+
+font-size:40px;
+
+}
+
+.card-top span{
+
+color:#9fdcff;
+
+font-size:14px;
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#d5e9fb;
+
+margin-bottom:25px;
+
+}
+
+.tags{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-bottom:30px;
+
+}
+
+.tags span{
+
+padding:8px 14px;
+
+background:rgba(143,211,255,.12);
+
+border-radius:30px;
+
+font-size:13px;
+
+color:#9fdcff;
+
+}
+
+.read-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:#8fd3ff;
+
+transition:.35s;
+
+}
+
+.read-btn:hover{
+
+transform:translateX(8px);
+
+}
+.wellbeing-section{
+
+width:90%;
+
+max-width:1200px;
+
+margin:90px auto;
+
+}
+
+.tips-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.tip-card{
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:28px;
+
+padding:35px;
+
+transition:.4s;
+
+}
+
+.tip-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.3);
+
+border-color:#8fd3ff;
+
+}
+
+.tip-icon{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+.tip-card h3{
+
+margin-bottom:15px;
+
+font-size:25px;
+
+}
+
+.tip-card p{
+
+line-height:1.8;
+
+color:#d7ebff;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+margin:80px 0;
+
+}
+
+.stat-box{
+
+background:linear-gradient(135deg,#0d2d55,#123d70);
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-box:hover{
+
+transform:scale(1.05);
+
+}
+
+.stat-box h2{
+
+font-size:50px;
+
+color:#8fd3ff;
+
+margin-bottom:15px;
+
+}
+
+.stat-box p{
+
+line-height:1.8;
+
+color:#d9ecff;
+
+}
+
+.quote-box{
+
+margin-top:80px;
+
+padding:60px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+text-align:center;
+
+}
+
+.quote-box h2{
+
+font-size:36px;
+
+line-height:1.4;
+
+margin-bottom:25px;
+
+color:#8fd3ff;
+
+}
+
+.quote-box p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.9;
+
+color:#d7ebff;
+
+}  
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+MindSpace
+</div>
+
+<a href="specialist.html" class="back">
+← Back
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span>Mental Health Library</span>
+
+<h1>
+
+Start Your <b>Wellbeing Journey</b>
+
+</h1>
+
+<p>
+
+Explore trusted articles created to help you better understand
+your emotions, reduce stress, build confidence and develop
+healthy habits for everyday life.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#articles" class="primary-btn">
+
+Explore Articles
+
+</a>
+
+<a href="specialist.html" class="secondary-btn">
+
+Meet Emma Wilson
+
+</a>
+
+</div>
+
+<div class="scroll">
+
+↓ Scroll to discover
+
+</div>
+
+</div>
+
+</section>
+
+<section id="articles">
+
+<div class="section-title">
+
+<h2>
+
+Featured Articles
+
+</h2>
+
+<p>
+
+Expert-written mental health resources designed to educate,
+support and inspire your personal wellbeing journey.
+
+</p>
+
+</div>
+
+<div class="articles">
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🧠</div>
+
+<span>5 min read</span>
+
+</div>
+
+<h3>How to Manage Stress</h3>
+
+<p>
+Discover practical techniques to reduce everyday stress,
+improve focus, and create healthier routines for a calmer life.
+</p>
+
+<div class="tags">
+<span>Stress</span>
+<span>Wellbeing</span>
+</div>
+
+<a href="stress.html" class="read-btn">
+Read Article →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🔥</div>
+
+<span>6 min read</span>
+
+</div>
+
+<h3>Signs of Burnout</h3>
+
+<p>
+Learn how to recognize emotional exhaustion early and
+take meaningful steps toward recovery and balance.
+</p>
+
+<div class="tags">
+<span>Burnout</span>
+<span>Work-Life</span>
+</div>
+
+<a href="burnout.html" class="read-btn">
+Read Article →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">💙</div>
+
+<span>7 min read</span>
+
+</div>
+
+<h3>How to Improve Self-Esteem</h3>
+
+<p>
+Build confidence, challenge negative thoughts and develop
+a healthier relationship with yourself.
+</p>
+
+<div class="tags">
+<span>Confidence</span>
+<span>Growth</span>
+</div>
+
+<a href="self-esteem.html" class="read-btn">
+Read Article →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🌿</div>
+
+<span>8 min read</span>
+
+</div>
+
+<h3>Understanding Anxiety</h3>
+
+<p>
+Understand what anxiety is, why it happens and explore
+healthy coping strategies for everyday life.
+</p>
+
+<div class="tags">
+<span>Anxiety</span>
+<span>Mental Health</span>
+</div>
+
+<a href="anxiety.html" class="read-btn">
+Read Article →
+</a>
+
+</div>
+</section
+ <section class="wellbeing-section">
+
+<div class="section-title">
+
+<h2>Daily Wellbeing Tips</h2>
+
+<p>
+Small daily habits can make a meaningful difference to your mental wellbeing.
+Explore simple practices you can start today.
+</p>
+
+</div>
+
+<div class="tips-grid">
+
+<div class="tip-card">
+
+<div class="tip-icon">🌞</div>
+
+<h3>Start with Gratitude</h3>
+
+<p>
+Take one minute every morning to think about three things you're grateful for.
+It helps shift your focus toward positive experiences.
+</p>
+
+</div>
+
+<div class="tip-card">
+
+<div class="tip-icon">🚶</div>
+
+<h3>Move Your Body</h3>
+
+<p>
+Even a short walk can improve your mood, reduce stress, and boost your energy.
+</p>
+
+</div>
+
+<div class="tip-card">
+
+<div class="tip-icon">💧</div>
+
+<h3>Stay Hydrated</h3>
+
+<p>
+Drinking enough water supports both your physical health and cognitive function.
+</p>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-box">
+
+<h2>95%</h2>
+
+<p>
+People report feeling better after practicing regular self-care.
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>10+</h2>
+
+<p>
+Years of professional psychological experience.
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>500+</h2>
+
+<p>
+Individuals supported on their wellbeing journey.
+</p>
+
+</div>
+
+</div>
+
+<div class="quote-box">
+
+<h2>
+“Small steps today create a healthier tomorrow.”
+</h2>
+
+<p>
+Mental wellbeing is built through consistent habits, self-awareness,
+and seeking support whenever you need it.
+</p>
+
+</div>
+
+</section> 
