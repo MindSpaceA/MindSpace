@@ -107,6 +107,34 @@ function getAIResponse(message){
 
 }
 
+    }
+
+
+    if(message.includes("stress") || message.includes("anxiety")){
+
+        return "Stress can feel overwhelming. Try taking a slow breath and tell me what is causing the most pressure right now.";
+
+    }
+
+
+    if(message.includes("tired") || message.includes("sleep")){
+
+        return "Feeling tired can affect your mood and thoughts. How has your sleep been recently?";
+
+    }
+
+
+    if(message.includes("hello") || message.includes("hi")){
+
+        return "Hello 👋 I'm MindSpace AI. How are you feeling today?";
+
+    }
+
+
+    return "Thank you for sharing that with me. Can you tell me a little more about your thoughts and feelings?";
+
+}
+
 
 
 function sendMessage(){
