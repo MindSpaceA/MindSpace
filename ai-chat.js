@@ -8,7 +8,6 @@ function addMessage(text, type){
     const message = document.createElement("div");
     message.classList.add("message", type);
 
-
     if(type === "ai"){
 
         message.innerHTML = `
@@ -16,7 +15,7 @@ function addMessage(text, type){
             <div class="bubble">${text}</div>
         `;
 
-    }else{
+    } else {
 
         message.innerHTML = `
             <div class="bubble">${text}</div>
@@ -25,33 +24,28 @@ function addMessage(text, type){
 
     }
 
-
     messages.appendChild(message);
-
     messages.scrollTop = messages.scrollHeight;
 
 }
 
 
 
-function typing(){
+function showTyping(){
 
     const typing = document.createElement("div");
 
-    typing.id="typing";
+    typing.id = "typing";
+    typing.className = "message ai";
 
-    typing.className="message ai";
-
-    typing.innerHTML=`
+    typing.innerHTML = `
         <div class="avatar">🧠</div>
         <div class="bubble">
-            <span>AI is thinking...</span>
+            AI is thinking...
         </div>
     `;
 
-
     messages.appendChild(typing);
-
     messages.scrollTop = messages.scrollHeight;
 
 }
@@ -60,10 +54,10 @@ function typing(){
 
 function removeTyping(){
 
-    const element=document.getElementById("typing");
+    const typing = document.getElementById("typing");
 
-    if(element){
-        element.remove();
+    if(typing){
+        typing.remove();
     }
 
 }
@@ -75,60 +69,42 @@ function getAIResponse(message){
     message = message.toLowerCase();
 
 
+    if(message.includes("hello") || message.includes("hi")){
+
+        return "Hello 👋 I'm MindSpace AI. How are you feeling today?";
+
+    }
+
+
     if(message.includes("sad") || message.includes("depressed")){
 
-        return "I'm sorry you are feeling this way. Would you like to share what has been making you feel sad? I'm here to listen.";
+        return "I'm sorry you are feeling this way 💙. I'm here to listen. Would you like to share what happened?";
 
     }
 
 
     if(message.includes("stress") || message.includes("anxiety")){
 
-        return "Stress can feel overwhelming. Try taking a slow breath and tell me what is causing the most pressure right now.";
+        return "I understand. Stress can feel overwhelming. What is causing you the most pressure right now?";
 
     }
 
 
     if(message.includes("tired") || message.includes("sleep")){
 
-        return "Feeling tired can affect your mood and thoughts. How has your sleep been recently?";
+        return "Feeling tired can affect your emotions. How has your sleep been recently?";
 
     }
 
 
-    if(message.includes("hello") || message.includes("hi")){
+    if(message.includes("alone") || message.includes("lonely")){
 
-        return "Hello 👋 I'm MindSpace AI. How are you feeling today?";
-
-    }
-
-
-    return "Thank you for sharing that with me. Can you tell me a little more about your thoughts and feelings?";
-
-}
-
-    
-
-        return "Stress can feel overwhelming. Try taking a slow breath and tell me what is causing the most pressure right now.";
+        return "Feeling alone can be difficult. I'm here with you. Would you like to talk about it?";
 
     }
 
 
-    if(message.includes("tired") || message.includes("sleep")){
-
-        return "Feeling tired can affect your mood and thoughts. How has your sleep been recently?";
-
-    }
-
-
-    if(message.includes("hello") || message.includes("hi")){
-
-        return "Hello 👋 I'm MindSpace AI. How are you feeling today?";
-
-    }
-
-
-    return "Thank you for sharing that with me. Can you tell me a little more about your thoughts and feelings?";
+    return "Thank you for sharing with me 💙. Can you tell me a little more about how you feel?";
 
 }
 
@@ -136,48 +112,44 @@ function getAIResponse(message){
 
 function sendMessage(){
 
-    const text=input.value.trim();
+    const text = input.value.trim();
 
 
-    if(text==="") return;
+    if(text === ""){
+        return;
+    }
 
 
     addMessage(text,"user");
 
+    input.value = "";
 
-    input.value="";
 
-
-    typing();
-
+    showTyping();
 
 
     setTimeout(()=>{
 
         removeTyping();
 
+        const response = getAIResponse(text);
 
-        const answer=getAIResponse(text);
-
-
-        addMessage(answer,"ai");
+        addMessage(response,"ai");
 
 
     },1500);
-
 
 
 }
 
 
 
-sendBtn.addEventListener("click",sendMessage);
+sendBtn.addEventListener("click", sendMessage);
 
 
+input.addEventListener("keydown", function(event){
 
-input.addEventListener("keydown",(e)=>{
-
-    if(e.key==="Enter"){
+    if(event.key === "Enter"){
 
         sendMessage();
 
