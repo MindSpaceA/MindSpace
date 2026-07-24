@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace | Breathing Exercise</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+radial-gradient(circle at top,#164d86,#071a33);
+
+color:white;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+
+
+/* HEADER */
+
+header{
+
+width:100%;
+
+padding:25px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#9fdcff;
+
+}
+
+
+.back{
+
+text-decoration:none;
+
+color:white;
+
+padding:10px 22px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.2);
+
+transition:.3s;
+
+}
+
+
+.back:hover{
+
+background:#9fdcff;
+
+color:#071a33;
+
+}
+
+
+
+/* MAIN */
+
+.container{
+
+width:90%;
+
+max-width:700px;
+
+text-align:center;
+
+margin-top:40px;
+
+}
+
+
+
+h1{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+
+h1 span{
+
+color:#8fd3ff;
+
+}
+
+
+.description{
+
+color:#d7ebff;
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+
+
+/* BREATH CIRCLE */
+
+
+.circle-area{
+
+margin:60px auto;
+
+height:260px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.circle{
+
+width:160px;
+
+height:160px;
+
+border-radius:50%;
+
+background:rgba(143,211,255,.25);
+
+border:3px solid #8fd3ff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+font-weight:700;
+
+box-shadow:0 0 60px rgba(143,211,255,.5);
+
+transition:all 4s ease;
+
+}
+
+
+
+/* ANIMATION */
+
+
+.breathe-in{
+
+transform:scale(1.5);
+
+}
+
+
+.breathe-out{
+
+transform:scale(1);
+
+}
+
+
+
+/* CARD */
+
+
+.info{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:30px;
+
+border-radius:25px;
+
+}
+
+
+
+.info h3{
+
+color:#8fd3ff;
+
+margin-bottom:15px;
+
+}
+
+
+
+.info p{
+
+line-height:1.8;
+
+color:#d7ebff;
+
+}
+
+
+
+/* BUTTONS */
+
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+button{
+
+border:none;
+
+cursor:pointer;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+font-size:16px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+
+
+.start{
+
+background:#8fd3ff;
+
+color:#071a33;
+
+}
+
+
+.reset{
+
+background:rgba(255,255,255,.15);
+
+color:white;
+
+}
+
+
+
+button:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.timer{
+
+margin-top:30px;
+
+font-size:22px;
+
+color:#9fdcff;
+
+}
+
+
+
+footer{
+
+position:absolute;
+
+bottom:25px;
+
+color:#aacce5;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+MindSpace
+</div>
+
+
+<a href="wellbeing-guide.html" class="back">
+← Back
+</a>
+
+
+</header>
+
+
+
+
+<div class="container">
+
+
+<h1>
+
+Breathing <span>Exercise</span>
+
+</h1>
+
+
+<p class="description">
+
+Take a moment to slow down, relax your mind,
+and reconnect with your breathing.
+
+</p>
+
+
+
+<div class="circle-area">
+
+
+<div class="circle" id="circle">
+
+Ready
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="info">
+
+
+<h3>
+4 - 4 - 6 Breathing Method
+</h3>
+
+
+<p>
+
+Inhale for 4 seconds.<br>
+Hold your breath for 4 seconds.<br>
+Slowly exhale for 6 seconds.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="buttons">
+
+
+<button class="start" onclick="startBreathing()">
+
+Start
+
+</button>
+
+
+<button class="reset" onclick="resetBreathing()">
+
+Reset
+
+</button>
+
+
+</div>
+
+
+<div class="timer" id="timer">
+
+Press Start to begin
+
+</div>
+
+
+
+</div>
+
+
+
+
+<footer>
+
+MindSpace © 2026
+
+</footer>
+
+
+
+
+<script>
+
+
+let running=false;
+
+let cycle;
+
+let circle=document.getElementById("circle");
+
+let timer=document.getElementById("timer");
+
+
+
+function startBreathing(){
+
+
+if(running) return;
+
+
+running=true;
+
+
+let steps=[
+
+{
+text:"Inhale",
+time:4,
+class:"breathe-in"
+},
+
+{
+text:"Hold",
+time:4,
+class:"breathe-in"
+},
+
+{
+text:"Exhale",
+time:6,
+class:"breathe-out"
+}
+
+];
+
+
+let index=0;
+
+
+
+function nextStep(){
+
+
+if(!running) return;
+
+
+let step=steps[index];
+
+
+circle.innerHTML=step.text;
+
+
+circle.className="circle "+step.class;
+
+
+let count=step.time;
+
+
+timer.innerHTML=count+" seconds";
+
+
+
+let countdown=setInterval(()=>{
+
+
+count--;
+
+
+timer.innerHTML=count+" seconds";
+
+
+if(count<=0){
+
+
+clearInterval(countdown);
+
+
+index++;
+
+
+if(index>=steps.length){
+
+index=0;
+
+}
+
+
+nextStep();
+
+
+}
+
+
+},1000);
+
+
+
+}
+
+
+nextStep();
+
+
+}
+
+
+
+function resetBreathing(){
+
+
+running=false;
+
+
+circle.className="circle";
+
+
+circle.innerHTML="Ready";
+
+
+timer.innerHTML="Press Start to begin";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
