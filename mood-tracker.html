@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace | Mood Tracker</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+    linear-gradient(135deg,#071a33,#0c2b55);
+    color:white;
+    padding:40px;
+}
+
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+
+/* Header */
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.header p{
+    color:#b8c7dc;
+    font-size:18px;
+}
+
+
+
+/* Cards */
+
+.card{
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    transition:.35s ease;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,0.12);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+
+/* Mood */
+
+.moods{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.mood{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.1);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.mood:hover{
+
+    transform:scale(1.15);
+
+    background:#1c7cff;
+
+}
+
+
+.mood.active{
+
+    background:#1c7cff;
+
+    box-shadow:
+    0 0 25px #1c7cff;
+
+}
+
+
+
+/* Text area */
+
+
+textarea{
+
+    width:100%;
+
+    height:120px;
+
+    margin-top:20px;
+
+    border:none;
+
+    outline:none;
+
+    resize:none;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.1);
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+textarea::placeholder{
+
+    color:#c5d2e5;
+
+}
+
+
+
+/* Button */
+
+
+button{
+
+    margin-top:20px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#1c7cff;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(28,124,255,.5);
+
+}
+
+
+
+/* Calendar */
+
+
+.calendar{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+
+.day{
+
+    height:55px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+
+.day:hover{
+
+    background:#1c7cff;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Reflection */
+
+
+.reflection{
+
+    text-align:center;
+
+}
+
+
+.reflection h2{
+
+    margin-bottom:15px;
+
+}
+
+
+.message{
+
+    color:#c8d8ef;
+
+    font-size:18px;
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:700px){
+
+body{
+    padding:20px;
+}
+
+.header h1{
+    font-size:32px;
+}
+
+
+.calendar{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="header">
+
+<h1>How are you feeling today?</h1>
+
+<p>
+Track your emotions and understand yourself better.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>Choose your mood</h2>
+
+
+<div class="moods">
+
+
+<div class="mood">😊</div>
+
+<div class="mood">🙂</div>
+
+<div class="mood">😐</div>
+
+<div class="mood">😔</div>
+
+<div class="mood">😰</div>
+
+<div class="mood">😴</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2>Write your thoughts</h2>
+
+
+<textarea placeholder="What's on your mind today?"></textarea>
+
+
+<button onclick="saveMood()">
+Save Mood
+</button>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2>Your Mood Calendar</h2>
+
+
+<div class="calendar">
+
+
+<script>
+
+for(let i=1;i<=28;i++){
+
+document.write(
+`<div class="day">${i}</div>`
+)
+
+}
+
+</script>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card reflection">
+
+
+<h2>AI Reflection</h2>
+
+
+<p class="message">
+
+Your emotional journey starts with awareness.
+Keep checking in with yourself 💙
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+let moods=document.querySelectorAll(".mood");
+
+
+moods.forEach(mood=>{
+
+mood.onclick=()=>{
+
+
+moods.forEach(m=>m.classList.remove("active"));
+
+
+mood.classList.add("active");
+
+
+}
+
+});
+
+
+
+function saveMood(){
+
+alert("Your mood has been saved 💙");
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
