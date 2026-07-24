@@ -488,7 +488,6 @@ font-size:14px;
 }
 
 
-
 /* Services */
 
 
@@ -1649,6 +1648,21 @@ background:#2563eb;
 transform:translateY(-3px);
 
 }
+.ai-btn{
+    display:inline-flex;
+    padding:16px 35px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#4facfe,#2563eb);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.ai-btn:hover{
+    transform:translateY(-5px);
+}
     
 </style>
 
@@ -1895,8 +1909,6 @@ Want personal growth?
 </div>
 
 
-<a href="ai-chat.html" class="chat-button">
-    💬 Talk with MindSpace AI
 </a>
 
     
@@ -1904,6 +1916,10 @@ Want personal growth?
 
 
 
+<a href="ai-chat.html" class="ai-btn">
+    🧠 Talk with MindSpace AI
+</a>
+    
 
 <section class="section" id="services">
 
@@ -2160,8 +2176,10 @@ Check Result
 Book a private session with our psychologist.
 </p>
 
+
 <button class="appointment-btn" onclick="openAppointment()">
 Book an Appointment 📅
+
 </button>
 
 </div>
