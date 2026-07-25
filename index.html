@@ -26,17 +26,17 @@ html{
 }
 
 body{
+    background:
+        radial-gradient(circle at 15% 15%, rgba(77,184,255,.28), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(0,140,255,.20), transparent 35%),
+        linear-gradient(
+            135deg,
+            #081b33 0%,
+            #103867 45%,
+            #1d5ea8 100%
+        );
 
-    body{
-    background: linear-gradient(
-        135deg,
-        #0f2d57,
-        #1d4f8d,
-        #2c78c8
-    );
-}
-
-    color:white;
+    color:#fff;
     min-height:100vh;
     overflow-x:hidden;
 }
@@ -73,30 +73,39 @@ body{
 /* Animated background */
 
 body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    top:-150px;
+    left:-150px;
 
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:#2196ff;
-filter:blur(180px);
-opacity:.25;
-top:-200px;
-left:-200px;
-animation:move 10s infinite alternate;
+    pointer-events:none;
 
+    background:
+        radial-gradient(
+            circle,
+            rgba(77,184,255,0.35) 0%,
+            transparent 65%
+        );
+
+    filter:blur(80px);
+
+    animation:glowMove 12s ease-in-out infinite alternate;
+
+    z-index:-1;
 }
 
 
-@keyframes move{
+@keyframes glowMove{
 
-from{
-transform:translate(0,0);
-}
+    from{
+        transform:translate(0,0);
+    }
 
-to{
-transform:translate(200px,150px);
-}
+    to{
+        transform:translate(200px,150px);
+    }
 
 }
 
@@ -168,17 +177,15 @@ color:#4db8ff;
 
 
 .hero{
+    min-height:100vh;
 
-min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+    padding:110px 8% 70px;
 
-padding:140px 8% 80px;
-
-gap:50px;
-
+    gap:60px;
 }
 
 
@@ -227,72 +234,37 @@ margin-bottom:35px;
 
 .btn{
 
-display:inline-block;
+    background:linear-gradient(
+        135deg,
+        #42a5ff,
+        #2196f3
+    );
 
-padding:15px 35px;
-
-border-radius:40px;
-
-background:
-linear-gradient(
-135deg,
-#2294ff,
-#4dc7ff
-);
-
-color:white;
-
-text-decoration:none;
-
-font-weight:600;
-
-box-shadow:
-0 10px 30px rgba(0,150,255,.4);
-
-transition:.3s;
+    box-shadow:
+        0 15px 35px rgba(33,150,243,.45);
 
 }
-
-
 
 .btn:hover{
 
-transform:translateY(-5px);
-
-box-shadow:
-0 20px 40px rgba(0,150,255,.5);
+    transform:translateY(-6px) scale(1.03);
 
 }
-
 
 
 /* Glass card */
 
 
-.hero-card{
+.hero{
+    min-height:100vh;
 
-width:400px;
-height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-border-radius:30px;
+    padding:110px 8% 70px;
 
-background:
-rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border:
-1px solid rgba(255,255,255,.15);
-
-display:flex;
-
-align-items:center;
-justify-content:center;
-
-position:relative;
-
-animation:float 5s infinite ease-in-out;
-
+    gap:60px;
 }
 
 
@@ -382,10 +354,11 @@ text-align:center;
 
 .hero-text h1{
 
-font-size:45px;
+    font-size:72px;
+    line-height:1.05;
+    letter-spacing:-2px;
 
 }
-
 
 .hero-card{
 
