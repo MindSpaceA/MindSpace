@@ -234,20 +234,50 @@ margin-bottom:35px;
 
 .btn{
 
-    background:linear-gradient(
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(
         135deg,
-        #42a5ff,
-        #2196f3
+        #2294ff,
+        #4dc7ff
     );
 
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
     box-shadow:
-        0 15px 35px rgba(33,150,243,.45);
+    0 10px 30px rgba(0,150,255,.4);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
 
 }
 
+
 .btn:hover{
 
-    transform:translateY(-6px) scale(1.03);
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 45px rgba(0,150,255,.55);
+
+}
+
+
+.btn:active{
+
+    transform:translateY(-2px);
 
 }
 
