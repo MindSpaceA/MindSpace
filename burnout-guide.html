@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Signs of Burnout | MindSpace</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #081b38,
+        #123b70,
+        #245fa3
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/* Background lights */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#4dc7ff;
+
+    filter:blur(130px);
+
+    top:-100px;
+    right:-100px;
+
+    opacity:.35;
+
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    background:#8b5cf6;
+
+    filter:blur(140px);
+
+    bottom:-100px;
+    left:-100px;
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+
+
+/* Container */
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+/* Header */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 0;
+
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:30px;
+
+    font-size:15px;
+
+    opacity:.85;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    opacity:1;
+
+}
+
+
+
+/* Hero */
+
+.hero{
+
+    text-align:center;
+
+    padding:70px 0 50px;
+
+}
+
+
+
+.hero .read{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.8);
+
+    line-height:1.7;
+
+    font-size:18px;
+
+}
+
+
+
+/* Glass */
+
+.glass{
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:
+
+    1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.25);
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    padding:45px 0;
+
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* Cards */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.1);
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:
+
+    rgba(255,255,255,.16);
+
+}
+
+
+
+.card-icon{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.card p{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.6;
+
+}
+
+
+
+/* Quote */
+
+.quote{
+
+    text-align:center;
+
+}
+
+
+
+.quote p{
+
+    font-size:25px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2294ff,
+        #4dc7ff
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    padding:40px 0;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+nav a{
+
+    margin:0 10px;
+
+}
+
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+
+.section-title{
+
+    font-size:28px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+
+<header>
+
+<div class="logo">
+🧠 MindSpace
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="guides.html">Guides</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+
+<span class="read">
+🔥 6 min read
+</span>
+
+
+<h1>
+Signs of Burnout
+</h1>
+
+
+<p>
+Learn how to recognize emotional exhaustion early and take meaningful steps toward recovery and balance.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- What is Burnout -->
+
+
+<section>
+
+
+<div class="glass">
+
+
+<h2>
+What is Burnout?
+</h2>
+
+
+<p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,.8);">
+
+Burnout is a state of emotional, mental, and physical exhaustion
+caused by long periods of stress and pressure.
+
+It can happen when you feel overwhelmed, constantly busy,
+or when you do not give yourself enough time to rest and recover.
+
+Recognizing burnout early can help you restore your energy
+and create healthier habits.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Signs -->
+
+
+<section>
+
+
+<h2 class="section-title">
+Signs of Burnout
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🔥
+</div>
+
+
+<h3>
+Emotional Exhaustion
+</h3>
+
+
+<p>
+Feeling mentally and physically drained, even after resting.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🧠
+</div>
+
+
+<h3>
+Lack of Motivation
+</h3>
+
+
+<p>
+Losing interest in activities and feeling disconnected from things you enjoy.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+😴
+</div>
+
+
+<h3>
+Sleep & Energy Changes
+</h3>
+
+
+<p>
+Having trouble relaxing, sleeping well, or feeling refreshed.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+😟
+</div>
+
+
+<h3>
+Feeling Overwhelmed
+</h3>
+
+
+<p>
+Daily responsibilities may start feeling harder to manage.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Prevention -->
+
+
+<section>
+
+
+<h2 class="section-title">
+How to Prevent Burnout
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🌿
+</div>
+
+
+<h3>
+Take Regular Breaks
+</h3>
+
+
+<p>
+Short moments of rest help your mind recharge and reduce pressure.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+⚖️
+</div>
+
+
+<h3>
+Create Balance
+</h3>
+
+
+<p>
+Make time for yourself, hobbies, relationships, and relaxation.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🧘
+</div>
+
+
+<h3>
+Relax Your Mind
+</h3>
+
+
+<p>
+Breathing exercises and mindfulness can help calm your thoughts.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+💙
+</div>
+
+
+<h3>
+Listen to Yourself
+</h3>
+
+
+<p>
+Notice when you need rest and give your body the care it deserves.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Reminder -->
+
+
+<section>
+
+
+<div class="glass quote">
+
+
+<p>
+"Rest is not a weakness. Taking care of yourself helps you keep growing."
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CTA -->
+
+
+<section>
+
+
+<div class="glass" style="text-align:center;">
+
+
+<h2>
+Protect Your Energy
+</h2>
+
+
+<p style="margin-top:15px; color:rgba(255,255,255,.75);">
+
+Small changes every day can help you create a healthier and more balanced life.
+
+</p>
+
+
+
+<a href="index.html" class="btn">
+Start Your Journey
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 MindSpace. All rights reserved.
+</p>
+
+
+<p style="margin-top:10px;">
+Wellbeing guides for a healthier mind.
+</p>
+
+
+</div>
+
+</footer>
+
+
+
+
+
+<script>
+
+
+// Scroll animation
+
+const elements = document.querySelectorAll(
+".glass, .card, .hero"
+);
+
+
+
+const observer = new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+},
+
+{
+threshold:0.15
+}
+
+);
+
+
+
+
+
+elements.forEach(el=>{
+
+
+el.style.opacity="0";
+
+el.style.transform="translateY(30px)";
+
+el.style.transition="all .8s ease";
+
+
+observer.observe(el);
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
