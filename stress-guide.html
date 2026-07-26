@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,225 +8,920 @@
 
 <title>How to Manage Stress | MindSpace</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #081b38,
+        #123b70,
+        #245fa3
+    );
+
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* Background glow */
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#4dc7ff;
+
+    filter:blur(130px);
+
+    top:-100px;
+    right:-100px;
+
+    opacity:.35;
+
+    z-index:-1;
+}
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    background:#8b5cf6;
+
+    filter:blur(140px);
+
+    bottom:-100px;
+    left:-100px;
+
+    opacity:.25;
+
+    z-index:-1;
+}
+
+
+
+/* Container */
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+/* Header */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 0;
+
+}
+
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+
+    color:white;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:30px;
+
+    font-size:15px;
+
+    opacity:.85;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    opacity:1;
+
+}
+
+
+
+/* Hero */
+
+.hero{
+
+    padding:70px 0 50px;
+
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:rgba(255,255,255,.8);
+
+    line-height:1.7;
+
+}
+
+
+
+/* Glass Card */
+
+.glass{
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:
+
+    1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.25);
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    padding:50px 0;
+
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* Cards */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.1);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:
+
+    rgba(255,255,255,.16);
+
+}
+
+
+
+.card-icon{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+
+.card p{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.6;
+
+}
+
+
+
+/* Quote */
+
+.quote{
+
+    text-align:center;
+
+}
+
+
+.quote p{
+
+    font-size:25px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+
+
+/* CTA */
+
+.cta{
+
+    text-align:center;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2294ff,
+        #4dc7ff
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,150,255,.4);
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    padding:40px 0;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+
+/* Animation */
+
+.fade{
+
+    animation:
+
+    fadeUp .8s ease forwards;
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+nav a{
+
+    margin:0 10px;
+
+}
+
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
+.section-title{
+
+    font-size:28px;
+
+}
+
+
+.glass{
+
+    padding:25px;
+
+}
+
+
+}
+
+</style>
+
 
 </head>
-
 <body>
 
-<header class="article-hero">
 
-    <div class="hero-content">
+<div class="container">
 
-        <span class="tag">Stress • Wellbeing</span>
 
-        <h1>How to Manage Stress</h1>
+<header>
 
-        <p>
-            Discover practical techniques to reduce everyday stress,
-            improve focus, and create healthier routines for a calmer life.
-        </p>
+<div class="logo">
+🧠 MindSpace
+</div>
 
-        <a href="articles.html" class="btn">
-            ← Back to Articles
-        </a>
 
-    </div>
+<nav>
+
+<a href="index.html">Home</a>
+<a href="guides.html">Guides</a>
+<a href="contact.html">Contact</a>
+
+</nav>
 
 </header>
 
 
-<main class="article-container">
 
-<section class="article-section">
+<!-- Hero -->
 
-<h2>Understanding Stress</h2>
+<section class="hero fade">
+
+
+<h1>
+How to Manage Stress
+</h1>
+
 
 <p>
-Stress is your body's natural response to challenges, pressure, or unexpected
-changes. While short-term stress can help improve focus and motivation,
-long-lasting stress may negatively affect both mental and physical health.
+Discover simple techniques to reduce everyday stress,
+improve your focus, and create a calmer, healthier lifestyle.
 </p>
 
-</section>
-
-
-<section class="article-section">
-
-<h2>Common Signs of Stress</h2>
-
-<div class="card-grid">
-
-<div class="info-card">
-<h3>😟 Emotional</h3>
-<p>Anxiety, irritability, feeling overwhelmed, mood changes.</p>
-</div>
-
-<div class="info-card">
-<h3>😴 Physical</h3>
-<p>Fatigue, headaches, muscle tension, poor sleep.</p>
-</div>
-
-<div class="info-card">
-<h3>🧠 Mental</h3>
-<p>Difficulty concentrating, racing thoughts, forgetfulness.</p>
-</div>
-
-</div>
 
 </section>
 
 
-<section class="article-section">
-
-<h2>What Causes Stress?</h2>
-
-<ul>
-
-<li>Work or school pressure</li>
-
-<li>Financial concerns</li>
-
-<li>Family responsibilities</li>
-
-<li>Health issues</li>
-
-<li>Major life changes</li>
-
-<li>Lack of sleep</li>
-
-<li>Too much screen time</li>
-
-</ul>
-
-</section>
 
 
-<section class="article-section">
 
-<h2>7 Practical Ways to Reduce Stress</h2>
+<!-- Introduction -->
 
-<div class="tips">
-
-<div class="tip">
-<h3>🌬 Deep Breathing</h3>
-<p>Take slow, deep breaths for 3–5 minutes to calm your nervous system.</p>
-</div>
-
-<div class="tip">
-<h3>🚶 Stay Active</h3>
-<p>Walking, yoga, or stretching helps release feel-good hormones.</p>
-</div>
-
-<div class="tip">
-<h3>😴 Sleep Well</h3>
-<p>Aim for 7–9 hours of quality sleep every night.</p>
-</div>
-
-<div class="tip">
-<h3>🥗 Eat Balanced Meals</h3>
-<p>Healthy nutrition supports both brain and body.</p>
-</div>
-
-<div class="tip">
-<h3>📵 Take Digital Breaks</h3>
-<p>Reduce social media and screen time when feeling overwhelmed.</p>
-</div>
-
-<div class="tip">
-<h3>🧘 Practice Mindfulness</h3>
-<p>Meditation and gratitude can help calm your thoughts.</p>
-</div>
-
-<div class="tip">
-<h3>💙 Talk to Someone</h3>
-<p>Sharing your feelings with a trusted person can reduce stress.</p>
-</div>
-
-</div>
-
-</section>
+<section>
 
 
-<section class="article-section">
-
-<h2>Quick 5-Minute Breathing Exercise</h2>
-
-<div class="exercise-box">
-
-<p><strong>Step 1</strong> — Inhale through your nose for 4 seconds.</p>
-
-<p><strong>Step 2</strong> — Hold your breath for 4 seconds.</p>
-
-<p><strong>Step 3</strong> — Exhale slowly for 6 seconds.</p>
-
-<p><strong>Repeat</strong> for 5 minutes.</p>
-
-</div>
-
-</section>
+<div class="glass fade">
 
 
-<section class="article-section">
-
-<h2>Healthy Daily Habits</h2>
-
-<ul>
-
-<li>✔ Drink enough water</li>
-
-<li>✔ Get enough sleep</li>
-
-<li>✔ Exercise regularly</li>
-
-<li>✔ Spend time outdoors</li>
-
-<li>✔ Listen to calming music</li>
-
-<li>✔ Practice gratitude</li>
-
-<li>✔ Make time for hobbies</li>
-
-</ul>
-
-</section>
+<h2>
+What is Stress?
+</h2>
 
 
-<section class="article-section warning">
+<p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,.8);">
 
-<h2>When Should You Seek Help?</h2>
+Stress is a natural response that happens when we face
+pressure, challenges, or changes in life. A small amount of
+stress can help us stay motivated, but too much stress can
+affect our mood, energy, sleep, and overall wellbeing.
 
-<p>
-
-If stress lasts for several weeks, affects your daily life,
-or feels too difficult to manage alone,
-consider speaking with a qualified mental health professional.
+Learning how to manage stress can help you feel more balanced
+and in control of your daily life.
 
 </p>
 
+
+</div>
+
+
 </section>
 
 
-<section class="article-section conclusion">
 
-<h2>Final Thoughts</h2>
+
+
+
+<!-- Signs -->
+
+<section>
+
+
+<h2 class="section-title">
+Signs of Stress
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+😟
+</div>
+
+<h3>
+Feeling Overwhelmed
+</h3>
 
 <p>
+You may feel like everything is too much to handle or difficult
+to organize.
+</p>
 
-Managing stress doesn't require perfection.
-Small daily habits can make a big difference over time.
-Be patient with yourself, celebrate small wins,
-and remember that asking for support is a sign of strength.
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+😴
+</div>
+
+<h3>
+Low Energy
+</h3>
+
+<p>
+Constant stress can make you feel tired and reduce your motivation.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+🌙
+</div>
+
+<h3>
+Sleep Problems
+</h3>
+
+<p>
+Stress can make it harder to relax and get quality sleep.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+🧠
+</div>
+
+<h3>
+Lack of Focus
+</h3>
+
+<p>
+A busy mind can affect concentration and daily productivity.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Tips -->
+
+
+<section>
+
+
+<h2 class="section-title">
+Simple Ways to Manage Stress
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+🌬️
+</div>
+
+<h3>
+Deep Breathing
+</h3>
+
+<p>
+Slow breathing exercises can calm your nervous system and
+help your mind relax.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+🚶
+</div>
+
+<h3>
+Move Your Body
+</h3>
+
+<p>
+Walking, stretching, or exercising can improve your mood and
+release tension.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+☀️
+</div>
+
+<h3>
+Create Healthy Routines
+</h3>
+
+<p>
+Small daily habits like regular sleep and balanced meals support
+your mental wellbeing.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card fade">
+
+<div class="card-icon">
+☕
+</div>
+
+<h3>
+Take Breaks
+</h3>
+
+<p>
+Give yourself moments to rest, recharge, and enjoy simple things.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Reminder -->
+
+
+<section>
+
+
+<div class="glass quote fade">
+
+
+<p>
+"Taking care of your mind is one of the most important things
+you can do for yourself."
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CTA -->
+
+
+<section>
+
+
+<div class="glass cta fade">
+
+
+<h2>
+Build a calmer daily life
+</h2>
+
+
+<p style="margin-top:15px; color:rgba(255,255,255,.75);">
+
+Small steps every day can create a big positive change.
 
 </p>
 
-<a href="breathing.html" class="btn">
-Try a Breathing Exercise →
+
+
+<a href="index.html" class="btn">
+Start Your Journey
 </a>
 
+
+</div>
+
+
 </section>
 
-</main>
+
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 MindSpace. All rights reserved.
+</p>
+
+<p style="margin-top:10px;">
+Wellbeing guides for a healthier mind.
+</p>
+
+</div>
+
+</footer>
+
+
+
+
+
+<script>
+
+
+// Smooth fade animation on scroll
+
+const elements = document.querySelectorAll(".fade");
+
+
+const observer = new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+
+},
+{
+threshold:0.15
+});
+
+
+
+elements.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(30px)";
+el.style.transition="all .8s ease";
+
+observer.observe(el);
+
+});
+
+
+
+</script>
+
+
 
 </body>
+
 </html>
