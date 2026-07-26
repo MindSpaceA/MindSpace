@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Understanding Anxiety | MindSpace</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #081b38,
+        #123b70,
+        #245fa3
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#4dc7ff;
+
+    filter:blur(130px);
+
+    top:-100px;
+    right:-100px;
+
+    opacity:.35;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    background:#8b5cf6;
+
+    filter:blur(140px);
+
+    bottom:-100px;
+    left:-100px;
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 0;
+
+}
+
+
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:30px;
+
+    opacity:.85;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    opacity:1;
+
+}
+
+
+
+
+
+.hero{
+
+    text-align:center;
+
+    padding:70px 0 50px;
+
+}
+
+
+
+
+.read{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.hero h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.8);
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+section{
+
+    padding:45px 0;
+
+}
+
+
+
+
+
+.glass{
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:
+
+    1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.25);
+
+}
+
+
+
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:
+
+    rgba(255,255,255,.16);
+
+}
+
+
+
+
+
+.card-icon{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+
+
+.card p{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+.quote{
+
+    text-align:center;
+
+}
+
+
+
+
+
+.quote p{
+
+    font-size:25px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+
+
+
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2294ff,
+        #4dc7ff
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+footer{
+
+    padding:40px 0;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+nav a{
+
+    margin:0 10px;
+
+}
+
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+
+.section-title{
+
+    font-size:28px;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head
+  <body>
+
+
+<div class="container">
+
+
+
+<header>
+
+<div class="logo">
+🧠 MindSpace
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="guides.html">Guides</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+
+<span class="read">
+🌿 8 min read
+</span>
+
+
+
+<h1>
+Understanding Anxiety
+</h1>
+
+
+
+<p>
+Understand what anxiety is, why it happens and explore healthy coping strategies for everyday life.
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- What is Anxiety -->
+
+<section>
+
+
+<div class="glass">
+
+
+<h2>
+What is Anxiety?
+</h2>
+
+
+
+<p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,.8);">
+
+Anxiety is a natural emotional response to stress, uncertainty,
+or challenging situations. It can help us prepare for important
+moments, but when anxiety becomes constant, it may affect our
+daily life, emotions, and overall wellbeing.
+
+Understanding anxiety is the first step toward managing it
+in a healthier way.
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Signs -->
+
+<section>
+
+
+<h2 class="section-title">
+Common Signs of Anxiety
+</h2>
+
+
+
+
+<div class="cards">
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🌪️
+</div>
+
+
+<h3>
+Constant Worry
+</h3>
+
+
+<p>
+Feeling unable to stop worrying about situations, problems, or the future.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+💭
+</div>
+
+
+<h3>
+Racing Thoughts
+</h3>
+
+
+<p>
+Having a busy mind and finding it difficult to relax or stay focused.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+😰
+</div>
+
+
+<h3>
+Physical Symptoms
+</h3>
+
+
+<p>
+Feeling tension, restlessness, increased heartbeat, or discomfort.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🌙
+</div>
+
+
+<h3>
+Sleep Difficulties
+</h3>
+
+
+<p>
+Trouble falling asleep because of ongoing thoughts and worries.
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Coping -->
+
+<section>
+
+
+<h2 class="section-title">
+Healthy Ways to Cope
+</h2>
+
+
+
+
+<div class="cards">
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🌬️
+</div>
+
+
+<h3>
+Deep Breathing
+</h3>
+
+
+<p>
+Slow breathing exercises can calm your body and reduce tension.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🧘
+</div>
+
+
+<h3>
+Stay Present
+</h3>
+
+
+<p>
+Mindfulness helps you focus on the current moment instead of worries.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+🏃
+</div>
+
+
+<h3>
+Move Your Body
+</h3>
+
+
+<p>
+Regular movement supports a healthier mood and reduces stress.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+💙
+</div>
+
+
+<h3>
+Share Your Feelings
+</h3>
+
+
+<p>
+Talking with trusted people can make difficult emotions easier to manage.
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Quote -->
+
+<section>
+
+
+<div class="glass quote">
+
+
+<p>
+"You don't have to control every thought. Sometimes you just need to understand and accept them."
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CTA -->
+
+<section>
+
+
+<div class="glass" style="text-align:center;">
+
+
+<h2>
+Find Your Inner Calm
+</h2>
+
+
+
+<p style="margin-top:15px; color:rgba(255,255,255,.75);">
+
+Small steps and healthy habits can help you feel more balanced every day.
+
+</p>
+
+
+
+
+<a href="index.html" class="btn">
+Start Your Journey
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</div>
+<!-- Footer -->
+
+<footer>
+
+<div class="container">
+
+
+<p>
+© 2026 MindSpace. All rights reserved.
+</p>
+
+
+<p style="margin-top:10px;">
+Wellbeing guides for a healthier mind.
+</p>
+
+
+</div>
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+// Scroll reveal animation
+
+const elements = document.querySelectorAll(
+".glass, .card, .hero"
+);
+
+
+
+const observer = new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+},
+
+{
+threshold:0.15
+}
+
+);
+
+
+
+
+
+elements.forEach(el=>{
+
+
+el.style.opacity="0";
+
+el.style.transform="translateY(30px)";
+
+el.style.transition="all .8s ease";
+
+
+observer.observe(el);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
