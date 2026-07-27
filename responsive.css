@@ -1,35 +1,52 @@
 /* =========================
-   MOBILE RESPONSIVE
+   GLOBAL RESPONSIVE
 ========================= */
 
-@media(max-width:900px){
-
-    .hero{
-        min-height:auto;
-        flex-direction:column;
-        justify-/* =========================
-   GLOBAL MOBILE FIX
-========================= */
+*{
+    box-sizing:border-box;
+}
 
 img{
     max-width:100%;
     height:auto;
 }
 
+body{
+    overflow-x:hidden;
+}
 
-*{
-    box-sizing:border-box;
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1024px){
+
+    .hero{
+
+        padding-left:5%;
+        padding-right:5%;
+        gap:40px;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:50px;
+
+    }
+
+
 }
 
 
 
-/* TABLET + MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:900px){
-
-    body{
-        overflow-x:hidden;
-    }
+@media(max-width:768px){
 
 
     .hero{
@@ -39,8 +56,8 @@ img{
         display:flex;
         flex-direction:column;
 
-        justify-content:center;
         align-items:center;
+        justify-content:center;
 
         text-align:center;
 
@@ -54,14 +71,14 @@ img{
     .hero-text{
 
         width:100%;
-        max-width:100%;
+        max-width:600px;
 
     }
 
 
     .hero-text h1{
 
-        font-size:40px;
+        font-size:38px;
         line-height:1.15;
 
     }
@@ -77,13 +94,56 @@ img{
 
     .hero-card{
 
-        width:260px;
-        height:260px;
-
-        margin:auto;
+        width:280px;
+        height:280px;
 
     }
 
+
+    /* Buttons */
+
+    .btn{
+
+        display:inline-flex;
+
+        align-items:center;
+        justify-content:center;
+
+        max-width:100%;
+
+    }
+
+
+
+    /* Cards / Sections */
+
+
+    .cards,
+    .tools,
+    .articles,
+    .features{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    .card,
+    .tool-card,
+    .article-card{
+
+        width:100%;
+        max-width:360px;
+
+    }
+
+
+
+    /* Navigation */
 
     nav{
 
@@ -96,14 +156,16 @@ img{
 
 
 
-/* SMALL PHONES */
+/* =========================
+   SMALL PHONES
+========================= */
 
 @media(max-width:480px){
 
 
     .hero{
 
-        padding:90px 16px 50px;
+        padding:80px 16px 40px;
 
     }
 
@@ -130,92 +192,11 @@ img{
     }
 
 
-}content:center;
-        align-items:center;
-        text-align:center;
-        padding:110px 20px 60px;
-        gap:45px;
-        overflow:hidden;
-        position:relative;
-    }
-
-
-    .hero-text{
-        width:100%;
-        max-width:600px;
-        position:relative;
-        z-index:10;
-    }
-
-
-    .hero-text h1{
-        font-size:42px;
-        line-height:1.15;
-        margin-bottom:20px;
-    }
-
-
-    .hero-text p{
-        font-size:17px;
-        line-height:1.6;
-        margin-bottom:30px;
-    }
-
-
     .btn{
-        position:relative;
-        z-index:9999;
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        padding:15px 35px;
-        pointer-events:auto;
+
+        padding:13px 28px;
+
     }
 
-
-    .hero-card{
-        width:280px;
-        height:280px;
-        position:relative;
-        z-index:1;
-    }
-
-}
-
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media(max-width:480px){
-
-    .hero{
-        padding:100px 18px 50px;
-        gap:35px;
-    }
-
-
-    .hero-text h1{
-        font-size:34px;
-        line-height:1.2;
-    }
-
-
-    .hero-text p{
-        font-size:16px;
-    }
-
-
-    .btn{
-        width:100%;
-        max-width:280px;
-    }
-
-
-    .hero-card{
-        width:230px;
-        height:230px;
-    }
 
 }
