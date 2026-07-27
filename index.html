@@ -1667,33 +1667,69 @@ transform:translateY(-3px);
     transform:translateY(-5px);
 }
  .hero-card{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.mind-circle{
-    width:380px;
-    height:380px;
-    border-radius:50%;
-    background:radial-gradient(circle,#4fd4ff 0%,#2196f3 55%,transparent 75%);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    animation:float 5s ease-in-out infinite;
+.brain-wrapper{
+position:relative;
+width:500px;
+height:500px;
+display:flex;
+justify-content:center;
+align-items:center;
+animation:float 6s ease-in-out infinite;
 }
 
-.mind-circle img{
-    width:220px;
-    filter:
-        drop-shadow(0 0 20px #53c8ff)
-        drop-shadow(0 0 50px #2196f3);
+.brain-image{
+width:330px;
+position:relative;
+z-index:2;
+filter:
+drop-shadow(0 0 25px #4fd4ff)
+drop-shadow(0 0 60px #2196f3)
+drop-shadow(0 0 120px #1d72ff);
+}
+
+.brain-glow{
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(79,212,255,.9) 0%,
+rgba(33,150,243,.4) 45%,
+transparent 75%);
+filter:blur(20px);
+animation:pulse 4s infinite;
 }
 
 @keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
-}   
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+transform:scale(1);
+opacity:.8;
+}
+
+50%{
+transform:scale(1.08);
+opacity:1;
+}
+
+}
 </style>
 
 
@@ -1759,13 +1795,21 @@ Start Your Journey
 </div>
 
 
-
 <div class="hero-card">
-    <div class="mind-circle">
-        <img src="images/premium-brain.png" alt="MindSpace Brain">
-    </div>
-</div>
 
+    <div class="brain-wrapper">
+
+        <div class="brain-glow"></div>
+
+        <img
+        src="https://cdn.shopify.com/s/files/1/0740/7016/3545/files/ChatGPT_Image_Jul_27_2026_03_28_55_PM.png?v=1785151756"
+        class="brain-image"
+        alt="MindSpace Brain">
+
+    </div>
+
+</div>
+  
 
 </section>
 <section class="section">
