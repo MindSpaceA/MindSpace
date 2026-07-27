@@ -45,8 +45,3 @@
     cursor:pointer;
     pointer-events:auto;
 }
-.hero-card,
-.brain-wrapper,
-.brain-image{
-    pointer-events:none;
-}
