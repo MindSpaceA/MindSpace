@@ -13,12 +13,15 @@
         padding:110px 20px 60px;
         gap:45px;
         overflow:hidden;
+        position:relative;
     }
 
 
     .hero-text{
         width:100%;
         max-width:600px;
+        position:relative;
+        z-index:10;
     }
 
 
@@ -54,17 +57,13 @@
         z-index:1;
     }
 
-
-    .brain-wrapper,
-    .brain-image{
-        pointer-events:none;
-    }
-
 }
 
 
 
-/* Small phones */
+/* =========================
+   SMALL PHONES
+========================= */
 
 @media(max-width:480px){
 
