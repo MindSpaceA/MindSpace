@@ -1666,7 +1666,34 @@ transform:translateY(-3px);
 .ai-btn:hover{
     transform:translateY(-5px);
 }
-    
+ .hero-card{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.mind-circle{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:radial-gradient(circle,#4fd4ff 0%,#2196f3 55%,transparent 75%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:float 5s ease-in-out infinite;
+}
+
+.mind-circle img{
+    width:220px;
+    filter:
+        drop-shadow(0 0 20px #53c8ff)
+        drop-shadow(0 0 50px #2196f3);
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}   
 </style>
 
 
@@ -1734,21 +1761,9 @@ Start Your Journey
 
 
 <div class="hero-card">
-
-<div class="mind-circle">
-
-<svg viewBox="0 0 100 100">
-
-<path d="M50 15
-C30 15 20 30 25 45
-C10 55 20 75 40 72
-C55 90 80 75 72 55
-C90 35 70 15 50 15Z"/>
-
-</svg>
-
-</div>
-
+    <div class="mind-circle">
+        <img src="images/premium-brain.png" alt="MindSpace Brain">
+    </div>
 </div>
 
 
