@@ -7,7 +7,130 @@
     .hero{
         min-height:auto;
         flex-direction:column;
+        justify-/* =========================
+   GLOBAL MOBILE FIX
+========================= */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+
+/* TABLET + MOBILE */
+
+@media(max-width:900px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    .hero{
+
+        min-height:auto;
+
+        display:flex;
+        flex-direction:column;
+
         justify-content:center;
+        align-items:center;
+
+        text-align:center;
+
+        padding:100px 20px 60px;
+
+        gap:40px;
+
+    }
+
+
+    .hero-text{
+
+        width:100%;
+        max-width:100%;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:40px;
+        line-height:1.15;
+
+    }
+
+
+    .hero-text p{
+
+        font-size:17px;
+        line-height:1.6;
+
+    }
+
+
+    .hero-card{
+
+        width:260px;
+        height:260px;
+
+        margin:auto;
+
+    }
+
+
+    nav{
+
+        display:none;
+
+    }
+
+
+}
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+
+    .hero{
+
+        padding:90px 16px 50px;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:32px;
+
+    }
+
+
+    .hero-text p{
+
+        font-size:15px;
+
+    }
+
+
+    .hero-card{
+
+        width:220px;
+        height:220px;
+
+    }
+
+
+}content:center;
         align-items:center;
         text-align:center;
         padding:110px 20px 60px;
