@@ -38,10 +38,3 @@
 }
 
 }
-.btn{
-    position:relative;
-    z-index:9999;
-    display:inline-block;
-    cursor:pointer;
-    pointer-events:auto;
-}
