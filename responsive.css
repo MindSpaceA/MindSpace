@@ -1,40 +1,99 @@
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media(max-width:900px){
 
-.hero{
-    flex-direction:column;
-    text-align:center;
-    padding:100px 25px 50px;
+    .hero{
+        min-height:auto;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:110px 20px 60px;
+        gap:45px;
+        overflow:hidden;
+    }
+
+
+    .hero-text{
+        width:100%;
+        max-width:600px;
+    }
+
+
+    .hero-text h1{
+        font-size:42px;
+        line-height:1.15;
+        margin-bottom:20px;
+    }
+
+
+    .hero-text p{
+        font-size:17px;
+        line-height:1.6;
+        margin-bottom:30px;
+    }
+
+
+    .btn{
+        position:relative;
+        z-index:9999;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:15px 35px;
+        pointer-events:auto;
+    }
+
+
+    .hero-card{
+        width:280px;
+        height:280px;
+        position:relative;
+        z-index:1;
+    }
+
+
+    .brain-wrapper,
+    .brain-image{
+        pointer-events:none;
+    }
+
 }
 
-.hero-text h1{
-    font-size:42px;
-}
 
-.hero-text p{
-    font-size:17px;
-}
 
-.btn{
-    padding:14px 32px;
-}
-
-.hero-card{
-    width:280px;
-    height:280px;
-}
-
-}
-
+/* Small phones */
 
 @media(max-width:480px){
 
-.hero-text h1{
-    font-size:34px;
-}
+    .hero{
+        padding:100px 18px 50px;
+        gap:35px;
+    }
 
-.btn{
-    width:100%;
-    max-width:280px;
-}
+
+    .hero-text h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+
+    .btn{
+        width:100%;
+        max-width:280px;
+    }
+
+
+    .hero-card{
+        width:230px;
+        height:230px;
+    }
 
 }
