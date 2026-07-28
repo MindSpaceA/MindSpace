@@ -2,457 +2,329 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MindSpace | Relaxing Sounds</title>
-<link rel="stylesheet" href="responsive.css">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Inter",Arial,sans-serif;
-}
-
-
-body{
-
-    min-height:100vh;
-
-    background:
-    linear-gradient(135deg,#071a33,#12345d);
-
-    color:white;
-
-    padding:40px;
-
-}
-
-
-
-.container{
-
-    max-width:1000px;
-
-    margin:auto;
-
-}
-
-
-
-/* Header */
-
-.header{
-
-    text-align:center;
-
-    margin-bottom:45px;
-
-}
-
-
-.header h1{
-
-    font-size:42px;
-
-    margin-bottom:15px;
-
-}
-
-
-.header p{
-
-    color:#b8c7dc;
-
-    font-size:18px;
-
-}
-
-
-
-
-/* Sounds Grid */
-
-
-.sounds{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
-}
-
-
-
-
-.sound-card{
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:30px;
-
-    padding:35px 25px;
-
-    text-align:center;
-
-    transition:.35s;
-
-}
-
-
-
-.sound-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.3);
-
-    background:rgba(255,255,255,.13);
-
-}
-
-
-
-
-.icon{
-
-    width:90px;
-
-    height:90px;
-
-    border-radius:50%;
-
-    background:rgba(28,124,255,.25);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:45px;
-
-    margin:0 auto 20px;
-
-    transition:.3s;
-
-}
-
-
-
-.sound-card:hover .icon{
-
-    transform:scale(1.15);
-
-    background:#1c7cff;
-
-}
-
-
-
-
-
-.sound-card h3{
-
-    margin-bottom:12px;
-
-}
-
-
-
-.sound-card p{
-
-    color:#c3d2e7;
-
-    line-height:1.6;
-
-}
-
-
-
-
-
-button{
-
-    margin-top:25px;
-
-    padding:13px 30px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:#1c7cff;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:15px;
-
-    transition:.3s;
-
-}
-
-
-
-button:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 25px rgba(28,124,255,.5);
-
-}
-
-
-
-
-.player{
-
-    margin-top:40px;
-
-    background:rgba(255,255,255,.08);
-
-    border-radius:25px;
-
-    padding:25px;
-
-    text-align:center;
-
-    border:1px solid rgba(255,255,255,.15);
-
-}
-
-
-
-
-audio{
-
-    width:100%;
-
-    margin-top:20px;
-
-}
-
-
-
-
-@media(max-width:800px){
-
-.sounds{
-
-grid-template-columns:1fr;
-
-}
-
-
-.header h1{
-
-font-size:32px;
-
-}
-
-
-body{
-
-padding:20px;
-
-}
-
-}
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpace | Relaxing Sounds</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #071a33, #12345d, #1c4b82);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
+            overflow-x: hidden;
+        }
+
+        /* BACKGROUND GLOWS */
+        body::before {
+            content: "";
+            position: fixed;
+            width: clamp(250px, 40vw, 450px);
+            height: clamp(250px, 40vw, 450px);
+            background: #4dc7ff;
+            filter: blur(140px);
+            top: -100px;
+            right: -100px;
+            opacity: .25;
+            z-index: -1;
+        }
+
+        /* HEADER */
+        header {
+            width: 90%;
+            max-width: 1100px;
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: clamp(22px, 4vw, 28px);
+            font-weight: 800;
+            color: #9fdcff;
+        }
+
+        .back {
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .back:hover {
+            background: #8fd3ff;
+            color: #071a33;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 10px;
+            flex: 1;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(32px, 5vw, 44px);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            color: #b8c7dc;
+            font-size: clamp(15px, 2.5vw, 18px);
+        }
+
+        /* SOUNDS GRID */
+        .sounds {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .sound-card {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 30px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: .35s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sound-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+            background: rgba(255, 255, 255, .12);
+        }
+
+        .sound-card.playing {
+            border-color: #4dc7ff;
+            background: rgba(28, 124, 255, .18);
+            box-shadow: 0 0 25px rgba(77, 199, 255, .3);
+        }
+
+        .icon {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: rgba(28, 124, 255, .25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+
+        .sound-card:hover .icon,
+        .sound-card.playing .icon {
+            transform: scale(1.1);
+            background: #1c7cff;
+            box-shadow: 0 0 20px rgba(28, 124, 255, .6);
+        }
+
+        .sound-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sound-card p {
+            color: #c3d2e7;
+            font-size: 14px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        button {
+            margin-top: 22px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #1c7cff, #4dc7ff);
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(28, 124, 255, .5);
+        }
+
+        /* PLAYER CARD */
+        .player {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 25px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, .15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+        }
+
+        .player h2 {
+            font-size: 18px;
+            color: #9fdcff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 50px;
+            color: #b8d8ef;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+            .sounds {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sounds {
+                grid-template-columns: 1fr;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<div class="container">
-
-
-<div class="header">
-
-<h1>
-Relaxing Sounds
-</h1>
-
-<p>
-Take a moment to relax, breathe and clear your mind.
-</p>
-
-</div>
-
-
-
-
-<div class="sounds">
-
-
-
-<div class="sound-card">
-
-<div class="icon">
-🌧️
-</div>
-
-<h3>
-Rain Sounds
-</h3>
-
-<p>
-Soft rain sounds to calm your thoughts.
-</p>
-
-<button onclick="playSound('rain')">
-Play
-</button>
-
-</div>
-
-
-
-
-<div class="sound-card">
-
-<div class="icon">
-🌊
-</div>
-
-<h3>
-Ocean Waves
-</h3>
-
-<p>
-Relax with peaceful ocean waves.
-</p>
-
-<button onclick="playSound('ocean')">
-Play
-</button>
-
-</div>
-
-
-
-
-<div class="sound-card">
-
-<div class="icon">
-🌲
-</div>
-
-<h3>
-Forest Nature
-</h3>
-
-<p>
-Feel connected with natural sounds.
-</p>
-
-<button onclick="playSound('forest')">
-Play
-</button>
-
-</div>
-
-
-
-</div>
-
-
-
-
-<div class="player">
-
-
-<h2>
-Now Playing 🎧
-</h2>
-
-
-<audio id="audio" controls>
-
-<source id="source" src="" type="audio/mpeg">
-
-</audio>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-<script>
-
-
-function playSound(type){
-
-
-let audio =
-document.getElementById("audio");
-
-
-let source =
-document.getElementById("source");
-
-
-
-if(type=="rain"){
-
-source.src =
-"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
-
-}
-
-
-if(type=="ocean"){
-
-source.src =
-"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3";
-
-}
-
-
-if(type=="forest"){
-
-source.src =
-"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3";
-
-}
-
-
-
-audio.load();
-
-audio.play();
-
-
-}
-
-
-</script>
-
-
+    <header>
+        <div class="logo">🧠 MindSpace</div>
+        <a href="index.html" class="back">← Home</a>
+    </header>
+
+    <div class="container">
+
+        <div class="page-header">
+            <h1>Relaxing Sounds</h1>
+            <p>Take a moment to relax, breathe and clear your mind.</p>
+        </div>
+
+        <div class="sounds">
+
+            <!-- Rain -->
+            <div class="sound-card" id="card-rain">
+                <div class="icon">🌧️</div>
+                <h3>Rain Sounds</h3>
+                <p>Soft rain sounds to calm your thoughts and ease stress.</p>
+                <button onclick="playSound('rain', 'Rain Sounds 🌧️', 'card-rain')">Play</button>
+            </div>
+
+            <!-- Ocean -->
+            <div class="sound-card" id="card-ocean">
+                <div class="icon">🌊</div>
+                <h3>Ocean Waves</h3>
+                <p>Relax with peaceful ocean waves washing over the shore.</p>
+                <button onclick="playSound('ocean', 'Ocean Waves 🌊', 'card-ocean')">Play</button>
+            </div>
+
+            <!-- Forest -->
+            <div class="sound-card" id="card-forest">
+                <div class="icon">🌲</div>
+                <h3>Forest Nature</h3>
+                <p>Feel connected with soothing natural forest ambience.</p>
+                <button onclick="playSound('forest', 'Forest Nature 🌲', 'card-forest')">Play</button>
+            </div>
+
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player">
+            <h2 id="nowPlayingTitle">Select a sound to start playing 🎧</h2>
+            <audio id="audio" controls>
+                <source id="source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+    </div>
+
+    <footer>
+        MindSpace © 2026 | Wellbeing guides for a healthier mind.
+    </footer>
+
+    <script>
+        const audioSources = {
+            rain: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            ocean: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            forest: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        };
+
+        let currentActiveCard = null;
+
+        function playSound(type, title, cardId) {
+            let audio = document.getElementById("audio");
+            let source = document.getElementById("source");
+            let nowPlaying = document.getElementById("nowPlayingTitle");
+
+            // Update Audio Source
+            source.src = audioSources[type];
+            nowPlaying.innerText = `Now Playing: ${title} 🎧`;
+
+            // Active Card Visual Effects
+            if (currentActiveCard) {
+                currentActiveCard.classList.remove("playing");
+            }
+            let activeCard = document.getElementById(cardId);
+            if (activeCard) {
+                activeCard.classList.add("playing");
+                currentActiveCard = activeCard;
+            }
+
+            audio.load();
+            audio.play();
+        }
+    </script>
 
 </body>
 
