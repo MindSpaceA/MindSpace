@@ -4,573 +4,204 @@
                         <head>
                             <meta charset="UTF-8">
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <style>
-                body {
-                  background-color: white; /* Ensure the iframe has a white background */
-                }
-
-                /* ========================================
-   MindSpace - Responsive Stylesheet
-   ======================================== */
-
-/* Large Tablets & Small Desktops */
-@media (max-width: 1200px) {
-    header {
-        padding: 20px 5%;
-    }
-
-    .hero {
-        padding: 110px 5% 70px;
-        gap: 40px;
-    }
-
-    .section {
-        padding: 80px 5%;
-    }
-
-    .hero-text h1 {
-        font-size: 55px;
-    }
-
-    .brain-wrapper {
-        width: 420px;
-        height: 420px;
-    }
-
-    .brain-image {
-        width: 280px;
-    }
-
-    .brain-glow {
-        width: 360px;
-        height: 360px;
-    }
-
-    footer {
-        padding: 40px 5%;
-    }
+             <style>
+/* ==========================================
+   1. VARIABLES & RESET
+   ========================================== */
+:root {
+    --primary: #4db8ff;
+    --primary-gradient: linear-gradient(135deg, #2294ff, #4dc7ff);
+    --bg-dark: #081b33;
+    --card-bg: rgba(255, 255, 255, 0.07);
+    --card-border: 1px solid rgba(255, 255, 255, 0.15);
+    --radius-lg: 25px;
+    --radius-md: 15px;
+    --section-padding: clamp(50px, 8vw, 100px) 5%;
 }
 
-/* Tablets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   2. FLUID LAYOUT & BASE COMPONENTS
+   ========================================== */
+header {
+    padding: clamp(15px, 3vw, 25px) 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    font-size: clamp(24px, 5vw, 42px);
+    margin-bottom: clamp(25px, 4vw, 50px);
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(90px, 12vw, 140px) 5% clamp(40px, 6vw, 70px);
+    gap: 40px;
+    min-height: 100vh;
+}
+
+.hero-text h1 {
+    font-size: clamp(30px, 6vw, 58px);
+    line-height: 1.15;
+}
+
+.hero-text p {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Responsive Brain Graphic Container */
+.brain-wrapper {
+    position: relative;
+    width: clamp(220px, 35vw, 420px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.brain-image {
+    width: 65%;
+    height: auto;
+    z-index: 2;
+}
+
+.brain-glow {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+}
+
+/* ==========================================
+   3. AUTO-RESPONSIVE GRIDS
+   ========================================== */
+.feelings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 45%, 260px), 1fr));
+    gap: clamp(15px, 3vw, 25px);
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(20px, 3vw, 30px);
+}
+
+.booking {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonials {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+}
+
+.testimonial {
+    scroll-snap-align: start;
+    min-width: clamp(250px, 80vw, 320px);
+    background: var(--card-bg);
+    border: var(--card-border);
+    padding: clamp(20px, 4vw, 35px);
+    border-radius: var(--radius-lg);
+}
+
+/* ==========================================
+   4. INTERACTIVE & MODAL ELEMENTS
+   ========================================== */
+.therapist {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 4vw, 50px);
+    background: var(--card-bg);
+    padding: clamp(25px, 5vw, 50px);
+    border-radius: var(--radius-lg);
+    border: var(--card-border);
+}
+
+.avatar {
+    width: clamp(110px, 18vw, 180px);
+    height: clamp(110px, 18vw, 180px);
+    font-size: clamp(40px, 6vw, 70px);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.check-box,
+.form-box,
+.appointment-box {
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: var(--radius-lg);
+}
+
+.appointment-box {
+    width: min(92%, 420px);
+}
+
+/* Chat Widget Overflow Fix */
+.chat-widget {
+    position: fixed;
+    right: max(15px, env(safe-area-inset-right));
+    bottom: max(15px, env(safe-area-inset-bottom));
+    z-index: 999;
+}
+
+.chat-box {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    width: min(calc(100vw - 30px), 330px);
+    border-radius: var(--radius-lg);
+}
+
+/* ==========================================
+   5. MEDIA BREAKPOINTS (LAYOUT SPECIFIC)
+   ========================================== */
 @media (max-width: 900px) {
-    /* Navbar */
-    nav {
-        display: none;
-    }
+    nav { display: none; }
 
-    /* Hero Section */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 5% 60px;
-        gap: 40px;
         min-height: auto;
     }
 
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 48px;
-        line-height: 1.15;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-    }
-
-    /* Brain Card */
-    .brain-wrapper {
-        width: 350px;
-        height: 350px;
-    }
-
-    .brain-image {
-        width: 230px;
-    }
-
-    .brain-glow {
-        width: 300px;
-        height: 300px;
-    }
-
-    /* Feelings Grid */
-    .feelings {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    /* Services Grid */
-    .services {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    /* Therapist Section */
     .therapist {
         flex-direction: column;
         text-align: center;
-        padding: 40px 30px;
-        gap: 30px;
-    }
-
-    .therapist-info h2 {
-        font-size: 30px;
-    }
-
-    /* Booking Section */
-    .booking {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .booking-info h2 {
-        font-size: 32px;
-    }
-
-    /* Testimonials */
-    .testimonials {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 15px;
-    }
-
-    .testimonial {
-        scroll-snap-align: start;
-        min-width: 280px;
-    }
-
-    /* Section Title */
-    .section-title {
-        font-size: 36px;
-    }
-
-    /* Check Box */
-    .check-box {
-        padding: 30px 25px;
-    }
-
-    /* Appointment Modal */
-    .appointment-box {
-        width: 90%;
-        max-width: 420px;
-        padding: 30px 25px;
-    }
-
-    /* Chat Box */
-    .chat-box {
-        width: 300px;
-        right: 0;
-    }
-
-    /* Mind Circle */
-    .mind-circle {
-        width: 180px;
-        height: 180px;
-        font-size: 60px;
-    }
-
-    /* Avatar */
-    .avatar {
-        width: 150px;
-        height: 150px;
-        font-size: 60px;
     }
 }
 
-/* Mobile Devices */
-@media (max-width: 600px) {
-    /* Header */
-    header {
-        padding: 15px 5%;
-    }
-
-    .logo {
-        font-size: 22px;
-        gap: 8px;
-    }
-
-    .logo-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-        border-radius: 12px;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 90px 5% 50px;
-        gap: 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 36px;
-        line-height: 1.2;
-        letter-spacing: -1px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 25px;
-    }
-
-    .btn {
-        padding: 13px 28px;
-        font-size: 15px;
-    }
-
-    .ai-btn {
-        padding: 14px 25px;
-        font-size: 15px;
-        margin: 10px auto;
-        display: inline-flex;
-    }
-
-    /* Brain */
-    .brain-wrapper {
-        width: 280px;
-        height: 280px;
-    }
-
-    .brain-image {
-        width: 180px;
-    }
-
-    .brain-glow {
-        width: 240px;
-        height: 240px;
-    }
-
-    /* Section */
-    .section {
-        padding: 60px 5%;
-    }
-
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 35px;
-    }
-
-    /* Feelings */
-    .feelings {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .feeling-card {
-        padding: 25px 20px;
-    }
-
-    .mood-icon {
-        width: 65px;
-        height: 65px;
-        margin-bottom: 15px;
-    }
-
-    .mood-icon svg {
-        width: 45px;
-        height: 45px;
-    }
-
-    /* Services */
-    .service {
-        padding: 25px 20px;
-    }
-
-    .service-icon {
-        font-size: 38px;
-        margin-bottom: 15px;
-    }
-
-    /* Therapist */
-    .therapist {
-        padding: 30px 20px;
-        border-radius: 25px;
-    }
-
-    .avatar {
-        width: 120px;
-        height: 120px;
-        font-size: 50px;
-    }
-
-    .therapist-info h2 {
-        font-size: 26px;
-    }
-
-    .therapist-info p {
-        font-size: 15px;
-    }
-
-    /* Check Box */
-    .check-box {
-        padding: 25px 20px;
-        border-radius: 20px;
-    }
-
-    .question h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-    .options button {
-        padding: 10px 18px;
-        font-size: 14px;
-        margin: 4px;
-    }
-
-    .result {
-        font-size: 16px;
-    }
-
-    /* Testimonials */
-    .testimonial {
-        min-width: 260px;
-        padding: 25px 20px;
-    }
-
-    .stars {
-        font-size: 18px;
-    }
-
-    /* FAQ */
-    .faq-question {
-        padding: 20px;
-        font-size: 15px;
-    }
-
-    .faq-answer {
-        padding: 0 20px;
-        font-size: 14px;
-    }
-
-    .faq-item.active .faq-answer {
-        max-height: 200px;
-        padding-bottom: 20px;
-    }
-
-    /* Booking */
-    .booking-info h2 {
-        font-size: 28px;
-    }
-
-    .booking-info p {
-        font-size: 15px;
-    }
-
-    .form-box {
-        padding: 25px 20px;
-        border-radius: 20px;
-    }
-
-    .form-box input,
-    .form-box textarea {
-        padding: 13px;
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-
-    /* Appointment Modal */
-    .appointment-box {
-        width: 92%;
-        padding: 25px 20px;
-        border-radius: 20px;
-    }
-
-    .appointment-box h2 {
-        font-size: 22px;
-    }
-
-    .appointment-box p {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .appointment-box input,
-    .appointment-box select,
-    .appointment-box textarea {
-        padding: 12px;
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-
-    .appointment-box button {
-        padding: 13px;
-        font-size: 15px;
-    }
-
-    .appointment-btn {
-        padding: 12px 25px;
-        font-size: 15px;
-    }
-
-    .close-btn {
-        right: 18px;
-        top: 12px;
-        font-size: 26px;
-    }
-
-    /* Chat Widget */
-    .chat-widget {
-        right: 15px;
-        bottom: 15px;
-    }
-
-    .chat-button {
-        width: 55px;
-        height: 55px;
-        font-size: 26px;
-    }
-
-    .chat-box {
-        width: calc(100vw - 30px);
-        max-width: 320px;
-        right: -15px;
-        bottom: 70px;
-        border-radius: 20px;
-    }
-
-    .chat-header {
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    .chat-content {
-        height: 180px;
-        padding: 15px;
-        font-size: 13px;
-    }
-
-    .chat-content p {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .chat-input {
-        padding: 12px;
-        gap: 8px;
-    }
-
-    .chat-input input {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .chat-input button {
-        width: 36px;
-        height: 36px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 30px 5%;
-        font-size: 14px;
-    }
-
-    /* Cursor Glow - disable on mobile for performance */
-    .cursor-glow {
-        display: none;
-    }
-}
-
-/* Small Mobile Devices */
-@media (max-width: 400px) {
-    .hero-text h1 {
-        font-size: 30px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .brain-wrapper {
-        width: 240px;
-        height: 240px;
-    }
-
-    .brain-image {
-        width: 150px;
-    }
-
-    .brain-glow {
-        width: 200px;
-        height: 200px;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
-
-    .ai-btn {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .logo-icon {
-        width: 34px;
-        height: 34px;
-        font-size: 18px;
-    }
-
-    .feeling-card {
-        padding: 20px 15px;
-    }
-
-    .mood-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .mood-icon svg {
-        width: 40px;
-        height: 40px;
-    }
-
-    .appointment-box {
-        padding: 20px 15px;
-    }
-
-    .chat-box {
-        width: calc(100vw - 20px);
-        max-width: 300px;
-    }
-}
-
-/* Landscape Mobile */
-@media (max-width: 900px) and (orientation: landscape) {
-    .hero {
-        min-height: auto;
-        padding: 90px 5% 40px;
-    }
-
-    .brain-wrapper {
-        width: 250px;
-        height: 250px;
-    }
-
-    .brain-image {
-        width: 160px;
-    }
-
-    .brain-glow {
-        width: 210px;
-        height: 210px;
-    }
-}
-
-/* Touch Device Optimizations */
+/* Touch Optimizations */
 @media (hover: none) and (pointer: coarse) {
     .feeling-card:hover,
     .service:hover,
@@ -578,66 +209,29 @@
         transform: none;
     }
 
+    .btn:active,
     .feeling-card:active {
         transform: scale(0.97);
-        background: rgba(77, 184, 255, 0.15);
-    }
-
-    .service:active {
-        transform: scale(0.98);
-        border-color: #4db8ff;
-    }
-
-    .btn:active {
-        transform: scale(0.95);
-    }
-
-    .chat-button:hover {
-        transform: none;
-    }
-
-    .chat-button:active {
-        transform: scale(0.95);
     }
 }
 
-/* Safe Area Support for Notched Devices */
+/* Safe Area Support */
 @supports (padding: max(0px)) {
     header {
         padding-top: max(15px, env(safe-area-inset-top));
     }
-
     footer {
         padding-bottom: max(30px, env(safe-area-inset-bottom));
-    }
-
-    .chat-widget {
-        right: max(15px, env(safe-area-inset-right));
-        bottom: max(15px, env(safe-area-inset-bottom));
     }
 }
 
 /* Print Styles */
 @media print {
-    body {
-        background: white;
-        color: black;
-    }
-
-    header,
-    .chat-widget,
-    .cursor-glow,
-    .brain-wrapper {
-        display: none;
-    }
-
-    .section {
-        padding: 20px 0;
-    }
+    body { background: white; color: black; }
+    header, .chat-widget, .cursor-glow, .brain-wrapper { display: none; }
+    .section { padding: 20px 0; }
 }
-
-
-              </style>
+</style>
                         </head>
                         <body>
                             
