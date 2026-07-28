@@ -2,554 +2,320 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MindSpace | Breathing Exercise</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="responsive.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter,sans-serif;
-}
-
-
-body{
-
-min-height:100vh;
-
-background:linear-gradient(135deg,#071a33,#0c3b66);
-
-color:white;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-
-header{
-
-width:90%;
-
-max-width:1200px;
-
-padding:25px 0;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-color:#9fdcff;
-
-}
-
-
-.back{
-
-text-decoration:none;
-
-color:white;
-
-border:1px solid rgba(255,255,255,.2);
-
-padding:10px 25px;
-
-border-radius:30px;
-
-}
-
-
-
-.container{
-
-width:90%;
-
-max-width:700px;
-
-text-align:center;
-
-margin-top:40px;
-
-}
-
-
-
-h1{
-
-font-size:48px;
-
-margin-bottom:20px;
-
-}
-
-
-h1 span{
-
-color:#8fd3ff;
-
-}
-
-
-
-.text{
-
-color:#d7ebff;
-
-font-size:18px;
-
-line-height:1.7;
-
-}
-
-
-
-.circle{
-
-width:220px;
-
-height:220px;
-
-margin:60px auto 40px;
-
-border-radius:50%;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-background:rgba(143,211,255,.18);
-
-border:3px solid #8fd3ff;
-
-box-shadow:0 0 50px rgba(143,211,255,.4);
-
-transition:4s;
-
-}
-
-
-
-.circle.active{
-
-transform:scale(1.35);
-
-}
-
-
-
-.phase{
-
-font-size:28px;
-
-font-weight:700;
-
-}
-
-
-
-.number{
-
-font-size:45px;
-
-font-weight:800;
-
-margin-top:10px;
-
-color:#9fdcff;
-
-}
-
-
-
-
-.info{
-
-background:rgba(255,255,255,.08);
-
-padding:25px;
-
-border-radius:25px;
-
-line-height:1.8;
-
-}
-
-
-
-.buttons{
-
-margin-top:35px;
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-button{
-
-padding:14px 35px;
-
-border:none;
-
-border-radius:40px;
-
-font-size:16px;
-
-font-weight:700;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-
-
-button:hover{
-
-transform:translateY(-4px);
-
-}
-
-
-
-.start{
-
-background:#8fd3ff;
-
-color:#071a33;
-
-}
-
-
-.stop{
-
-background:#ff8c8c;
-
-color:white;
-
-}
-
-
-.reset{
-
-background:rgba(255,255,255,.15);
-
-color:white;
-
-}
-
-
-
-footer{
-
-margin-top:60px;
-
-color:#b8d8ef;
-
-}
-
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpace | Breathing Exercise</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #071a33, #0c3b66);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            width: 90%;
+            max-width: 1200px;
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: clamp(22px, 4vw, 30px);
+            font-weight: 800;
+            color: #9fdcff;
+        }
+
+        .back {
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .back:hover {
+            background: #9fdcff;
+            color: #071a33;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            margin-top: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 48px);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        h1 span {
+            color: #8fd3ff;
+        }
+
+        .text {
+            color: #d7ebff;
+            font-size: clamp(15px, 2.5vw, 18px);
+            line-height: 1.7;
+            max-width: 550px;
+        }
+
+        /* BREATHING CIRCLE */
+        .circle {
+            width: clamp(180px, 40vw, 230px);
+            height: clamp(180px, 40vw, 230px);
+            margin: 40px auto;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(143, 211, 255, .18);
+            border: 3px solid #8fd3ff;
+            box-shadow: 0 0 50px rgba(143, 211, 255, .4);
+            transition: transform 4s ease-in-out;
+            will-change: transform;
+        }
+
+        .circle.expand {
+            transform: scale(1.35);
+            transition: transform 4s ease-in-out;
+        }
+
+        .circle.shrink {
+            transform: scale(1);
+            transition: transform 6s ease-in-out;
+        }
+
+        .phase {
+            font-size: clamp(22px, 4vw, 28px);
+            font-weight: 700;
+        }
+
+        .number {
+            font-size: clamp(36px, 6vw, 45px);
+            font-weight: 800;
+            margin-top: 5px;
+            color: #9fdcff;
+        }
+
+        /* INFO CARD */
+        .info {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 20px 30px;
+            border-radius: 25px;
+            line-height: 1.8;
+            width: 100%;
+            max-width: 480px;
+            margin-bottom: 25px;
+        }
+
+        .info h3 {
+            font-size: 18px;
+            color: #9fdcff;
+            margin-bottom: 8px;
+        }
+
+        .info p {
+            color: #d7ebff;
+            font-size: 15px;
+        }
+
+        /* BUTTONS */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        button {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+        }
+
+        .start {
+            background: #8fd3ff;
+            color: #071a33;
+        }
+
+        .stop {
+            background: #ff8c8c;
+            color: white;
+        }
+
+        .reset {
+            background: rgba(255, 255, 255, .15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            color: #b8d8ef;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .buttons {
+                flex-direction: column;
+                max-width: 280px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<header>
-
-<div class="logo">
-MindSpace
-</div>
-
-
-<a href="wellbeing-guide.html" class="back">
-← Back
-</a>
-
-
-</header>
-
-
-
-<div class="container">
-
-
-<h1>
-Breathing <span>Exercise</span>
-</h1>
-
-
-<p class="text">
-Take a moment to slow down and calm your mind with guided breathing.
-</p>
-
-
-
-<div class="circle" id="circle">
-
-<div class="phase" id="phase">
-Ready
-</div>
-
-<div class="number" id="number">
--
-</div>
-
-</div>
-
-
-
-<div class="info">
-
-<h3>
-4 - 4 - 6 Breathing Method
-</h3>
-
-<p>
-Inhale for 4 seconds<br>
-Hold for 4 seconds<br>
-Exhale slowly for 6 seconds
-</p>
-
-</div>
-
-
-
-<div class="buttons">
-
-<button class="start" onclick="startBreathing()">
-Start
-</button>
-
-
-<button class="stop" onclick="stopBreathing()">
-Stop
-</button>
-
-
-<button class="reset" onclick="resetBreathing()">
-Reset
-</button>
-
-</div>
-
-
-</div>
-
-
-
-<footer>
-MindSpace © 2026
-</footer>
-
-
-
-
-<script>
-
-let running=false;
-
-let timer;
-
-let phase=document.getElementById("phase");
-
-let number=document.getElementById("number");
-
-let circle=document.getElementById("circle");
-
-
-
-let steps=[
-
-{
-name:"Inhale",
-seconds:4,
-grow:true
-},
-
-{
-name:"Hold",
-seconds:4,
-grow:true
-},
-
-{
-name:"Exhale",
-seconds:6,
-grow:false
-}
-
-];
-
-
-
-let index=0;
-
-
-
-function startBreathing(){
-
-
-if(running) return;
-
-
-running=true;
-
-runStep();
-
-}
-
-
-
-function runStep(){
-
-
-if(!running) return;
-
-
-let current=steps[index];
-
-
-phase.innerHTML=current.name;
-
-
-number.innerHTML=current.seconds;
-
-
-if(current.grow){
-
-circle.classList.add("active");
-
-}
-
-else{
-
-circle.classList.remove("active");
-
-}
-
-
-
-let count=current.seconds;
-
-
-timer=setInterval(()=>{
-
-
-count--;
-
-number.innerHTML=count;
-
-
-if(count<=0){
-
-
-clearInterval(timer);
-
-
-index++;
-
-
-if(index>=steps.length){
-
-index=0;
-
-}
-
-
-runStep();
-
-
-}
-
-
-},1000);
-
-
-
-}
-
-
-
-function stopBreathing(){
-
-
-running=false;
-
-
-clearInterval(timer);
-
-
-phase.innerHTML="Paused";
-
-
-}
-
-
-
-function resetBreathing(){
-
-
-running=false;
-
-clearInterval(timer);
-
-
-index=0;
-
-
-phase.innerHTML="Ready";
-
-number.innerHTML="-";
-
-
-circle.classList.remove("active");
-
-
-}
-
-
-
-</script>
-
+    <header>
+        <div class="logo">MindSpace</div>
+        <a href="wellbeing-guide.html" class="back">← Back</a>
+    </header>
+
+    <div class="container">
+
+        <h1>Breathing <span>Exercise</span></h1>
+
+        <p class="text">
+            Take a moment to slow down and calm your mind with guided breathing.
+        </p>
+
+        <div class="circle" id="circle">
+            <div class="phase" id="phase">Ready</div>
+            <div class="number" id="number">-</div>
+        </div>
+
+        <div class="info">
+            <h3>4 - 4 - 6 Breathing Method</h3>
+            <p>
+                Inhale for 4 seconds<br>
+                Hold for 4 seconds<br>
+                Exhale slowly for 6 seconds
+            </p>
+        </div>
+
+        <div class="buttons">
+            <button class="start" onclick="startBreathing()">Start</button>
+            <button class="stop" onclick="stopBreathing()">Stop</button>
+            <button class="reset" onclick="resetBreathing()">Reset</button>
+        </div>
+
+    </div>
+
+    <footer>
+        MindSpace © 2026
+    </footer>
+
+    <script>
+        let running = false;
+        let timer;
+        let phase = document.getElementById("phase");
+        let number = document.getElementById("number");
+        let circle = document.getElementById("circle");
+
+        let steps = [
+            { name: "Inhale", seconds: 4, action: "expand" },
+            { name: "Hold", seconds: 4, action: "hold" },
+            { name: "Exhale", seconds: 6, action: "shrink" }
+        ];
+
+        let index = 0;
+
+        function startBreathing() {
+            if (running) return;
+            running = true;
+            runStep();
+        }
+
+        function runStep() {
+            if (!running) return;
+
+            let current = steps[index];
+            phase.innerHTML = current.name;
+            number.innerHTML = current.seconds;
+
+            if (current.action === "expand") {
+                circle.className = "circle expand";
+            } else if (current.action === "shrink") {
+                circle.className = "circle shrink";
+            }
+
+            let count = current.seconds;
+
+            timer = setInterval(() => {
+                count--;
+                number.innerHTML = count;
+
+                if (count <= 0) {
+                    clearInterval(timer);
+                    index = (index + 1) % steps.length;
+                    runStep();
+                }
+            }, 1000);
+        }
+
+        function stopBreathing() {
+            running = false;
+            clearInterval(timer);
+            phase.innerHTML = "Paused";
+        }
+
+        function resetBreathing() {
+            running = false;
+            clearInterval(timer);
+            index = 0;
+            phase.innerHTML = "Ready";
+            number.innerHTML = "-";
+            circle.className = "circle";
+        }
+    </script>
 
 </body>
 
