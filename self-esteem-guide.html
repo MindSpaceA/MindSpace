@@ -3,936 +3,404 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How to Improve Self-Esteem | MindSpace</title>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="responsive.css">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
-
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-body{
-
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-        135deg,
-        #081b38,
-        #123b70,
-        #245fa3
-    );
-
-    color:white;
-    overflow-x:hidden;
-
-}
-
-
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    width:350px;
-    height:350px;
-
-    background:#4dc7ff;
-
-    filter:blur(130px);
-
-    top:-100px;
-    right:-100px;
-
-    opacity:.35;
-
-    z-index:-1;
-
-}
-
-
-
-body::after{
-
-    content:"";
-
-    position:fixed;
-
-    width:300px;
-    height:300px;
-
-    background:#8b5cf6;
-
-    filter:blur(140px);
-
-    bottom:-100px;
-    left:-100px;
-
-    opacity:.25;
-
-    z-index:-1;
-
-}
-
-
-
-
-.container{
-
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-
-}
-
-
-
-
-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:30px 0;
-
-}
-
-
-
-.logo{
-
-    font-size:28px;
-
-    font-weight:700;
-
-}
-
-
-
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    margin-left:30px;
-
-    opacity:.85;
-
-    transition:.3s;
-
-}
-
-
-nav a:hover{
-
-    opacity:1;
-
-}
-
-
-
-
-.hero{
-
-    text-align:center;
-
-    padding:70px 0 50px;
-
-}
-
-
-
-.read{
-
-    display:inline-block;
-
-    padding:8px 18px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.12);
-
-    border:1px solid rgba(255,255,255,.2);
-
-    margin-bottom:25px;
-
-    font-size:14px;
-
-}
-
-
-
-.hero h1{
-
-    font-size:55px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-.hero p{
-
-    max-width:650px;
-
-    margin:auto;
-
-    color:rgba(255,255,255,.8);
-
-    font-size:18px;
-
-    line-height:1.7;
-
-}
-
-
-
-
-
-section{
-
-    padding:45px 0;
-
-}
-
-
-
-
-.glass{
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(20px);
-
-    border:1px solid rgba(255,255,255,.2);
-
-    border-radius:30px;
-
-    padding:35px;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-}
-
-
-
-
-.section-title{
-
-    text-align:center;
-
-    font-size:34px;
-
-    margin-bottom:35px;
-
-}
-
-
-
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-    gap:25px;
-
-}
-
-
-
-.card{
-
-    background:rgba(255,255,255,.1);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:25px;
-
-    padding:30px;
-
-    border:1px solid rgba(255,255,255,.18);
-
-    transition:.35s;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    background:rgba(255,255,255,.16);
-
-}
-
-
-
-.card-icon{
-
-    font-size:40px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-.card h3{
-
-    font-size:22px;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.card p{
-
-    color:rgba(255,255,255,.75);
-
-    line-height:1.6;
-
-}
-
-
-
-
-.quote{
-
-    text-align:center;
-
-}
-
-
-
-.quote p{
-
-    font-size:25px;
-
-    font-style:italic;
-
-    line-height:1.5;
-
-}
-
-
-
-
-.btn{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:15px 35px;
-
-    border-radius:40px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #2294ff,
-        #4dc7ff
-    );
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-
-.btn:hover{
-
-    transform:translateY(-5px);
-
-}
-
-
-
-
-footer{
-
-    padding:40px 0;
-
-    text-align:center;
-
-    color:rgba(255,255,255,.65);
-
-}
-
-
-
-
-
-@media(max-width:768px){
-
-
-header{
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-
-nav a{
-
-    margin:0 10px;
-
-}
-
-
-.hero h1{
-
-    font-size:38px;
-
-}
-
-
-.section-title{
-
-    font-size:28px;
-
-}
-
-
-}
-
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How to Improve Self-Esteem | MindSpace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #081b38, #123b70, #245fa3);
+            color: white;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* BACKGROUND GLOWS */
+        body::before {
+            content: "";
+            position: fixed;
+            width: clamp(250px, 40vw, 450px);
+            height: clamp(250px, 40vw, 450px);
+            background: #4dc7ff;
+            filter: blur(140px);
+            top: -100px;
+            right: -100px;
+            opacity: .3;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: clamp(250px, 40vw, 400px);
+            height: clamp(250px, 40vw, 400px);
+            background: #8b5cf6;
+            filter: blur(140px);
+            bottom: -100px;
+            left: -100px;
+            opacity: .25;
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: clamp(22px, 4vw, 28px);
+            font-weight: 800;
+            color: #9fdcff;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            opacity: .85;
+            font-size: 15px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: #9fdcff;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: clamp(40px, 8vw, 70px) 0 clamp(30px, 5vw, 50px);
+        }
+
+        .read {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .2);
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 55px);
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: rgba(255, 255, 255, .8);
+            font-size: clamp(16px, 2.5vw, 18px);
+            line-height: 1.7;
+        }
+
+        /* SECTIONS & GLASS */
+        section {
+            padding: 30px 0;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 30px;
+            padding: clamp(25px, 5vw, 40px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(26px, 4vw, 34px);
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            transition: .35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, .15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .3);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* QUOTE */
+        .quote {
+            text-align: center;
+        }
+
+        .quote p {
+            font-size: clamp(20px, 3.5vw, 25px);
+            font-style: italic;
+            line-height: 1.5;
+            color: #e2f1ff;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 35px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, #2294ff, #4dc7ff);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+            box-shadow: 0 10px 25px rgba(34, 148, 255, .3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(34, 148, 255, .5);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: rgba(255, 255, 255, .65);
+            font-size: 14px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 
 </head>
+
 <body>
 
-
-<div class="container">
-
-
-
-<header>
-
-<div class="logo">
-🧠 MindSpace
-</div>
-
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="guides.html">Guides</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-
-
-
-
-<!-- Hero -->
-
-<section class="hero">
-
-
-<span class="read">
-💙 7 min read
-</span>
-
-
-<h1>
-How to Improve Self-Esteem
-</h1>
-
-
-<p>
-Build confidence, challenge negative thoughts and develop a healthier relationship with yourself.
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- What is Self Esteem -->
-
-<section>
-
-
-<div class="glass">
-
-
-<h2>
-What is Self-Esteem?
-</h2>
-
-
-<p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,.8);">
-
-Self-esteem is the way you see and value yourself.
-Having healthy self-esteem means accepting yourself,
-recognizing your strengths, and believing that you deserve
-respect and kindness.
-
-Building confidence takes time, but small daily changes
-can help you create a more positive relationship with yourself.
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- Signs -->
-
-<section>
-
-
-<h2 class="section-title">
-Signs of Low Self-Esteem
-</h2>
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-🧠
-</div>
-
-
-<h3>
-Negative Self-Talk
-</h3>
-
-
-<p>
-Constantly criticizing yourself or focusing only on your mistakes.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-😟
-</div>
-
-
-<h3>
-Fear of Failure
-</h3>
-
-
-<p>
-Avoiding challenges because you doubt your own abilities.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-📱
-</div>
-
-
-<h3>
-Comparing Yourself
-</h3>
-
-
-<p>
-Measuring your worth by comparing your life with others.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-💙
-</div>
-
-
-<h3>
-Rejecting Compliments
-</h3>
-
-
-<p>
-Finding it difficult to accept positive feedback from others.
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- Build Confidence -->
-
-
-<section>
-
-
-<h2 class="section-title">
-Ways to Build Confidence
-</h2>
-
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-🌿
-</div>
-
-
-<h3>
-Practice Self-Compassion
-</h3>
-
-
-<p>
-Treat yourself with the same kindness and understanding you give others.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-✨
-</div>
-
-
-<h3>
-Focus on Your Strengths
-</h3>
-
-
-<p>
-Recognize your achievements and appreciate the qualities that make you unique.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-🎯
-</div>
-
-
-<h3>
-Set Small Goals
-</h3>
-
-
-<p>
-Small successes build confidence and create a feeling of progress.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon">
-🌈
-</div>
-
-
-<h3>
-Choose Positive Connections
-</h3>
-
-
-<p>
-Spend time with people who support and encourage your growth.
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- Quote -->
-
-<section>
-
-
-<div class="glass quote">
-
-
-<p>
-"Confidence grows when you learn to accept yourself and believe in your own journey."
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- CTA -->
-
-<section>
-
-
-<div class="glass" style="text-align:center;">
-
-
-<h2>
-Start Building Confidence
-</h2>
-
-
-<p style="margin-top:15px; color:rgba(255,255,255,.75);">
-
-Every small step toward self-respect creates a stronger relationship with yourself.
-
-</p>
-
-
-
-<a href="index.html" class="btn">
-Start Your Journey
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-</div>
-<!-- Footer -->
-
-<footer>
-
-<div class="container">
-
-
-<p>
-© 2026 MindSpace. All rights reserved.
-</p>
-
-
-<p style="margin-top:10px;">
-Wellbeing guides for a healthier mind.
-</p>
-
-
-</div>
-
-</footer>
-
-
-
-
-
-
-
-<script>
-
-
-// Scroll reveal animation
-
-const elements = document.querySelectorAll(
-".glass, .card, .hero"
-);
-
-
-
-const observer = new IntersectionObserver(
-
-(entries)=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
-
-
-}
-
-
-});
-
-
-},
-
-{
-threshold:0.15
-}
-
-);
-
-
-
-
-
-elements.forEach(el=>{
-
-
-el.style.opacity="0";
-
-el.style.transform="translateY(30px)";
-
-el.style.transition="all .8s ease";
-
-
-observer.observe(el);
-
-
-});
-
-
-
-</script>
-
-
-
-
-
+    <div class="container">
+
+        <header>
+            <div class="logo">🧠 MindSpace</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <span class="read">💙 7 min read</span>
+            <h1>How to Improve Self-Esteem</h1>
+            <p>Build confidence, challenge negative thoughts and develop a healthier relationship with yourself.</p>
+        </section>
+
+        <!-- WHAT IS SELF ESTEEM -->
+        <section>
+            <div class="glass">
+                <h2>What is Self-Esteem?</h2>
+                <p style="margin-top:20px; line-height:1.8; color:rgba(255,255,255,.85);">
+                    Self-esteem is the way you see and value yourself. Having healthy self-esteem means accepting yourself,
+                    recognizing your strengths, and believing that you deserve respect and kindness.
+                    <br><br>
+                    Building confidence takes time, but small daily changes can help you create a more positive relationship with yourself.
+                </p>
+            </div>
+        </section>
+
+        <!-- SIGNS -->
+        <section>
+            <h2 class="section-title">Signs of Low Self-Esteem</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Negative Self-Talk</h3>
+                    <p>Constantly criticizing yourself or focusing only on your mistakes.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">😟</div>
+                    <h3>Fear of Failure</h3>
+                    <p>Avoiding challenges because you doubt your own abilities.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Comparing Yourself</h3>
+                    <p>Measuring your worth by comparing your life with others.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💙</div>
+                    <h3>Rejecting Compliments</h3>
+                    <p>Finding it difficult to accept positive feedback from others.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BUILD CONFIDENCE -->
+        <section>
+            <h2 class="section-title">Ways to Build Confidence</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">🌿</div>
+                    <h3>Practice Self-Compassion</h3>
+                    <p>Treat yourself with the same kindness and understanding you give others.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Focus on Your Strengths</h3>
+                    <p>Recognize your achievements and appreciate the qualities that make you unique.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Set Small Goals</h3>
+                    <p>Small successes build confidence and create a feeling of progress.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌈</div>
+                    <h3>Choose Positive Connections</h3>
+                    <p>Spend time with people who support and encourage your growth.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QUOTE -->
+        <section>
+            <div class="glass quote">
+                <p>"Confidence grows when you learn to accept yourself and believe in your own journey."</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section>
+            <div class="glass" style="text-align:center;">
+                <h2>Start Building Confidence</h2>
+                <p style="margin-top:15px; color:rgba(255,255,255,.8);">
+                    Every small step toward self-respect creates a stronger relationship with yourself.
+                </p>
+                <a href="index.html" class="btn">Start Your Journey</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 MindSpace. All rights reserved.</p>
+            <p style="margin-top:10px; color: rgba(255,255,255,.5);">Wellbeing guides for a healthier mind.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const elements = document.querySelectorAll(".glass, .card, .hero");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        elements.forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all .8s ease";
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 
