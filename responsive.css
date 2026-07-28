@@ -200,3 +200,67 @@ body{
 
 
 }
+/* =========================
+   MINDSPACE MOBILE FIX
+========================= */
+
+@media (max-width:768px){
+
+    .brain-wrapper{
+        width:300px;
+        height:300px;
+    }
+
+    .brain-image{
+        width:210px;
+    }
+
+    .brain-glow{
+        width:250px;
+        height:250px;
+    }
+
+    .feelings{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .therapist{
+        flex-direction:column;
+        text-align:center;
+        padding:30px 20px;
+    }
+
+    .booking{
+        grid-template-columns:1fr;
+    }
+
+    .form-box{
+        padding:25px;
+    }
+
+    .check-box{
+        padding:25px;
+    }
+
+    .section{
+        padding:70px 20px;
+    }
+
+    .testimonial{
+        min-width:260px;
+    }
+
+    .chat-box{
+        width:95vw;
+        right:0;
+    }
+
+    .appointment-box{
+        width:90%;
+    }
+
+}
